@@ -53,7 +53,7 @@ $$
 
 where $a_{ij}^{(P)}$ and $a_{ik}^{(D)}$ are the binary adjacency matrices of the two layers, $k_i^{(P)}$ and $k_i^{(D)}$ are the numbers of partners of species $i$ in each layer, and $\gamma_0^{(P)}$ and $\gamma_0^{(D)}$ are the base mutualistic strengths. The exponent $\delta$ sets the generalist trade-off, so that the higher the value, the more specialists receive a greater per-interaction benefit than generalists.
 
-Each simulation run consists of two steps. First, the population dynamics is simulated until the abundances of all species reach a steady state, $N_i^{*}$, without any hurricanes striking. Second, hurricanes strike at random times for $t_{\mathrm{years}} = 300$ years. The waiting time between hurricanes is exponential with mean $1/\lambda_i$, as in a Poisson process, and each hurricane removes a fraction $d_c$ of the abundance of each species, such that $N_i(t^{+}) = N_i(t)(1 - d_c)$. The fraction removed depends on the category of the hurricane, which occurs with probability given by the PMF of hurricanes in each island. A species whose abundance falls below its extinction threshold, defined as $\epsilon_i = 0.01 N_i^{*}$, goes extinct. Every scenario runs 1,000 replicates with the following parameters:
+Each simulation run consists of two steps. First, the population dynamics is simulated until the abundances of all species reach a steady state, $N_i^{\ast}$, without any hurricanes striking. Second, hurricanes strike at random times for $t_{\mathrm{years}} = 300$ years. The waiting time between hurricanes is exponential with mean $1/\lambda_i$, as in a Poisson process, and each hurricane removes a fraction $d_c$ of the abundance of each species, such that $N_i(t^{+}) = N_i(t)(1 - d_c)$. The fraction removed depends on the category of the hurricane, which occurs with probability given by the PMF of hurricanes in each island. A species whose abundance falls below its extinction threshold, defined as $\epsilon_i = 0.01 N_i^{\ast}$, goes extinct. Every scenario runs 1,000 replicates with the following parameters:
 
 | Parameter | Value | Meaning |
 |---|---:|---|
@@ -63,7 +63,7 @@ Each simulation run consists of two steps. First, the population dynamics is sim
 | $h$ | 0.5 | Handling time of the Type II functional response (`ht` in the code) |
 | $\delta$ | 0.5 | Exponent of the generalist trade-off |
 | $r_i$ | $U[0.0, 0.5]$ | Intrinsic growth rate, drawn at random for each replicate |
-| $\epsilon_i$ | $0.01 N_i^{*}$ | Extinction threshold of species $i$ |
+| $\epsilon_i$ | $0.01 N_i^{\ast}$ | Extinction threshold of species $i$ |
 
 ## Network structure and species roles
 
