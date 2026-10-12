@@ -1,0 +1,100 @@
+island,code,species,Symplocos martinicensis,Heliconia sp1,Passiflora sp1,Palicourea crocea,Gesneria sp2,Hippeastrum puniceum,Acacia sp1,Eugenia sp1,Alloplectus cristatus ,Bauhinia sp3,Amaranthus sp1,Euphorbia sp4,Begonia sp3,Rubus sp1,Miconia sp1 ,Charianthus sp2,Miconia sp5,Euphorbia sp2,Marcgravia umbellata,Vriesea sp2,Myosotis sp1 ,Bauhinia tomentosa,Eucalyptus sp1,Carica papaya,Solanum sp1 ,Myrcia sp1,Euphorbia sp4
+08_nevis,N1N1H822,Lesser-Antillean Bullfinch,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0
+08_nevis,N2N3H855,Antillean Crested Hummingbird,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N2N4H800,Antillean Crested Hummingbird,1,0,0,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N2N5H1004,Purple-throated Carib,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N2N5H1046,Lesser-Antillean Bullfinch,1,0,0,1,1,0,1,0,0,1,1,1,1,1,0,1,1,0,1,0,1,1,1,0,0,1,1
+08_nevis,N3N1H725,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N3N1H726,Purple-throated Carib,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N3N1H747,Bananaquit,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,1,0,1,0,1
+08_nevis,N3N1H946,Lesser-Antillean Bullfinch,0,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N3N2H1129,Brown Trembler,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N3N2H1132,Antillean Crested Hummingbird,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,1,0
+08_nevis,N3N2H1140,Antillean Crested Hummingbird,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,1,1,0,0,0,0,0,0,1
+08_nevis,N3N2H735,Bananaquit,1,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,1,1,0,0,1,0,0,0,0,0,0
+08_nevis,N3N2H747,Bananaquit,1,0,1,0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0
+08_nevis,N3N2H805,Brown Trembler,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N3N2H815,Bananaquit,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,1,0,1,0,0,0,1
+08_nevis,N3N2H828,Purple-throated Carib,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N3N2H900,Bananaquit,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,1,0,0,0,0,0
+08_nevis,N3N3H737,Bananaquit,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+08_nevis,N3N3H759,Purple-throated Carib,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N3N4H736,Purple-throated Carib,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N3N4H900,Bridled Quail-Dove,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N3N4H959,Purple-throated Carib,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N3N5H1138,Purple-throated Carib,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0
+08_nevis,N3N5H641,Antillean Crested Hummingbird,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N4N1H1015,Lesser-Antillean Bullfinch,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,1,1,1,0,1,1,1,0,1,1
+08_nevis,N4N1H1017,Lesser-Antillean Bullfinch,0,1,0,1,0,0,0,1,1,1,0,1,1,0,0,1,0,0,0,0,1,0,0,0,1,0,0
+08_nevis,N4N1H1025,Bananaquit,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0
+08_nevis,N4N1H1210,Bananaquit,1,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,0
+08_nevis,N4N1H806,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,1,0,0,0,0,0,0,0
+08_nevis,N4N1H830,Lesser-Antillean Bullfinch,0,0,1,0,0,0,1,0,0,1,1,0,0,1,1,1,1,0,0,1,0,1,1,0,0,1,1
+08_nevis,N4N2H1034,Antillean Crested Hummingbird,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0
+08_nevis,N4N2H1045,Antillean Crested Hummingbird,1,1,0,0,1,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+08_nevis,N4N2H1200,Purple-throated Carib,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N4N2H640,Antillean Crested Hummingbird,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0
+08_nevis,N4N3H1100,Antillean Crested Hummingbird,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N4N3H1159,Antillean Crested Hummingbird,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N4N3H700,Bananaquit,0,0,0,1,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0
+08_nevis,N4N3H725,Antillean Crested Hummingbird,0,0,0,1,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0
+08_nevis,N4N3H735,Bananaquit,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1
+08_nevis,N4N3H808,Bananaquit,1,0,0,0,0,0,1,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,1,0,0,0
+08_nevis,N4N4H1107,Antillean Crested Hummingbird,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0
+08_nevis,N4N4H1116,Lesser-Antillean Bullfinch,0,0,0,0,1,1,0,1,1,0,0,1,0,0,0,0,0,1,1,0,1,0,0,1,0,0,0
+08_nevis,N4N4H1135,Purple-throated Carib,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N4N4H638,Purple-throated Carib,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N4N6H905,Bridled Quail-Dove,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N4N6H906,Bridled Quail-Dove,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N5N1H848,Bananaquit,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N5N1H849,Lesser Antillean Flycatcher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N5N2H1021,Bananaquit,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0
+08_nevis,N5N2H1200,Purple-throated Carib,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+08_nevis,N5N2H812,Bananaquit,1,0,0,1,0,1,0,0,0,1,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+08_nevis,N5N2H858,Antillean Crested Hummingbird,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+08_nevis,N5N3H1035,Antillean Crested Hummingbird,1,1,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0
+08_nevis,N5N3H1110,Antillean Crested Hummingbird,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1
+08_nevis,N5N3H1120,Lesser-Antillean Bullfinch,0,0,1,1,0,1,1,0,0,0,0,1,1,1,0,0,0,0,0,1,0,1,0,0,1,0,0
+08_nevis,N5N3H810,Purple-throated Carib,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0
+08_nevis,N5N3H811,Antillean Crested Hummingbird,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0
+08_nevis,N5N3H827,Antillean Crested Hummingbird,0,0,0,1,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+08_nevis,N5N3H837,Bridled Quail-Dove,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N5N3H858,Brown Trembler,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N5N3H900,Antillean Crested Hummingbird,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0
+08_nevis,N5N4H1033,Antillean Crested Hummingbird,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0
+08_nevis,N5N4H1129,Antillean Crested Hummingbird,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0
+08_nevis,N5N4H805,Bananaquit,0,1,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N5N4H854,Brown Trembler,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N5N4H935,Antillean Crested Hummingbird,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+08_nevis,N5N5H1015,Antillean Crested Hummingbird,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,0
+08_nevis,N5N5H739,Antillean Crested Hummingbird,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N5N5H754,Antillean Crested Hummingbird,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N5N5H915,Pearly-Eyed Thrasher,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N5N6H930,Bananaquit,1,0,0,0,0,1,0,0,0,0,1,1,0,0,0,1,0,1,1,1,1,0,0,0,0,0,1
+08_nevis,N5N7H1116,Purple-throated Carib,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N6N1H800,Lesser-Antillean Bullfinch,0,1,1,0,0,1,0,0,0,1,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,0
+08_nevis,N6N1H840,Bananaquit,1,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+08_nevis,N6N1H850,Pearly-Eyed Thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N6N1H936,Antillean Crested Hummingbird,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+08_nevis,N6N2H1121,Scaly-breasted Thrasher,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N6N2H1148,Bananaquit,1,1,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N6N2H835,Lesser Antillean Flycatcher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N6N2H836,Pearly-Eyed Thrasher,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N6N2H959,Brown Trembler,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N6N3H1001,Antillean Crested Hummingbird,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+08_nevis,N6N3H710,Antillean Crested Hummingbird,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0
+08_nevis,N6N3H717,Antillean Crested Hummingbird,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N6N4H1015,Antillean Crested Hummingbird,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N6N4H1101,Antillean Crested Hummingbird,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0
+08_nevis,N6N4H1102,Purple-throated Carib,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0
+08_nevis,N6N4H1120,Lesser-Antillean Bullfinch,1,0,0,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,0,1,1,0,1,1,1,0,1
+08_nevis,N6N4H1137,Purple-throated Carib,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N6N4H754,Bananaquit,1,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
+08_nevis,N6N4H830,Scaly-breasted Thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+08_nevis,N6N4H910,Antillean Crested Hummingbird,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0
+08_nevis,N6N4H956,Antillean Crested Hummingbird,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,0,1,0,0,1,1
+08_nevis,N6N5H737,Bridled Quail-Dove,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+08_nevis,N6N6H720,Purple-throated Carib,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+08_nevis,N6N6H737,Antillean Crested Hummingbird,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+08_nevis,N6N6H831,Antillean Crested Hummingbird,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+08_nevis,N6N4H1015,Antillean crested hummingbird,1,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0

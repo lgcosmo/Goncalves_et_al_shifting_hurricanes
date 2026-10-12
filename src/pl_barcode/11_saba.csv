@@ -1,0 +1,122 @@
+island,code,species,Miconia sp5,Solanum sp3,Psychotria sp4,Heliconia sp1,Hippeastrum puniceum,Chromolaena sp2,Symplocos martinicensis,Lagenaria siceraria,Rauvolfia viridis,Rubus sp1,Eucalyptus sp1,Gesneria ventricosa,Nephrolepis cordifolia (Fern),Begonia sp3,Erythrina sp1,Passiflora sp1,Carica papaya,Begonia sp3,Bauhinia sp6,Euphorbia sp4,Musa sp1,Rudbeckia hirta,Myrcia sp1
+11_saba,SA1N1H611,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N1H652,Lesser-Antillean Bullfinch,1,0,0,1,0,0,1,0,0,1,1,1,0,1,1,0,1,0,0,0,1,1,1
+11_saba,SA1N1H710,Bananaquit,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N1H715,Lesser-Antillean Bullfinch,1,0,0,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,0,1,0
+11_saba,SA1N1H858,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N2H1056,Pearly-Eyed Thrasher,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N2H558,Bananaquit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0
+11_saba,SA1N2H625,Bananaquit,1,1,1,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0
+11_saba,SA1N2H727,Lesser-Antillean Bullfinch,1,0,0,0,0,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,1
+11_saba,SA1N2H800,Bananaquit,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N2H821,Bananaquit,1,0,0,1,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0
+11_saba,SA1N2H859,Bananaquit,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N2H957,Bananaquit,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N3H627,Bananaquit,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,1
+11_saba,SA1N3H846,Antillean Crested Hummingbird,1,1,0,1,0,0,1,0,0,0,1,1,0,1,1,0,1,0,1,1,0,1,0
+11_saba,SA1N3H900,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N4H553,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N4H650,Pearly-Eyed Thrasher,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N4H651,Pearly-Eyed Thrasher,1,1,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N4H927,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N57H700,Lesser-Antillean Bullfinch,1,1,1,0,1,1,0,1,0,1,1,0,0,0,0,1,0,1,0,1,1,1,0
+11_saba,SA1N5H750,Antillean Crested Hummingbird,1,0,0,0,1,0,0,1,1,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+11_saba,SA1N5H831,Scaly-breasted Thrasher,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N5H909,Antillean Crested Hummingbird,1,1,1,0,0,1,0,0,1,1,0,0,1,0,1,0,0,0,0,1,0,0,0
+11_saba,SA1N6H628,Bananaquit,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N6H810,Bananaquit,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N6H818,Bananaquit,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N6H825,Bananaquit,1,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N6H900,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+11_saba,SA1N7H1045,Scaly-breasted Thrasher,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N7H615,Antillean Crested Hummingbird,1,1,1,0,0,0,1,0,1,1,1,0,0,0,0,0,1,0,1,0,0,1,0
+11_saba,SA1N7H618,Bananaquit,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA1N7H647,Bananaquit,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+11_saba,SA1N7H852,Bananaquit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+11_saba,SA2N1H1050,Bananaquit,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+11_saba,SA2N2H1047,Bananaquit,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA2N2H758,Bananaquit,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0
+11_saba,SA2N2H812,Scaly-breasted Thrasher,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA2N2H820,Pearly-Eyed Thrasher,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+11_saba,SA2N3H1055,Bananaquit,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA2N3H730,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+11_saba,SA2N4H1008,Pearly-Eyed Thrasher,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA2N5H806,Bananaquit,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA2N5H826,Bananaquit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA2N5H852,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA2N6H1046,Scaly-breasted Thrasher,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA2N6H605,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,0
+11_saba,SA2N6H606,Bananaquit,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA2N6H900,Black-whiskered vireo,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA2N6H946,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA2N6H955,Bananaquit,1,1,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+11_saba,SA2N7H1000,Bananaquit,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0
+11_saba,SA2N7H735,Bananaquit,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+11_saba,SA2N7H838,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA2N7H921,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA2N7H922,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+11_saba,SA2N7H931,Bananaquit,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,Sa3n1h1029,Bananaquit,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+11_saba,Sa3n1h1041,Bananaquit,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+11_saba,Sa3n1h655,Bananaquit,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA3n1h706,Bananaquit,0,1,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+11_saba,Sa3n2h856,Bananaquit,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,Sa3n4646,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+11_saba,Sa3n4h814,Scaly-breasted Thrasher,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+11_saba,Sa3n5h805,Bananaquit,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+11_saba,Sa3n5h942,Pearly-Eyed Thrasher,1,1,0,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+11_saba,Sa3n6h1030,Bananaquit,1,1,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0
+11_saba,Sa3n6h900,Pearly-Eyed Thrasher,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+11_saba,Sa3n6h954,Bananaquit,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+11_saba,Sa3n7h1038,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA3N7H557,Lesser-Antillean Bullfinch,1,1,1,0,1,0,0,1,1,0,0,0,1,1,1,1,1,0,0,1,1,0,0
+11_saba,Sa3n7h641,Bananaquit,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,Sa3n7h810,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,Sa3n7h918,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+11_saba,Sa3n7h920,Bananaquit,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+11_saba,Sa3n7h939,Lesser-Antillean Bullfinch,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,1,0,1
+11_saba,Sa3n8h708,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA4N1H653,Bananaquit,1,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA4N2H1028,Bananaquit,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+11_saba,SA4N2H1050,Antillean Crested Hummingbird,1,0,1,1,1,0,0,0,1,0,0,1,0,1,0,1,0,1,0,0,1,0,0
+11_saba,SA4N2H1051,Antillean Crested Hummingbird,1,1,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+11_saba,SA4N2H630,Bananaquit,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA4N2H648,Bananaquit,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+11_saba,SA4N2H650,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA4N2H750,Scaly-breasted Thrasher,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA4N2H808,Bananaquit,1,1,1,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA4N2H910,Bananaquit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA4N3H1045,Scaly-breasted Thrasher,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA4N3H1049,Bananaquit,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA4N3H624,Bananaquit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+11_saba,SA4N3H759,Bananaquit,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA4N4H722,Bananaquit,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA4N4H832,Bananaquit,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA4N4H936,Antillean Crested Hummingbird,1,0,0,1,1,0,0,0,0,0,1,0,1,0,1,0,1,0,1,1,0,0,0
+11_saba,SA4N4H947,Bananaquit,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA4N4H949,Bananaquit,1,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA4N5H1025,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+11_saba,SA4N5H656,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+11_saba,SA4N5H935,Antillean Crested Hummingbird,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0
+11_saba,SA4N6H739,Antillean Crested Hummingbird,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,1
+11_saba,SA4N6H746,Green-throated Carib,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+11_saba,SA4N6H825,Antillean Crested Hummingbird,1,0,0,0,0,0,0,1,0,0,1,0,0,1,0,1,0,0,1,0,0,0,1
+11_saba,SA4N6H915,Antillean Crested Hummingbird,1,0,0,0,0,1,0,0,0,1,0,0,1,0,1,0,1,1,0,0,1,0,1
+11_saba,SA5N2H1010,Scaly-breasted Thrasher,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+11_saba,SA5N2H1015,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0
+11_saba,SA5N2H1017,Bananaquit,1,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+11_saba,SA5N2H1119,Bananaquit,1,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA5N2H920,Bananaquit,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA5N3H1033,Scaly-breasted Thrasher,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA5N4H1022,Bananaquit,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0
+11_saba,SA5N4H1047,Bananaquit,1,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA5N4H859,Bananaquit,1,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA5N5H713,Lesser-Antillean Bullfinch,1,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,1,1,1,0,1,1
+11_saba,SA5N5H737,Antillean Crested Hummingbird,1,0,0,0,0,0,1,1,0,1,0,1,0,0,0,0,0,0,0,1,1,1,1
+11_saba,SA5N6H1052,Antillean Crested Hummingbird,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA5N6H653,Purple-throated Carib,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA5N6H848,Bananaquit,1,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+11_saba,SA5N6H855,Bananaquit,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+11_saba,SA5N6H930,Purple-throated Carib,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA5N6H959,Scaly-breasted Thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11_saba,SA5N7H901,Bananaquit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0

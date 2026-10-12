@@ -1,0 +1,486 @@
+species_id,species_set,degree_pol,degree_sd,z_pollination,z_dispersal,k_total,mpc,role,network
+01_trinidad Sp1,Plant,0,2,-0.582623443734861,0.214184034748223,2,0,Peripheral,01_trinidad
+01_trinidad Sp2,Plant,0,1,-0.582623443734861,-0.223919672691324,1,0,Peripheral,01_trinidad
+Adiantum Pedatum,Plant,2,0,-0.176141971361702,-0.662023380130871,2,0,Peripheral,01_trinidad
+Aechmea Sp1,Plant,10,1,1.44978391813093,-0.223919672691324,11,0.165289256198347,Pollination Hub,01_trinidad
+Agave Sp1,Plant,1,0,-0.379382707548282,-0.662023380130871,1,0,Peripheral,01_trinidad
+Alchornea Triplinervia,Plant,0,3,-0.582623443734861,0.65228774218777,3,0,Peripheral,01_trinidad
+Alpinia Sp2,Plant,1,0,-0.379382707548282,-0.662023380130871,1,0,Peripheral,01_trinidad
+Anthurium Scandens,Plant,0,1,-0.582623443734861,-0.223919672691324,1,0,Peripheral,01_trinidad
+Araliaceae Sp1,Plant,0,2,-0.582623443734861,0.214184034748223,2,0,Peripheral,01_trinidad
+Bauhinia Sp6,Plant,2,0,-0.176141971361702,-0.662023380130871,2,0,Peripheral,01_trinidad
+Casearia Guianensis,Plant,0,6,-0.582623443734861,1.96659886450641,6,0,Dispersal Hub,01_trinidad
+Chrysothemis Pulchella,Plant,16,0,2.66922833525041,-0.662023380130871,16,0,Pollination Hub,01_trinidad
+Clusia Sp1,Plant,0,1,-0.582623443734861,-0.223919672691324,1,0,Peripheral,01_trinidad
+Coccoloba Sp2,Plant,7,0,0.840061709571195,-0.662023380130871,7,0,Pollination Hub,01_trinidad
+Columnea Scandens,Plant,0,1,-0.582623443734861,-0.223919672691324,1,0,Peripheral,01_trinidad
+Dianthus Caryophyllus,Plant,1,0,-0.379382707548282,-0.662023380130871,1,0,Peripheral,01_trinidad
+Ficus Sp1,Plant,0,5,-0.582623443734861,1.52849515706686,5,0,Dispersal Hub,01_trinidad
+Heliconia Hirsuta,Plant,13,0,2.05950612669067,-0.662023380130871,13,0,Pollination Hub,01_trinidad
+Heliconia Sp4,Plant,6,0,0.636820973384616,-0.662023380130871,6,0,Peripheral,01_trinidad
+Hippeastrum Puniceum,Plant,4,0,0.230339501011457,-0.662023380130871,4,0,Peripheral,01_trinidad
+Justicia Sp2,Plant,4,0,0.230339501011457,-0.662023380130871,4,0,Peripheral,01_trinidad
+Lasiacis Sp1,Plant,0,1,-0.582623443734861,-0.223919672691324,1,0,Peripheral,01_trinidad
+Marcgravia Elegans,Plant,16,0,2.66922833525041,-0.662023380130871,16,0,Pollination Hub,01_trinidad
+Marcgraviaceae Sp1,Plant,0,3,-0.582623443734861,0.65228774218777,3,0,Peripheral,01_trinidad
+Miconia Dentata,Plant,0,1,-0.582623443734861,-0.223919672691324,1,0,Peripheral,01_trinidad
+Miconia Dodecandra,Plant,0,9,-0.582623443734861,3.28090998682505,9,0,Dispersal Hub,01_trinidad
+Miconia Sp1,Plant,0,2,-0.582623443734861,0.214184034748223,2,0,Peripheral,01_trinidad
+Miconia Sp2,Plant,1,10,-0.379382707548282,3.7190136942646,11,0.165289256198347,Dispersal Hub,01_trinidad
+Miconia Sp3,Plant,5,5,0.433580237198036,1.52849515706686,10,0.5,Multilayer Hub,01_trinidad
+Miconia Sp4,Plant,0,1,-0.582623443734861,-0.223919672691324,1,0,Peripheral,01_trinidad
+Myrcia Sp1,Plant,2,0,-0.176141971361702,-0.662023380130871,2,0,Peripheral,01_trinidad
+Nectandra Membranacea,Plant,0,1,-0.582623443734861,-0.223919672691324,1,0,Peripheral,01_trinidad
+Notopleura Uliginosa,Plant,0,1,-0.582623443734861,-0.223919672691324,1,0,Peripheral,01_trinidad
+Oryza Latifolia,Plant,1,0,-0.379382707548282,-0.662023380130871,1,0,Peripheral,01_trinidad
+Palicourea Guianensis,Plant,0,1,-0.582623443734861,-0.223919672691324,1,0,Peripheral,01_trinidad
+Piper Sp1,Plant,1,0,-0.379382707548282,-0.662023380130871,1,0,Peripheral,01_trinidad
+Piper Umbellatum,Plant,0,1,-0.582623443734861,-0.223919672691324,1,0,Peripheral,01_trinidad
+Prestoea Pubigera,Plant,0,1,-0.582623443734861,-0.223919672691324,1,0,Peripheral,01_trinidad
+Rosa Sp1,Plant,16,0,2.66922833525041,-0.662023380130871,16,0,Pollination Hub,01_trinidad
+Solanaceae Sp1,Plant,0,1,-0.582623443734861,-0.223919672691324,1,0,Peripheral,01_trinidad
+Trema Micranthum,Plant,0,4,-0.582623443734861,1.09039144962732,4,0,Dispersal Hub,01_trinidad
+Urera Baccifera,Plant,0,1,-0.582623443734861,-0.223919672691324,1,0,Peripheral,01_trinidad
+Vaccinium Latifolium,Plant,3,2,0.0270987648248773,0.214184034748223,5,0.48,Multilayer Connector,01_trinidad
+Vitis Vinifera,Plant,2,0,-0.176141971361702,-0.662023380130871,2,0,Peripheral,01_trinidad
+Warszewiczia Coccinea,Plant,15,0,2.46598759906383,-0.662023380130871,15,0,Pollination Hub,01_trinidad
+Bananaquit,Animal,15,1,2.62454440641378,-0.485648403180832,16,0.1171875,Pollination Hub,01_trinidad
+Bay-Headed Tanager,Animal,8,8,0.7574904587617,1.49082765627604,16,0.5,Multilayer Hub,01_trinidad
+Blue-Chinned Sapphire,Animal,4,0,-0.309397511325201,-0.768002125960385,4,0,Peripheral,01_trinidad
+Blue-Tailed Emerald,Animal,3,0,-0.576119503846927,-0.768002125960385,3,0,Peripheral,01_trinidad
+Blue Dacnis,Animal,0,3,-1.3762854814121,0.0790590423782748,3,0,Peripheral,01_trinidad
+Brown Violetear,Animal,3,0,-0.576119503846927,-0.768002125960385,3,0,Peripheral,01_trinidad
+Golden-Crowned Warbler,Animal,2,0,-0.842841496368652,-0.768002125960385,2,0,Peripheral,01_trinidad
+Golden-Headed Manakin,Animal,11,13,1.55765643632688,2.90259627017381,24,0.496527777777778,Multilayer Hub,01_trinidad
+Green Hermit,Animal,6,0,0.224046473718249,-0.768002125960385,6,0,Peripheral,01_trinidad
+Green Honeycreeper,Animal,5,5,-0.0426755188034761,0.643766487937381,10,0.5,Multilayer Connector,01_trinidad
+House Wren,Animal,4,0,-0.309397511325201,-0.768002125960385,4,0,Peripheral,01_trinidad
+Ochre-Bellied Flycatcher,Animal,0,4,-1.3762854814121,0.361412765157828,4,0,Peripheral,01_trinidad
+Olive-Striped Flycatcher,Animal,1,0,-1.10956348889038,-0.768002125960385,1,0,Peripheral,01_trinidad
+Plain Brown Woodcreeper,Animal,5,1,-0.0426755188034761,-0.485648403180832,6,0.277777777777778,Peripheral,01_trinidad
+Purple Honeycreeper,Animal,3,2,-0.576119503846927,-0.203294680401278,5,0.48,Multilayer Connector,01_trinidad
+Ruddy Quail-Dove,Animal,4,0,-0.309397511325201,-0.768002125960385,4,0,Peripheral,01_trinidad
+Rufous-Breasted Hermit,Animal,12,0,1.8243784288486,-0.768002125960385,12,0,Pollination Hub,01_trinidad
+Sooty Grassquit,Animal,8,0,0.7574904587617,-0.768002125960385,8,0,Pollination Hub,01_trinidad
+Speckled Tanager,Animal,4,4,-0.309397511325201,0.361412765157828,8,0.5,Multilayer Connector,01_trinidad
+Stripe-Breasted Spinetail,Animal,4,0,-0.309397511325201,-0.768002125960385,4,0,Peripheral,01_trinidad
+Violaceous Euphonia,Animal,7,9,0.490768466239975,1.77318137905559,16,0.4921875,Multilayer Hub,01_trinidad
+White-Bearded Manakin,Animal,1,2,-1.10956348889038,-0.203294680401278,3,0.444444444444444,Multilayer Connector,01_trinidad
+White-Lined Tanager,Animal,3,4,-0.576119503846927,0.361412765157828,7,0.489795918367347,Multilayer Connector,01_trinidad
+White-Necked Thrush,Animal,8,4,0.7574904587617,0.361412765157828,12,0.444444444444444,Multilayer Hub,01_trinidad
+Yellow-Legged Thrush,Animal,8,8,0.7574904587617,1.49082765627604,16,0.5,Multilayer Hub,01_trinidad
+Aechmea Downsiana,Plant,6,0,1.63771562586427,-0.672803520206685,6,0,Pollination Hub,02_tobago
+Agave Sp1,Plant,1,0,-0.308749667171134,-0.672803520206685,1,0,Peripheral,02_tobago
+Aphelandra Pulcherrima,Plant,1,0,-0.308749667171134,-0.672803520206685,1,0,Peripheral,02_tobago
+Bauhinia Sp7,Plant,3,0,0.469836450043029,-0.672803520206685,3,0,Peripheral,02_tobago
+Dianthus Caryophyllus,Plant,1,0,-0.308749667171134,-0.672803520206685,1,0,Peripheral,02_tobago
+Ficus Sp1,Plant,0,2,-0.698042725778215,1.3810177520032,2,0,Dispersal Hub,02_tobago
+Gonzalagunia Spicata,Plant,0,1,-0.698042725778215,0.354107115898256,1,0,Peripheral,02_tobago
+Heliconia Hirsuta,Plant,6,0,1.63771562586427,-0.672803520206685,6,0,Pollination Hub,02_tobago
+Heliconia Sp4,Plant,2,0,0.0805433914359479,-0.672803520206685,2,0,Peripheral,02_tobago
+Hippeastrum Puniceum,Plant,9,0,2.80559480168552,-0.672803520206685,9,0,Pollination Hub,02_tobago
+Lasiacis Sp2,Plant,0,1,-0.698042725778215,0.354107115898256,1,0,Peripheral,02_tobago
+Marcgravia Elegans,Plant,4,0,0.859129508650111,-0.672803520206685,4,0,Pollination Hub,02_tobago
+Marcgraviaceae Sp2,Plant,0,3,-0.698042725778215,2.40792838810814,3,0,Dispersal Hub,02_tobago
+Melastomataceae Sp1,Plant,0,1,-0.698042725778215,0.354107115898256,1,0,Peripheral,02_tobago
+Miconia Dodecandra,Plant,0,4,-0.698042725778215,3.43483902421308,4,0,Dispersal Hub,02_tobago
+Miconia Neourceolata,Plant,0,1,-0.698042725778215,0.354107115898256,1,0,Peripheral,02_tobago
+Miconia Sp2,Plant,1,0,-0.308749667171134,-0.672803520206685,1,0,Peripheral,02_tobago
+Miconia Sp4,Plant,0,1,-0.698042725778215,0.354107115898256,1,0,Peripheral,02_tobago
+Myrciaria Floribunda,Plant,1,0,-0.308749667171134,-0.672803520206685,1,0,Peripheral,02_tobago
+Nectandra Membranacea,Plant,0,1,-0.698042725778215,0.354107115898256,1,0,Peripheral,02_tobago
+Notopleura Uliginosa,Plant,0,1,-0.698042725778215,0.354107115898256,1,0,Peripheral,02_tobago
+Oryza Latifolia,Plant,1,0,-0.308749667171134,-0.672803520206685,1,0,Peripheral,02_tobago
+Psittacanthus Americanus,Plant,0,1,-0.698042725778215,0.354107115898256,1,0,Peripheral,02_tobago
+Psychotria Carthagenensis,Plant,0,1,-0.698042725778215,0.354107115898256,1,0,Peripheral,02_tobago
+Renealmia Sp2,Plant,1,0,-0.308749667171134,-0.672803520206685,1,0,Peripheral,02_tobago
+Rosa Sp1,Plant,6,0,1.63771562586427,-0.672803520206685,6,0,Pollination Hub,02_tobago
+Vaccinium Latifolium,Plant,0,1,-0.698042725778215,0.354107115898256,1,0,Peripheral,02_tobago
+Vitis Vinifera,Plant,2,0,0.0805433914359479,-0.672803520206685,2,0,Peripheral,02_tobago
+Warszewiczia Coccinea,Plant,7,0,2.02700868447136,-0.672803520206685,7,0,Pollination Hub,02_tobago
+Bananaquit,Animal,9,0,2.06111718744598,-0.578285466351064,9,0,Pollination Hub,02_tobago
+Barred Antshrike,Animal,2,1,-0.367327815584432,-0.0608721543527436,3,0.444444444444444,Multilayer Connector,02_tobago
+Blue-Backed Manakin,Animal,0,7,-1.06116924502169,3.04360771763718,7,0,Dispersal Hub,02_tobago
+Collared Trogon,Animal,0,1,-1.06116924502169,-0.0608721543527436,1,0,Peripheral,02_tobago
+Copper-Rumped Hummingbird,Animal,3,0,-0.0204071008658017,-0.578285466351064,3,0,Peripheral,02_tobago
+Golden-Olive Woodpecker,Animal,1,0,-0.714248530303062,-0.578285466351064,1,0,Peripheral,02_tobago
+Northern Waterthrush,Animal,1,0,-0.714248530303062,-0.578285466351064,1,0,Peripheral,02_tobago
+Ochre-Bellied Flycatcher,Animal,1,3,-0.714248530303062,0.973954469643897,4,0.375,Multilayer Hub,02_tobago
+Olivaceous Woodcreeper,Animal,1,0,-0.714248530303062,-0.578285466351064,1,0,Peripheral,02_tobago
+Red-Legged Honeycreeper,Animal,5,0,0.673434328571458,-0.578285466351064,5,0,Peripheral,02_tobago
+Rufous-Breasted Hermit,Animal,9,0,2.06111718744598,-0.578285466351064,9,0,Pollination Hub,02_tobago
+White-Lined Tanager,Animal,5,4,0.673434328571458,1.49136778164222,9,0.493827160493827,Multilayer Hub,02_tobago
+White-Necked Jacobin,Animal,3,0,-0.0204071008658017,-0.578285466351064,3,0,Peripheral,02_tobago
+White-Necked Thrush,Animal,0,1,-1.06116924502169,-0.0608721543527436,1,0,Peripheral,02_tobago
+White-Tailed Sabrewing,Animal,6,0,1.02035504329009,-0.578285466351064,6,0,Pollination Hub,02_tobago
+White-Throated Spadebill,Animal,3,0,-0.0204071008658017,-0.578285466351064,3,0,Peripheral,02_tobago
+Yellow-Legged Thrush,Animal,3,2,-0.0204071008658017,0.456541157645577,5,0.48,Multilayer Connector,02_tobago
+Albizia Sp2,Plant,1,0,-0.493394556860665,-0.485965657048585,1,0,Peripheral,03_grenada
+Begonia Sp2,Plant,3,0,0.639585536671232,-0.485965657048585,3,0,Peripheral,03_grenada
+Brassavola Cucullata,Plant,1,0,-0.493394556860665,-0.485965657048585,1,0,Peripheral,03_grenada
+Brunfelsia Americana,Plant,2,0,0.0730954899052837,-0.485965657048585,2,0,Peripheral,03_grenada
+Cecropia Schreberiana,Plant,0,4,-1.05988460362661,3.53135044121972,4,0,Dispersal Hub,03_grenada
+Coccinia Grandis,Plant,1,0,-0.493394556860665,-0.485965657048585,1,0,Peripheral,03_grenada
+Coccoloba Sp1,Plant,1,0,-0.493394556860665,-0.485965657048585,1,0,Peripheral,03_grenada
+Drymaria Cordata,Plant,2,0,0.0730954899052837,-0.485965657048585,2,0,Peripheral,03_grenada
+Ficus Sp2,Plant,0,3,-1.05988460362661,2.52702141665264,3,0,Dispersal Hub,03_grenada
+Gesneria Ventricose,Plant,5,0,1.77256563020313,-0.485965657048585,5,0,Pollination Hub,03_grenada
+Gonzalagunia Hirsuta,Plant,3,0,0.639585536671232,-0.485965657048585,3,0,Peripheral,03_grenada
+Guarea Glabra,Plant,0,2,-1.05988460362661,1.52269239208557,2,0,Dispersal Hub,03_grenada
+Heliconia Sp2,Plant,5,0,1.77256563020313,-0.485965657048585,5,0,Pollination Hub,03_grenada
+Hibiscus Sp1,Plant,1,0,-0.493394556860665,-0.485965657048585,1,0,Peripheral,03_grenada
+Hippeastrum Puniceum,Plant,4,0,1.20607558343718,-0.485965657048585,4,0,Pollination Hub,03_grenada
+Ixora Ferrea,Plant,0,1,-1.05988460362661,0.51836336751849,1,0,Peripheral,03_grenada
+Justicia Sp1,Plant,3,0,0.639585536671232,-0.485965657048585,3,0,Peripheral,03_grenada
+Lobelia Sp1,Plant,1,0,-0.493394556860665,-0.485965657048585,1,0,Peripheral,03_grenada
+Marcgravia Umbellata,Plant,7,1,2.90554572373502,0.51836336751849,8,0.21875,Pollination Hub,03_grenada
+Miconia Dodecandra,Plant,0,2,-1.05988460362661,1.52269239208557,2,0,Dispersal Hub,03_grenada
+Miconia Grenadensis,Plant,2,0,0.0730954899052837,-0.485965657048585,2,0,Peripheral,03_grenada
+Myosotis Sp1,Plant,1,0,-0.493394556860665,-0.485965657048585,1,0,Peripheral,03_grenada
+Palicourea Crocea,Plant,2,1,0.0730954899052837,0.51836336751849,3,0.444444444444444,Multilayer Connector,03_grenada
+Passiflora Sp1,Plant,1,0,-0.493394556860665,-0.485965657048585,1,0,Peripheral,03_grenada
+Pinus Sp1,Plant,1,0,-0.493394556860665,-0.485965657048585,1,0,Peripheral,03_grenada
+Prestoea Montana,Plant,0,1,-1.05988460362661,0.51836336751849,1,0,Peripheral,03_grenada
+Psidium Guajava,Plant,5,0,1.77256563020313,-0.485965657048585,5,0,Pollination Hub,03_grenada
+Psychotria Sp2,Plant,2,0,0.0730954899052837,-0.485965657048585,2,0,Peripheral,03_grenada
+Renealmia Alpinia,Plant,2,0,0.0730954899052837,-0.485965657048585,2,0,Peripheral,03_grenada
+Ruellia_sp1,Plant,1,0,-0.493394556860665,-0.485965657048585,1,0,Peripheral,03_grenada
+Verbena Sp1,Plant,1,0,-0.493394556860665,-0.485965657048585,1,0,Peripheral,03_grenada
+Antillean Crested Hummingbird,Animal,15,0,1.12959565462331,-0.795637219597602,15,0,Pollination Hub,03_grenada
+Bananaquit,Animal,13,1,0.838087098591485,-0.371297369145548,14,0.13265306122449,Pollination Hub,03_grenada
+Black-Whiskered Vireo,Animal,1,2,-0.91096423759944,0.0530424813065068,3,0.444444444444444,Multilayer Connector,03_grenada
+Cocoa Thrush,Animal,0,1,-1.05671851561535,-0.371297369145548,1,0,Peripheral,03_grenada
+Green-Throated Carib,Animal,1,0,-0.91096423759944,-0.795637219597602,1,0,Peripheral,03_grenada
+Lesser Antillean Tanager,Animal,7,6,-0.0364385695039776,1.75040188311473,13,0.497041420118343,Multilayer Hub,03_grenada
+Rufous-Breasted Hermit,Animal,17,0,1.42110421065513,-0.795637219597602,17,0,Pollination Hub,03_grenada
+Spectacled Thrush,Animal,4,5,-0.473701403551709,1.32606203266267,9,0.493827160493827,Multilayer Hub,03_grenada
+Aechmea Sp2,Plant,3,0,0.26147358780274,-0.384415691314511,3,0,Peripheral,04_stvincent
+Alpinia Purpurata,Plant,3,0,0.26147358780274,-0.384415691314511,3,0,Peripheral,04_stvincent
+Begonia Obliqua,Plant,3,0,0.26147358780274,-0.384415691314511,3,0,Peripheral,04_stvincent
+Begonia Sp2,Plant,2,0,-0.230711989237712,-0.384415691314511,2,0,Peripheral,04_stvincent
+Begonia Sp3,Plant,1,0,-0.722897566278163,-0.384415691314511,1,0,Peripheral,04_stvincent
+Brunfelsia Americana,Plant,4,0,0.753659164843191,-0.384415691314511,4,0,Pollination Hub,04_stvincent
+Cecropia Schreberiana,Plant,0,1,-1.21508314331861,0.640692818857519,1,0,Peripheral,04_stvincent
+Cestrum Sp1,Plant,1,0,-0.722897566278163,-0.384415691314511,1,0,Peripheral,04_stvincent
+Charianthus Sp1,Plant,3,0,0.26147358780274,-0.384415691314511,3,0,Peripheral,04_stvincent
+Cissampelos Pareira,Plant,0,1,-1.21508314331861,0.640692818857519,1,0,Peripheral,04_stvincent
+Clusia Major,Plant,0,1,-1.21508314331861,0.640692818857519,1,0,Peripheral,04_stvincent
+Eugenia Sp2,Plant,7,0,2.23021589596455,-0.384415691314511,7,0,Pollination Hub,04_stvincent
+Ficus Sp4,Plant,0,5,-1.21508314331861,4.74112685954564,5,0,Dispersal Hub,04_stvincent
+Heliconia Sp1,Plant,7,0,2.23021589596455,-0.384415691314511,7,0,Pollination Hub,04_stvincent
+Hippeastrum Puniceum,Plant,6,0,1.73803031892409,-0.384415691314511,6,0,Pollination Hub,04_stvincent
+Ipomoea Sp2,Plant,2,0,-0.230711989237712,-0.384415691314511,2,0,Peripheral,04_stvincent
+Lagenaria Siceraria,Plant,5,0,1.24584474188364,-0.384415691314511,5,0,Pollination Hub,04_stvincent
+Lobelia Sp2,Plant,1,0,-0.722897566278163,-0.384415691314511,1,0,Peripheral,04_stvincent
+Lobelia Sp3,Plant,2,0,-0.230711989237712,-0.384415691314511,2,0,Peripheral,04_stvincent
+Marcgravia Umbellata,Plant,5,0,1.24584474188364,-0.384415691314511,5,0,Pollination Hub,04_stvincent
+Miconia Dodecandra,Plant,0,2,-1.21508314331861,1.66580132902955,2,0,Dispersal Hub,04_stvincent
+Miconia Racemosa,Plant,0,1,-1.21508314331861,0.640692818857519,1,0,Peripheral,04_stvincent
+Miconia Sp5,Plant,4,0,0.753659164843191,-0.384415691314511,4,0,Pollination Hub,04_stvincent
+Ocimum Sp1,Plant,2,0,-0.230711989237712,-0.384415691314511,2,0,Peripheral,04_stvincent
+Passiflora Sp1,Plant,2,0,-0.230711989237712,-0.384415691314511,2,0,Peripheral,04_stvincent
+Psidium Guajava,Plant,3,0,0.26147358780274,-0.384415691314511,3,0,Peripheral,04_stvincent
+Psychotria Uliginosa,Plant,4,0,0.753659164843191,-0.384415691314511,4,0,Pollination Hub,04_stvincent
+Psychotria Urbaniana,Plant,2,0,-0.230711989237712,-0.384415691314511,2,0,Peripheral,04_stvincent
+Rondeletia Americana,Plant,0,1,-1.21508314331861,0.640692818857519,1,0,Peripheral,04_stvincent
+Ruellia_sp1,Plant,1,0,-0.722897566278163,-0.384415691314511,1,0,Peripheral,04_stvincent
+Turnera Sp2,Plant,3,0,0.26147358780274,-0.384415691314511,3,0,Peripheral,04_stvincent
+Vriesea Ringens,Plant,3,0,0.26147358780274,-0.384415691314511,3,0,Peripheral,04_stvincent
+Antillean Crested Hummingbird,Animal,16,0,1.20762580665985,-0.774596669241483,16,0,Pollination Hub,04_stvincent
+Bananaquit,Animal,16,1,1.20762580665985,-0.129099444873581,17,0.110726643598616,Pollination Hub,04_stvincent
+Black-Whiskered Vireo,Animal,0,1,-1.17780788550775,-0.129099444873581,1,0,Peripheral,04_stvincent
+Brown Trembler,Animal,2,2,-0.879628673986801,0.516397779494322,4,0.5,Multilayer Connector,04_stvincent
+Caribbean Elaenia,Animal,10,5,0.313088172096997,2.45288945259803,15,0.444444444444444,Multilayer Hub,04_stvincent
+Cocoa Thrush,Animal,2,1,-0.879628673986801,-0.129099444873581,3,0.444444444444444,Multilayer Connector,04_stvincent
+Green-Throated Carib,Animal,4,0,-0.581449462465852,-0.774596669241483,4,0,Peripheral,04_stvincent
+Lesser-Antillean Bullfinch,Animal,14,0,0.909446595138896,-0.774596669241483,14,0,Pollination Hub,04_stvincent
+Lesser Antillean Tanager,Animal,1,2,-1.02871827974728,0.516397779494322,3,0.444444444444444,Multilayer Connector,04_stvincent
+Purple-Throated Carib,Animal,14,0,0.909446595138896,-0.774596669241483,14,0,Pollination Hub,04_stvincent
+05_dominica Sp1,Plant,0,1,-1.03683677050419,1.17715768614439,1,0,Dispersal Hub,05_dominica
+05_dominica Sp2,Plant,0,1,-1.03683677050419,1.17715768614439,1,0,Dispersal Hub,05_dominica
+Alloplectus Cristatus,Plant,2,0,-0.0241124830349811,-0.417701114438332,2,0,Peripheral,05_dominica
+Bauhinia Sp3,Plant,1,0,-0.530474626769586,-0.417701114438332,1,0,Peripheral,05_dominica
+Begonia Sp2,Plant,3,0,0.482249660699624,-0.417701114438332,3,0,Peripheral,05_dominica
+Besleria Lutea,Plant,1,0,-0.530474626769586,-0.417701114438332,1,0,Peripheral,05_dominica
+Caladium Bicolor,Plant,2,0,-0.0241124830349811,-0.417701114438332,2,0,Peripheral,05_dominica
+Chromolaena Trigonocarpa,Plant,1,0,-0.530474626769586,-0.417701114438332,1,0,Peripheral,05_dominica
+Chrysothemis Melittifolia,Plant,1,0,-0.530474626769586,-0.417701114438332,1,0,Peripheral,05_dominica
+Erythrina Sp1,Plant,2,0,-0.0241124830349811,-0.417701114438332,2,0,Peripheral,05_dominica
+Eucalyptus Sp1,Plant,1,0,-0.530474626769586,-0.417701114438332,1,0,Peripheral,05_dominica
+Eugenia Sp1,Plant,4,0,0.988611804434228,-0.417701114438332,4,0,Pollination Hub,05_dominica
+Euphorbia Heterophylla,Plant,1,0,-0.530474626769586,-0.417701114438332,1,0,Peripheral,05_dominica
+Euphorbia Sp2,Plant,1,0,-0.530474626769586,-0.417701114438332,1,0,Peripheral,05_dominica
+Gesnera Ventricosa,Plant,0,1,-1.03683677050419,1.17715768614439,1,0,Dispersal Hub,05_dominica
+Gesneria Ventricose,Plant,3,0,0.482249660699624,-0.417701114438332,3,0,Peripheral,05_dominica
+Gonzalagunia Hirsuta,Plant,1,1,-0.530474626769586,1.17715768614439,2,0.5,Multilayer Hub,05_dominica
+Heliconia Bihai,Plant,4,0,0.988611804434228,-0.417701114438332,4,0,Pollination Hub,05_dominica
+Hibiscus Sp2,Plant,2,0,-0.0241124830349811,-0.417701114438332,2,0,Peripheral,05_dominica
+Hilia Parasitica,Plant,2,0,-0.0241124830349811,-0.417701114438332,2,0,Peripheral,05_dominica
+Hippeastrum Puniceum,Plant,5,0,1.49497394816883,-0.417701114438332,5,0,Pollination Hub,05_dominica
+Ipomoea Batatas,Plant,1,0,-0.530474626769586,-0.417701114438332,1,0,Peripheral,05_dominica
+Isachne Disperma,Plant,0,2,-1.03683677050419,2.77201648672711,2,0,Dispersal Hub,05_dominica
+Justicia Secunda,Plant,1,0,-0.530474626769586,-0.417701114438332,1,0,Peripheral,05_dominica
+Lagenaria Siceraria,Plant,1,0,-0.530474626769586,-0.417701114438332,1,0,Peripheral,05_dominica
+Lantana Radula,Plant,0,1,-1.03683677050419,1.17715768614439,1,0,Dispersal Hub,05_dominica
+Leonotis Nepetifolia,Plant,6,0,2.00133609190344,-0.417701114438332,6,0,Pollination Hub,05_dominica
+Marcgravia Sp2,Plant,4,0,0.988611804434228,-0.417701114438332,4,0,Pollination Hub,05_dominica
+Miconia Sp4,Plant,7,0,2.50769823563804,-0.417701114438332,7,0,Pollination Hub,05_dominica
+Miconia Sp5,Plant,9,0,3.52042252310725,-0.417701114438332,9,0,Pollination Hub,05_dominica
+Mikania Sp1,Plant,1,0,-0.530474626769586,-0.417701114438332,1,0,Peripheral,05_dominica
+Piper Sp1,Plant,1,0,-0.530474626769586,-0.417701114438332,1,0,Peripheral,05_dominica
+Psidium Sp2,Plant,2,0,-0.0241124830349811,-0.417701114438332,2,0,Peripheral,05_dominica
+Psychotria Urbaniana,Plant,1,1,-0.530474626769586,1.17715768614439,2,0.5,Multilayer Hub,05_dominica
+Renealmia Pyramidalis,Plant,2,0,-0.0241124830349811,-0.417701114438332,2,0,Peripheral,05_dominica
+Ruellia Sp1,Plant,1,0,-0.530474626769586,-0.417701114438332,1,0,Peripheral,05_dominica
+Solanum Sp1,Plant,4,0,0.988611804434228,-0.417701114438332,4,0,Pollination Hub,05_dominica
+Symphisia Racemosa,Plant,0,3,-1.03683677050419,4.36687528730984,3,0,Dispersal Hub,05_dominica
+Symplocos Guadeloupensis,Plant,1,0,-0.530474626769586,-0.417701114438332,1,0,Peripheral,05_dominica
+Turnera Ulmiflora,Plant,1,0,-0.530474626769586,-0.417701114438332,1,0,Peripheral,05_dominica
+Vaccinium Racemosum,Plant,3,0,0.482249660699624,-0.417701114438332,3,0,Peripheral,05_dominica
+Wercklea Tulipiflora,Plant,3,0,0.482249660699624,-0.417701114438332,3,0,Peripheral,05_dominica
+Antillean Crested Hummingbird,Animal,3,0,-0.564066034571869,-0.476731294622796,3,0,Peripheral,05_dominica
+Bananaquit,Animal,31,1,2.71390261916654,0,32,0.060546875,Pollination Hub,05_dominica
+Black-Faced Grassquit,Animal,6,0,-0.212855107385611,-0.476731294622796,6,0,Peripheral,05_dominica
+Blue-Headed Hummingbird,Animal,6,0,-0.212855107385611,-0.476731294622796,6,0,Peripheral,05_dominica
+Caribbean Elaenia,Animal,9,7,0.138355819800647,2.86038776773678,16,0.4921875,Multilayer Hub,05_dominica
+Green-Throated Carib,Animal,4,0,-0.446995725509783,-0.476731294622796,4,0,Peripheral,05_dominica
+House Wren,Animal,3,0,-0.564066034571869,-0.476731294622796,3,0,Peripheral,05_dominica
+Lesser-Antillean Bullfinch,Animal,13,2,0.606637056048991,0.476731294622796,15,0.231111111111111,Peripheral,05_dominica
+Plumbeous Warbler,Animal,2,0,-0.681136343633955,-0.476731294622796,2,0,Peripheral,05_dominica
+Purple-Throated Carib,Animal,9,0,0.138355819800647,-0.476731294622796,9,0,Peripheral,05_dominica
+Scaly-Breasted Thrasher,Animal,0,1,-0.915276961758127,0,1,0,Peripheral,05_dominica
+06_mtserrat Sp1,Plant,0,2,-1.27630877932354,1.64788265400765,2,0,Dispersal Hub,06_mtserrat
+Alpinia Sp2,Plant,5,0,1.06793183576051,-0.549294218002551,5,0,Pollination Hub,06_mtserrat
+Amaranthus Sp1,Plant,3,0,0.130235589726891,-0.549294218002551,3,0,Peripheral,06_mtserrat
+Bauhinia Sp2,Plant,4,0,0.599083712743701,-0.549294218002551,4,0,Peripheral,06_mtserrat
+Brunfelsia Americana,Plant,2,0,-0.338612533289918,-0.549294218002551,2,0,Peripheral,06_mtserrat
+Cecropia Schreberiana,Plant,0,3,-1.27630877932354,2.74647109001276,3,0,Dispersal Hub,06_mtserrat
+Coccoloba Pubescens,Plant,0,3,-1.27630877932354,2.74647109001276,3,0,Dispersal Hub,06_mtserrat
+Eucalyptus Sp1,Plant,3,0,0.130235589726891,-0.549294218002551,3,0,Peripheral,06_mtserrat
+Eugenia Sp1,Plant,3,0,0.130235589726891,-0.549294218002551,3,0,Peripheral,06_mtserrat
+Euphorbia Sp4,Plant,4,0,0.599083712743701,-0.549294218002551,4,0,Peripheral,06_mtserrat
+Faramea Occidentalis,Plant,0,2,-1.27630877932354,1.64788265400765,2,0,Dispersal Hub,06_mtserrat
+Ficus Sp2,Plant,0,1,-1.27630877932354,0.549294218002551,1,0,Peripheral,06_mtserrat
+Freziera Undulata,Plant,0,1,-1.27630877932354,0.549294218002551,1,0,Peripheral,06_mtserrat
+Gesneria Ventricose,Plant,3,0,0.130235589726891,-0.549294218002551,3,0,Peripheral,06_mtserrat
+Gonzalagunia Hirsuta,Plant,5,0,1.06793183576051,-0.549294218002551,5,0,Pollination Hub,06_mtserrat
+Heliconia Sp1,Plant,7,0,2.00562808179413,-0.549294218002551,7,0,Pollination Hub,06_mtserrat
+Hilia Parasitica,Plant,7,0,2.00562808179413,-0.549294218002551,7,0,Pollination Hub,06_mtserrat
+Hippeastrum Puniceum,Plant,2,0,-0.338612533289918,-0.549294218002551,2,0,Peripheral,06_mtserrat
+Ixora Ferrea,Plant,0,2,-1.27630877932354,1.64788265400765,2,0,Dispersal Hub,06_mtserrat
+Justicia Sp1,Plant,4,0,0.599083712743701,-0.549294218002551,4,0,Peripheral,06_mtserrat
+Lagenaria Siceraria,Plant,2,0,-0.338612533289918,-0.549294218002551,2,0,Peripheral,06_mtserrat
+Lobelia Sp1,Plant,2,0,-0.338612533289918,-0.549294218002551,2,0,Peripheral,06_mtserrat
+Marcgravia Sp2,Plant,4,0,0.599083712743701,-0.549294218002551,4,0,Peripheral,06_mtserrat
+Melothria Pendula,Plant,3,0,0.130235589726891,-0.549294218002551,3,0,Peripheral,06_mtserrat
+Miconia Christophriana,Plant,0,1,-1.27630877932354,0.549294218002551,1,0,Peripheral,06_mtserrat
+Miconia Sp3,Plant,4,0,0.599083712743701,-0.549294218002551,4,0,Peripheral,06_mtserrat
+Miconia Sp4,Plant,7,0,2.00562808179413,-0.549294218002551,7,0,Pollination Hub,06_mtserrat
+Myrcia Sp1,Plant,5,0,1.06793183576051,-0.549294218002551,5,0,Pollination Hub,06_mtserrat
+Norantea Guianensis,Plant,0,1,-1.27630877932354,0.549294218002551,1,0,Peripheral,06_mtserrat
+Palicourea Crocea,Plant,3,0,0.130235589726891,-0.549294218002551,3,0,Peripheral,06_mtserrat
+Passiflora Sp 2,Plant,3,0,0.130235589726891,-0.549294218002551,3,0,Peripheral,06_mtserrat
+Pinus Sp1,Plant,3,0,0.130235589726891,-0.549294218002551,3,0,Peripheral,06_mtserrat
+Prestoea Montana,Plant,0,2,-1.27630877932354,1.64788265400765,2,0,Dispersal Hub,06_mtserrat
+Psychotria Sp1,Plant,4,0,0.599083712743701,-0.549294218002551,4,0,Peripheral,06_mtserrat
+Rubus Sp1,Plant,2,0,-0.338612533289918,-0.549294218002551,2,0,Peripheral,06_mtserrat
+Vaccinium Racemosum,Plant,4,0,0.599083712743701,-0.549294218002551,4,0,Peripheral,06_mtserrat
+Antillean Crested Hummingbird,Animal,26,0,1.77746731282297,-0.751742162626101,26,0,Pollination Hub,06_mtserrat
+Bananaquit,Animal,26,0,1.77746731282297,-0.751742162626101,26,0,Pollination Hub,06_mtserrat
+Bridled Quail-Dove,Animal,1,0,-0.965537799558154,-0.751742162626101,1,0,Peripheral,06_mtserrat
+Brown Trembler,Animal,4,3,-0.63637718607242,0.501161441750734,7,0.489795918367347,Multilayer Connector,06_mtserrat
+Forest Thrush,Animal,4,5,-0.63637718607242,1.33643051133529,9,0.493827160493827,Multilayer Hub,06_mtserrat
+Green-Throated Carib,Animal,7,0,-0.307216572586685,-0.751742162626101,7,0,Peripheral,06_mtserrat
+Montserrat Oriole,Animal,4,0,-0.63637718607242,-0.751742162626101,4,0,Peripheral,06_mtserrat
+Pearly-Eyed Thrasher,Animal,11,5,0.131664245394294,1.33643051133529,16,0.4296875,Multilayer Hub,06_mtserrat
+Purple-Throated Carib,Animal,11,0,0.131664245394294,-0.751742162626101,11,0,Peripheral,06_mtserrat
+Scaly-Breasted Thrasher,Animal,4,5,-0.63637718607242,1.33643051133529,9,0.493827160493827,Multilayer Hub,06_mtserrat
+Albizia Lebbeck,Plant,3,0,0.188982236504614,-0.621059003408119,3,0,Peripheral,07_antigua
+Bauhinia Sp2,Plant,4,0,0.718132498717532,-0.621059003408119,4,0,Peripheral,07_antigua
+Bauhinia Tomentosa,Plant,3,0,0.188982236504614,-0.621059003408119,3,0,Peripheral,07_antigua
+Begonia Sp1,Plant,3,0,0.188982236504614,-0.621059003408119,3,0,Peripheral,07_antigua
+Brunfelsia Americana,Plant,5,0,1.24728276093045,-0.621059003408119,5,0,Pollination Hub,07_antigua
+Casearia Decandra,Plant,0,1,-1.39846855013414,1.5526475085203,1,0,Dispersal Hub,07_antigua
+Chiococca Alba,Plant,0,1,-1.39846855013414,1.5526475085203,1,0,Dispersal Hub,07_antigua
+Coccoloba Pubescens,Plant,0,1,-1.39846855013414,1.5526475085203,1,0,Dispersal Hub,07_antigua
+Coccoloba Sp1,Plant,3,0,0.188982236504614,-0.621059003408119,3,0,Peripheral,07_antigua
+Cosmos Sp1,Plant,3,0,0.188982236504614,-0.621059003408119,3,0,Peripheral,07_antigua
+Drymaria Cordata,Plant,5,0,1.24728276093045,-0.621059003408119,5,0,Pollination Hub,07_antigua
+Euphorbia Sp2,Plant,4,0,0.718132498717532,-0.621059003408119,4,0,Peripheral,07_antigua
+Euphorbia Sp4,Plant,3,0,0.188982236504614,-0.621059003408119,3,0,Peripheral,07_antigua
+Ficus Sp3,Plant,0,1,-1.39846855013414,1.5526475085203,1,0,Dispersal Hub,07_antigua
+Indigofera Sp1,Plant,5,0,1.24728276093045,-0.621059003408119,5,0,Pollination Hub,07_antigua
+Lagenaria Siceraria,Plant,3,0,0.188982236504614,-0.621059003408119,3,0,Peripheral,07_antigua
+Lasiacis Sloanei,Plant,0,1,-1.39846855013414,1.5526475085203,1,0,Dispersal Hub,07_antigua
+Miconia Sp1,Plant,4,0,0.718132498717532,-0.621059003408119,4,0,Peripheral,07_antigua
+Myrcia Sp1,Plant,5,0,1.24728276093045,-0.621059003408119,5,0,Pollination Hub,07_antigua
+Parkia Sp1,Plant,3,0,0.188982236504614,-0.621059003408119,3,0,Peripheral,07_antigua
+Psidium Guajava,Plant,3,0,0.188982236504614,-0.621059003408119,3,0,Peripheral,07_antigua
+Psychotria Sp2,Plant,3,0,0.188982236504614,-0.621059003408119,3,0,Peripheral,07_antigua
+Randia Aculeata,Plant,0,1,-1.39846855013414,1.5526475085203,1,0,Dispersal Hub,07_antigua
+Rubus Sp1,Plant,3,0,0.188982236504614,-0.621059003408119,3,0,Peripheral,07_antigua
+Sideroxylon Sp1,Plant,6,0,1.77643302314337,-0.621059003408119,6,0,Pollination Hub,07_antigua
+Solanum Americanum,Plant,0,1,-1.39846855013414,1.5526475085203,1,0,Dispersal Hub,07_antigua
+Solanum Sp2,Plant,3,0,0.188982236504614,-0.621059003408119,3,0,Peripheral,07_antigua
+Trichostigma Octandrum,Plant,0,1,-1.39846855013414,1.5526475085203,1,0,Dispersal Hub,07_antigua
+American Redstart,Animal,2,0,-1.25065087221281,-0.408248290463863,2,0,Peripheral,07_antigua
+Antillean Crested Hummingbird,Animal,20,0,0.92790226002886,-0.408248290463863,20,0,Pollination Hub,07_antigua
+Bananaquit,Animal,20,0,0.92790226002886,-0.408248290463863,20,0,Pollination Hub,07_antigua
+Black-Whiskered Vireo,Animal,8,0,-0.524466494798921,-0.408248290463863,8,0,Peripheral,07_antigua
+Caribbean Elaenia,Animal,5,8,-0.887558683505867,2.04124145231932,13,0.473372781065089,Multilayer Hub,07_antigua
+Lesser-Antillean Bullfinch,Animal,19,0,0.806871530459879,-0.408248290463863,19,0,Pollination Hub,07_antigua
+Acacia Sp1,Plant,4,0,0.338339598939477,-0.363067737231197,4,0,Peripheral,08_nevis
+Alloplectus Cristatus,Plant,4,0,0.338339598939477,-0.363067737231197,4,0,Peripheral,08_nevis
+Amaranthus Sp1,Plant,3,0,-0.225559732626318,-0.363067737231197,3,0,Peripheral,08_nevis
+Bauhinia Sp3,Plant,4,0,0.338339598939477,-0.363067737231197,4,0,Peripheral,08_nevis
+Bauhinia Tomentosa,Plant,3,0,-0.225559732626318,-0.363067737231197,3,0,Peripheral,08_nevis
+Begonia Sp3,Plant,3,0,-0.225559732626318,-0.363067737231197,3,0,Peripheral,08_nevis
+Carica Papaya,Plant,4,0,0.338339598939477,-0.363067737231197,4,0,Peripheral,08_nevis
+Charianthus Sp2,Plant,3,0,-0.225559732626318,-0.363067737231197,3,0,Peripheral,08_nevis
+Clusia Major,Plant,0,1,-1.9172577273237,1.45227094892479,1,0,Dispersal Hub,08_nevis
+Coccoloba Pubescens,Plant,0,2,-1.9172577273237,3.26760963508078,2,0,Dispersal Hub,08_nevis
+Eucalyptus Sp1,Plant,3,0,-0.225559732626318,-0.363067737231197,3,0,Peripheral,08_nevis
+Eugenia Sp1,Plant,4,0,0.338339598939477,-0.363067737231197,4,0,Peripheral,08_nevis
+Euphorbia Sp2,Plant,3,0,-0.225559732626318,-0.363067737231197,3,0,Peripheral,08_nevis
+Euphorbia Sp4,Plant,2,0,-0.789459064192114,-0.363067737231197,2,0,Peripheral,08_nevis
+Gesneria Sp2,Plant,5,0,0.902238930505273,-0.363067737231197,5,0,Pollination Hub,08_nevis
+Heliconia Sp1,Plant,4,0,0.338339598939477,-0.363067737231197,4,0,Peripheral,08_nevis
+Hippeastrum Puniceum,Plant,7,0,2.03003759363686,-0.363067737231197,7,0,Pollination Hub,08_nevis
+Marcgravia Umbellata,Plant,4,0,0.338339598939477,-0.363067737231197,4,0,Peripheral,08_nevis
+Miconia Sp1,Plant,6,0,1.46613826207107,-0.363067737231197,6,0,Pollination Hub,08_nevis
+Miconia Sp5,Plant,4,0,0.338339598939477,-0.363067737231197,4,0,Peripheral,08_nevis
+Myosotis Sp1,Plant,3,0,-0.225559732626318,-0.363067737231197,3,0,Peripheral,08_nevis
+Myrcia Sp1,Plant,4,0,0.338339598939477,-0.363067737231197,4,0,Peripheral,08_nevis
+Palicourea Crocea,Plant,3,0,-0.225559732626318,-0.363067737231197,3,0,Peripheral,08_nevis
+Passiflora Sp1,Plant,3,0,-0.225559732626318,-0.363067737231197,3,0,Peripheral,08_nevis
+Prestoea Montana,Plant,0,2,-1.9172577273237,3.26760963508078,2,0,Dispersal Hub,08_nevis
+Psychotria Nervosa,Plant,0,1,-1.9172577273237,1.45227094892479,1,0,Dispersal Hub,08_nevis
+Rubus Sp1,Plant,3,0,-0.225559732626318,-0.363067737231197,3,0,Peripheral,08_nevis
+Solanum Sp1,Plant,4,0,0.338339598939477,-0.363067737231197,4,0,Peripheral,08_nevis
+Symplocos Martinicensis,Plant,7,0,2.03003759363686,-0.363067737231197,7,0,Pollination Hub,08_nevis
+Vriesea Sp2,Plant,5,0,0.902238930505273,-0.363067737231197,5,0,Pollination Hub,08_nevis
+Antillean Crested Hummingbird,Animal,25,0,1.06421199476952,-0.724568837309472,25,0,Pollination Hub,08_nevis
+Bananaquit,Animal,26,0,1.15108644332213,-0.724568837309472,26,0,Pollination Hub,08_nevis
+Bridled Quail-Dove,Animal,2,0,-0.933900321940599,-0.724568837309472,2,0,Peripheral,08_nevis
+Brown Trembler,Animal,3,2,-0.847025873387985,1.20761472884912,5,0.48,Multilayer Hub,08_nevis
+Lesser-Antillean Bullfinch,Animal,26,0,1.15108644332213,-0.724568837309472,26,0,Pollination Hub,08_nevis
+Pearly-Eyed Thrasher,Animal,3,2,-0.847025873387985,1.20761472884912,5,0.48,Multilayer Hub,08_nevis
+Purple-Throated Carib,Animal,15,0,0.195467509243381,-0.724568837309472,15,0,Peripheral,08_nevis
+Scaly-Breasted Thrasher,Animal,2,2,-0.933900321940599,1.20761472884912,4,0.5,Multilayer Hub,08_nevis
+Acacia Sp1,Plant,3,0,-0.0202962738815686,-0.605196720906639,3,0,Peripheral,09_stkitts
+Alloplectus Cristatus,Plant,4,0,0.446518025394507,-0.605196720906639,4,0,Peripheral,09_stkitts
+Bauhinia Sp3,Plant,4,0,0.446518025394507,-0.605196720906639,4,0,Peripheral,09_stkitts
+Carica Papaya,Plant,4,0,0.446518025394507,-0.605196720906639,4,0,Peripheral,09_stkitts
+Cecropia Schreberiana,Plant,0,1,-1.42073917170979,0.660214604625424,1,0,Peripheral,09_stkitts
+Chamaecytisus Sp1,Plant,5,0,0.913332324670582,-0.605196720906639,5,0,Pollination Hub,09_stkitts
+Chrysothemis Sp1,Plant,7,0,1.84696092322273,-0.605196720906639,7,0,Pollination Hub,09_stkitts
+Clusia Major,Plant,0,2,-1.42073917170979,1.92562593015749,2,0,Dispersal Hub,09_stkitts
+Eugenia Sp1,Plant,3,0,-0.0202962738815686,-0.605196720906639,3,0,Peripheral,09_stkitts
+Ficus Sp3,Plant,0,2,-1.42073917170979,1.92562593015749,2,0,Dispersal Hub,09_stkitts
+Hibiscus Sp2,Plant,3,0,-0.0202962738815686,-0.605196720906639,3,0,Peripheral,09_stkitts
+Hilia Sp2,Plant,2,0,-0.487110573157644,-0.605196720906639,2,0,Peripheral,09_stkitts
+Hippeastrum Sp1,Plant,4,0,0.446518025394507,-0.605196720906639,4,0,Peripheral,09_stkitts
+Indigofera Sp1,Plant,4,0,0.446518025394507,-0.605196720906639,4,0,Peripheral,09_stkitts
+Inga Laurina,Plant,4,0,0.446518025394507,-0.605196720906639,4,0,Peripheral,09_stkitts
+Marcgravia Sp1,Plant,6,0,1.38014662394666,-0.605196720906639,6,0,Pollination Hub,09_stkitts
+Miconia Dodecandra,Plant,0,2,-1.42073917170979,1.92562593015749,2,0,Dispersal Hub,09_stkitts
+Miconia Sp2,Plant,4,0,0.446518025394507,-0.605196720906639,4,0,Peripheral,09_stkitts
+Miconia Sp5,Plant,6,0,1.38014662394666,-0.605196720906639,6,0,Pollination Hub,09_stkitts
+Nectandra Membranacea,Plant,0,1,-1.42073917170979,0.660214604625424,1,0,Peripheral,09_stkitts
+Prestoea Montana,Plant,0,1,-1.42073917170979,0.660214604625424,1,0,Peripheral,09_stkitts
+Psychotria Sp3,Plant,3,0,-0.0202962738815686,-0.605196720906639,3,0,Peripheral,09_stkitts
+Symplocos Martinicensis,Plant,4,2,0.446518025394507,1.92562593015749,6,0.444444444444444,Multilayer Hub,09_stkitts
+Antillean Crested Hummingbird,Animal,16,0,1.30815427440107,-0.593655779442953,16,0,Pollination Hub,09_stkitts
+Bananaquit,Animal,17,0,1.45350474933453,-0.593655779442953,17,0,Pollination Hub,09_stkitts
+Bridled Quail-Dove,Animal,3,0,-0.581401899733811,-0.593655779442953,3,0,Peripheral,09_stkitts
+Brown Trembler,Animal,2,2,-0.726752374667264,0.485718364998779,4,0.5,Multilayer Connector,09_stkitts
+Lesser-Antillean Bullfinch,Animal,16,0,1.30815427440107,-0.593655779442953,16,0,Pollination Hub,09_stkitts
+Lesser Antillean Flycatcher,Animal,1,1,-0.872102849600717,-0.0539687072220866,2,0.5,Multilayer Connector,09_stkitts
+Pearly-Eyed Thrasher,Animal,4,6,-0.436051424800358,2.64446665388224,10,0.48,Multilayer Hub,09_stkitts
+Purple-Throated Carib,Animal,9,0,0.290700949866906,-0.593655779442953,9,0,Peripheral,09_stkitts
+Scaly-Breasted Thrasher,Animal,2,1,-0.726752374667264,-0.0539687072220866,3,0.444444444444444,Multilayer Connector,09_stkitts
+Scaly-Naped Pigeon,Animal,0,1,-1.01745332453417,-0.0539687072220866,1,0,Peripheral,09_stkitts
+Begonia Sp3,Plant,4,0,0.715126533581056,-0.68871207650536,4,0,Peripheral,10_eustatios
+Begonia Sp4,Plant,4,0,0.715126533581056,-0.68871207650536,4,0,Peripheral,10_eustatios
+Bursera Simaruba,Plant,0,2,-1.04518493369539,1.60699484517917,2,0,Dispersal Hub,10_eustatios
+Byrsonima Spicata,Plant,0,1,-1.04518493369539,0.459141384336907,1,0,Peripheral,10_eustatios
+Caladium Bicolor,Plant,4,0,0.715126533581056,-0.68871207650536,4,0,Peripheral,10_eustatios
+Carica Papaya,Plant,5,0,1.15520440040017,-0.68871207650536,5,0,Pollination Hub,10_eustatios
+Casearia Decandra,Plant,0,2,-1.04518493369539,1.60699484517917,2,0,Dispersal Hub,10_eustatios
+Cecropia Schreberiana,Plant,0,4,-1.04518493369539,3.9027017668637,4,0,Dispersal Hub,10_eustatios
+Celtis Iguanaea,Plant,0,1,-1.04518493369539,0.459141384336907,1,0,Peripheral,10_eustatios
+Chiococca Alba,Plant,0,1,-1.04518493369539,0.459141384336907,1,0,Peripheral,10_eustatios
+Citharexylum Spinosum,Plant,0,1,-1.04518493369539,0.459141384336907,1,0,Peripheral,10_eustatios
+Citrus Sp1,Plant,4,0,0.715126533581056,-0.68871207650536,4,0,Peripheral,10_eustatios
+Coccoloba Venosa,Plant,0,1,-1.04518493369539,0.459141384336907,1,0,Peripheral,10_eustatios
+Cosmos Sp1,Plant,4,0,0.715126533581056,-0.68871207650536,4,0,Peripheral,10_eustatios
+Crossopetalum Rhacoma,Plant,0,1,-1.04518493369539,0.459141384336907,1,0,Peripheral,10_eustatios
+Dendrobium Sp1,Plant,5,0,1.15520440040017,-0.68871207650536,5,0,Pollination Hub,10_eustatios
+Eugenia Sp2,Plant,3,0,0.275048666761945,-0.68871207650536,3,0,Peripheral,10_eustatios
+Euphorbia Sp2,Plant,2,0,-0.165029200057167,-0.68871207650536,2,0,Peripheral,10_eustatios
+Euphorbia Sp4,Plant,4,0,0.715126533581056,-0.68871207650536,4,0,Peripheral,10_eustatios
+Eustatius Sp1,Plant,0,1,-1.04518493369539,0.459141384336907,1,0,Peripheral,10_eustatios
+Ficus Sp3,Plant,0,2,-1.04518493369539,1.60699484517917,2,0,Dispersal Hub,10_eustatios
+Gonzalagunia Sp2,Plant,3,0,0.275048666761945,-0.68871207650536,3,0,Peripheral,10_eustatios
+Heliconia Caribaea,Plant,5,0,1.15520440040017,-0.68871207650536,5,0,Pollination Hub,10_eustatios
+Indigofera Sp1,Plant,3,0,0.275048666761945,-0.68871207650536,3,0,Peripheral,10_eustatios
+Miconia Laevigata,Plant,0,1,-1.04518493369539,0.459141384336907,1,0,Peripheral,10_eustatios
+Miconia Sp4,Plant,4,0,0.715126533581056,-0.68871207650536,4,0,Peripheral,10_eustatios
+Nephrolepis Cordifolia (Fern),Plant,1,0,-0.605107066876278,-0.68871207650536,1,0,Peripheral,10_eustatios
+Passiflora Sp1,Plant,4,0,0.715126533581056,-0.68871207650536,4,0,Peripheral,10_eustatios
+Plectranthus Sp1,Plant,4,0,0.715126533581056,-0.68871207650536,4,0,Peripheral,10_eustatios
+Psycothria Sp3,Plant,6,0,1.59528226721928,-0.68871207650536,6,0,Pollination Hub,10_eustatios
+Quadrella Indica,Plant,0,2,-1.04518493369539,1.60699484517917,2,0,Dispersal Hub,10_eustatios
+Rauvolfia Viridis,Plant,5,0,1.15520440040017,-0.68871207650536,5,0,Pollination Hub,10_eustatios
+Renealmia Alpinia,Plant,5,0,1.15520440040017,-0.68871207650536,5,0,Pollination Hub,10_eustatios
+Ruellia Sp2,Plant,4,0,0.715126533581056,-0.68871207650536,4,0,Peripheral,10_eustatios
+Sapotaceae Sp1,Plant,0,1,-1.04518493369539,0.459141384336907,1,0,Peripheral,10_eustatios
+Schoepfia Schreberi,Plant,0,1,-1.04518493369539,0.459141384336907,1,0,Peripheral,10_eustatios
+Solanum Bahamense,Plant,7,0,2.03536013403839,-0.68871207650536,7,0,Pollination Hub,10_eustatios
+Tournefortia Sp1,Plant,0,1,-1.04518493369539,0.459141384336907,1,0,Peripheral,10_eustatios
+Zanthoxylum Martinicense,Plant,0,1,-1.04518493369539,0.459141384336907,1,0,Peripheral,10_eustatios
+Zanthoxylum Sp1,Plant,5,0,1.15520440040017,-0.68871207650536,5,0,Pollination Hub,10_eustatios
+Antillean Crested Hummingbird,Animal,22,0,0.986811578082575,-0.577183284292658,22,0,Pollination Hub,10_eustatios
+Bananaquit,Animal,23,1,1.10389091785508,-0.4088381597073,24,0.0798611111111109,Pollination Hub,10_eustatios
+Black-Faced Grassquit,Animal,2,0,-1.3547752173676,-0.577183284292658,2,0,Peripheral,10_eustatios
+Green-Throated Carib,Animal,5,0,-1.00353719805008,-0.577183284292658,5,0,Peripheral,10_eustatios
+Lesser-Antillean Bullfinch,Animal,21,1,0.869732238310066,-0.4088381597073,22,0.0867768595041321,Pollination Hub,10_eustatios
+Pearly-Eyed Thrasher,Animal,10,6,-0.418140499187532,0.432887463219494,16,0.46875,Multilayer Connector,10_eustatios
+Scaly-Breasted Thrasher,Animal,12,16,-0.183981819642514,2.11633870907308,28,0.489795918367347,Multilayer Hub,10_eustatios
+Bauhinia Sp6,Plant,3,0,-0.0165901466251933,-0.501870563958991,3,0,Peripheral,11_saba
+Begonia Sp3,Plant,4,0,0.464524105505413,-0.501870563958991,4,0,Peripheral,11_saba
+Carica Papaya,Plant,4,0,0.464524105505413,-0.501870563958991,4,0,Peripheral,11_saba
+Cecropia Schreberiana,Plant,0,2,-1.45993290301701,1.9238371618428,2,0,Dispersal Hub,11_saba
+Chromolaena Sp2,Plant,3,0,-0.0165901466251933,-0.501870563958991,3,0,Peripheral,11_saba
+Cyathea Sp1,Plant,0,1,-1.45993290301701,0.710983298941904,1,0,Peripheral,11_saba
+Erythrina Sp1,Plant,3,0,-0.0165901466251933,-0.501870563958991,3,0,Peripheral,11_saba
+Eucalyptus Sp1,Plant,3,0,-0.0165901466251933,-0.501870563958991,3,0,Peripheral,11_saba
+Euphorbia Sp4,Plant,3,0,-0.0165901466251933,-0.501870563958991,3,0,Peripheral,11_saba
+Freziera Undulata,Plant,0,3,-1.45993290301701,3.13669102474369,3,0,Dispersal Hub,11_saba
+Gesneria Ventricosa,Plant,4,0,0.464524105505413,-0.501870563958991,4,0,Peripheral,11_saba
+Heliconia Sp1,Plant,6,0,1.42675260976663,-0.501870563958991,6,0,Pollination Hub,11_saba
+Hippeastrum Puniceum,Plant,5,0,0.94563835763602,-0.501870563958991,5,0,Pollination Hub,11_saba
+Lagenaria Siceraria,Plant,3,0,-0.0165901466251933,-0.501870563958991,3,0,Peripheral,11_saba
+Miconia Sp5,Plant,8,0,2.38898111402784,-0.501870563958991,8,0,Pollination Hub,11_saba
+Musa Sp1,Plant,3,0,-0.0165901466251933,-0.501870563958991,3,0,Peripheral,11_saba
+Myrcia Sp1,Plant,3,0,-0.0165901466251933,-0.501870563958991,3,0,Peripheral,11_saba
+Nephrolepis Cordifolia (Fern),Plant,4,0,0.464524105505413,-0.501870563958991,4,0,Peripheral,11_saba
+Passiflora Sp1,Plant,4,0,0.464524105505413,-0.501870563958991,4,0,Peripheral,11_saba
+Philodendrum Giganteum,Plant,0,2,-1.45993290301701,1.9238371618428,2,0,Dispersal Hub,11_saba
+Prestoea Montana,Plant,0,2,-1.45993290301701,1.9238371618428,2,0,Dispersal Hub,11_saba
+Psychotria Sp4,Plant,3,0,-0.0165901466251933,-0.501870563958991,3,0,Peripheral,11_saba
+Rauvolfia Viridis,Plant,4,0,0.464524105505413,-0.501870563958991,4,0,Peripheral,11_saba
+Rubus Rosifolius,Plant,0,1,-1.45993290301701,0.710983298941904,1,0,Peripheral,11_saba
+Rubus Sp1,Plant,5,0,0.94563835763602,-0.501870563958991,5,0,Pollination Hub,11_saba
+Rudbeckia Hirta,Plant,4,0,0.464524105505413,-0.501870563958991,4,0,Peripheral,11_saba
+Saba Sp1,Plant,0,1,-1.45993290301701,0.710983298941904,1,0,Peripheral,11_saba
+Solanum Sp3,Plant,6,0,1.42675260976663,-0.501870563958991,6,0,Pollination Hub,11_saba
+Symplocos Martinicensis,Plant,3,0,-0.0165901466251933,-0.501870563958991,3,0,Peripheral,11_saba
+Antillean Crested Hummingbird,Animal,22,0,1.15040753648435,-0.598293026413099,22,0,Pollination Hub,11_saba
+Bananaquit,Animal,22,1,1.15040753648435,-0.199431008804366,23,0.0831758034026464,Pollination Hub,11_saba
+Black-Whiskered Vireo,Animal,1,0,-1.04582503316759,-0.598293026413099,1,0,Peripheral,11_saba
+Green-Throated Carib,Animal,3,0,-0.836660026534076,-0.598293026413099,3,0,Peripheral,11_saba
+Lesser-Antillean Bullfinch,Animal,22,0,1.15040753648435,-0.598293026413099,22,0,Pollination Hub,11_saba
+Pearly-Eyed Thrasher,Animal,9,6,-0.209165006633519,1.7948790792393,15,0.48,Multilayer Hub,11_saba
+Purple-Throated Carib,Animal,1,0,-1.04582503316759,-0.598293026413099,1,0,Peripheral,11_saba
+Scaly-Breasted Thrasher,Animal,8,5,-0.313747509950278,1.39601706163057,13,0.473372781065089,Multilayer Hub,11_saba

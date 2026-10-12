@@ -1,0 +1,530 @@
+level,type,name,lambda,intensity,collapse,abruptness,cv_inter_extinction,max_drop,extinction_fraction,network
+Network,All,01_trinidad,0.06,0.39,0.00106321428571432,-0.000185714285714308,3.87298334620742,0.00252857142857143,0.00252857142857143,01_trinidad
+Type,Multilayer,Multilayer,0.06,0.39,0.000335000000000085,-0.000104166666666646,2.16832794584971,0.00075,0.00075,01_trinidad
+Type,Pollination,Pollination,0.06,0.39,0.000952586206896644,-0.000172413793103436,2.76153507055698,0.00237931034482759,0.00237931034482759,01_trinidad
+Type,Seed-dispersal,Seed-dispersal,0.06,0.39,0.00165759999999993,-0.000253333333333328,2.44948974278318,0.00384,0.00384,01_trinidad
+Species,Seed-dispersal,01_trinidad Sp1,0.06,0.39,0.00103756799999999,-0.000333333333333334,,,0.002,01_trinidad
+Species,Seed-dispersal,01_trinidad Sp2,0.06,0.39,0.00492345799999994,-0.000333333333333334,,,0.009,01_trinidad
+Species,Pollination,Adiantum Pedatum,0.06,0.39,0.00133401966666669,-0.000333333333333334,,,0.003,01_trinidad
+Species,Multilayer,Aechmea Sp1,0.06,0.39,0,0,,,0,01_trinidad
+Species,Pollination,Agave Sp1,0.06,0.39,0.00347881966666663,-0.000666666666666667,,,0.008,01_trinidad
+Species,Seed-dispersal,Alchornea Triplinervia,0.06,0.39,0.00160336966666663,-0.000333333333333334,,,0.005,01_trinidad
+Species,Pollination,Alpinia Sp2,0.06,0.39,0.000128446666666782,-0.000333333333333334,,,0.002,01_trinidad
+Species,Seed-dispersal,Anthurium Scandens,0.06,0.39,0.000474495333333325,-0.000333333333333334,,,0.002,01_trinidad
+Species,Seed-dispersal,Araliaceae Sp1,0.06,0.39,0.000872829666666686,-0.000333333333333334,,,0.003,01_trinidad
+Species,Pollination,Bauhinia Sp6,0.06,0.39,0.00291294233333339,-0.000333333333333334,,,0.005,01_trinidad
+Species,Seed-dispersal,Casearia Guianensis,0.06,0.39,0.00126452500000007,-0.000333333333333334,,,0.002,01_trinidad
+Species,Pollination,Chrysothemis Pulchella,0.06,0.39,0.000638031333333289,-0.000333333333333334,,,0.001,01_trinidad
+Species,Seed-dispersal,Clusia Sp1,0.06,0.39,0.00376501966666676,-0.000666666666666667,,,0.008,01_trinidad
+Species,Pollination,Coccoloba Sp2,0.06,0.39,7.49586666666247e-05,-0.000333333333333334,,,0.001,01_trinidad
+Species,Seed-dispersal,Columnea Scandens,0.06,0.39,0.00122709833333334,-0.000333333333333334,,,0.003,01_trinidad
+Species,Pollination,Dianthus Caryophyllus,0.06,0.39,0.00238131333333347,-0.000333333333333334,,,0.005,01_trinidad
+Species,Seed-dispersal,Ficus Sp1,0.06,0.39,0.000776213666666581,-0.000333333333333334,,,0.002,01_trinidad
+Species,Pollination,Heliconia Hirsuta,0.06,0.39,0.000638031333333289,-0.000333333333333334,,,0.001,01_trinidad
+Species,Pollination,Heliconia Sp4,0.06,0.39,0.00238131333333347,-0.000333333333333334,,,0.005,01_trinidad
+Species,Pollination,Hippeastrum Puniceum,0.06,0.39,0,0,,,0,01_trinidad
+Species,Pollination,Justicia Sp2,0.06,0.39,0.000474495333333325,-0.000333333333333334,,,0.002,01_trinidad
+Species,Seed-dispersal,Lasiacis Sp1,0.06,0.39,0.00463647433333336,-0.000333333333333334,,,0.007,01_trinidad
+Species,Pollination,Marcgravia Elegans,0.06,0.39,0.0003995366666667,-0.000333333333333334,,,0.001,01_trinidad
+Species,Seed-dispersal,Marcgraviaceae Sp1,0.06,0.39,0.000803334999999961,-0.000333333333333334,,,0.002,01_trinidad
+Species,Seed-dispersal,Miconia Dentata,0.06,0.39,0.00140391366666659,-0.000333333333333334,,,0.004,01_trinidad
+Species,Seed-dispersal,Miconia Dodecandra,0.06,0.39,0,0,,,0,01_trinidad
+Species,Seed-dispersal,Miconia Sp1,0.06,0.39,0.00173848966666657,-0.000333333333333334,,,0.004,01_trinidad
+Species,Multilayer,Miconia Sp2,0.06,0.39,0,0,,,0,01_trinidad
+Species,Multilayer,Miconia Sp3,0.06,0.39,0,0,,,0,01_trinidad
+Species,Seed-dispersal,Miconia Sp4,0.06,0.39,0.00118202133333345,-0.000333333333333334,,,0.004,01_trinidad
+Species,Pollination,Myrcia Sp1,0.06,0.39,0.000473292999999986,-0.000333333333333334,,,0.002,01_trinidad
+Species,Seed-dispersal,Nectandra Membranacea,0.06,0.39,0.000469031333333314,-0.000333333333333334,,,0.002,01_trinidad
+Species,Seed-dispersal,Notopleura Uliginosa,0.06,0.39,0.00054399000000005,-0.000333333333333334,,,0.003,01_trinidad
+Species,Pollination,Oryza Latifolia,0.06,0.39,0.00156563766666673,-0.000333333333333334,,,0.003,01_trinidad
+Species,Seed-dispersal,Palicourea Guianensis,0.06,0.39,0.00150193166666668,-0.000333333333333334,,,0.002,01_trinidad
+Species,Pollination,Piper Sp1,0.06,0.39,0.000872829666666686,-0.000333333333333334,,,0.003,01_trinidad
+Species,Seed-dispersal,Piper Umbellatum,0.06,0.39,0.00223513000000009,-0.000333333333333334,,,0.005,01_trinidad
+Species,Seed-dispersal,Prestoea Pubigera,0.06,0.39,0.00203337633333334,-0.000333333333333334,,,0.004,01_trinidad
+Species,Pollination,Rosa Sp1,0.06,0.39,0,0,,,0,01_trinidad
+Species,Seed-dispersal,Solanaceae Sp1,0.06,0.39,0.000474495333333325,-0.000333333333333334,,,0.002,01_trinidad
+Species,Seed-dispersal,Trema Micranthum,0.06,0.39,0.00133401966666669,-0.000333333333333334,,,0.003,01_trinidad
+Species,Seed-dispersal,Urera Baccifera,0.06,0.39,0.00277537999999988,-0.000333333333333334,,,0.007,01_trinidad
+Species,Multilayer,Vaccinium Latifolium,0.06,0.39,0.00174428700000007,-0.000333333333333334,,,0.003,01_trinidad
+Species,Pollination,Vitis Vinifera,0.06,0.39,0.000469031333333314,-0.000333333333333334,,,0.002,01_trinidad
+Species,Pollination,Warszewiczia Coccinea,0.06,0.39,0.0003995366666667,-0.000333333333333334,,,0.001,01_trinidad
+Species,Multilayer,Bananaquit,0.06,0.39,0,0,,,0,01_trinidad
+Species,Multilayer,Bay-Headed Tanager,0.06,0.39,0,0,,,0,01_trinidad
+Species,Pollination,Blue-Chinned Sapphire,0.06,0.39,0.000864988333333372,-0.000333333333333334,,,0.001,01_trinidad
+Species,Pollination,Blue-Tailed Emerald,0.06,0.39,0.00174328199999996,-0.000333333333333334,,,0.004,01_trinidad
+Species,Seed-dispersal,Blue Dacnis,0.06,0.39,0.00207585566666679,-0.000333333333333334,,,0.006,01_trinidad
+Species,Pollination,Brown Violetear,0.06,0.39,6.94946666666141e-05,-0.000333333333333334,,,0.001,01_trinidad
+Species,Pollination,Golden-Crowned Warbler,0.06,0.39,6.94946666666141e-05,-0.000333333333333334,,,0.001,01_trinidad
+Species,Multilayer,Golden-Headed Manakin,0.06,0.39,0.0003995366666667,-0.000333333333333334,,,0.001,01_trinidad
+Species,Pollination,Green Hermit,0.06,0.39,6.94946666666141e-05,-0.000333333333333334,,,0.001,01_trinidad
+Species,Multilayer,Green Honeycreeper,0.06,0.39,0.000403798333333372,-0.000333333333333334,,,0.001,01_trinidad
+Species,Pollination,House Wren,0.06,0.39,0.00125070900000002,-0.000333333333333334,,,0.004,01_trinidad
+Species,Seed-dispersal,Ochre-Bellied Flycatcher,0.06,0.39,0.00248474666666676,-0.000333333333333334,,,0.005,01_trinidad
+Species,Pollination,Olive-Striped Flycatcher,0.06,0.39,0.00145891633333328,-0.000333333333333334,,,0.003,01_trinidad
+Species,Multilayer,Plain Brown Woodcreeper,0.06,0.39,0.00111252666666661,-0.000333333333333334,,,0.003,01_trinidad
+Species,Multilayer,Purple Honeycreeper,0.06,0.39,0.000935154666666604,-0.000333333333333334,,,0.002,01_trinidad
+Species,Pollination,Ruddy Quail-Dove,0.06,0.39,0.000872829666666686,-0.000333333333333334,,,0.003,01_trinidad
+Species,Pollination,Rufous-Breasted Hermit,0.06,0.39,0,0,,,0,01_trinidad
+Species,Pollination,Sooty Grassquit,0.06,0.39,0.00141424500000009,-0.000333333333333334,,,0.003,01_trinidad
+Species,Multilayer,Speckled Tanager,0.06,0.39,0,0,,,0,01_trinidad
+Species,Pollination,Stripe-Breasted Spinetail,0.06,0.39,0.00133401966666669,-0.000333333333333334,,,0.003,01_trinidad
+Species,Multilayer,Violaceous Euphonia,0.06,0.39,0.0003995366666667,-0.000333333333333334,,,0.001,01_trinidad
+Species,Multilayer,White-Bearded Manakin,0.06,0.39,0,0,,,0,01_trinidad
+Species,Multilayer,White-Lined Tanager,0.06,0.39,0.0003995366666667,-0.000333333333333334,,,0.001,01_trinidad
+Species,Multilayer,White-Necked Thrush,0.06,0.39,0,0,,,0,01_trinidad
+Species,Multilayer,Yellow-Legged Thrush,0.06,0.39,0,0,,,0,01_trinidad
+Network,All,02_tobago,0.053,0.41,0.00720798913043488,-0.000321014492753621,1.96537278162298,0.0103260869565217,0.0127847826086957,02_tobago
+Type,Multilayer,Multilayer,0.053,0.41,0.00413200000000005,-0.000416666666666658,,0.00755,0.0077,02_tobago
+Type,Pollination,Pollination,0.053,0.41,0.00760255769230774,-0.000311538461538459,1.849014961819,0.0109769230769231,0.0132807692307692,02_tobago
+Type,Seed-dispersal,Seed-dispersal,0.053,0.41,0.00733581249999992,-0.000370833333333335,1.99593728509831,0.01145,0.01325,02_tobago
+Species,Pollination,Aechmea Downsiana,0.053,0.41,0.000761441800000016,-0.000333333333333334,,,0.0019,02_tobago
+Species,Pollination,Agave Sp1,0.053,0.41,0.0593044420333333,-0.00153333333333333,,,0.0998,02_tobago
+Species,Pollination,Aphelandra Pulcherrima,0.053,0.41,0.00356737303333342,-0.000433333333333334,,,0.007,02_tobago
+Species,Pollination,Bauhinia Sp7,0.053,0.41,0.0060296538,-0.000666666666666667,,,0.0122,02_tobago
+Species,Pollination,Dianthus Caryophyllus,0.053,0.41,0.00388700476666663,-0.000433333333333334,,,0.007,02_tobago
+Species,Seed-dispersal,Ficus Sp1,0.053,0.41,0.00519175743333329,-0.000333333333333334,,,0.0076,02_tobago
+Species,Seed-dispersal,Gonzalagunia Spicata,0.053,0.41,0.00879118036666671,-0.000433333333333334,,,0.0159,02_tobago
+Species,Pollination,Heliconia Hirsuta,0.053,0.41,0.000965305100000035,-0.000333333333333334,,,0.0022,02_tobago
+Species,Pollination,Heliconia Sp4,0.053,0.41,0.00248756123333327,-0.000433333333333334,,,0.0048,02_tobago
+Species,Pollination,Hippeastrum Puniceum,0.053,0.41,0.00110346600000006,-0.000333333333333334,,,0.0019,02_tobago
+Species,Seed-dispersal,Lasiacis Sp2,0.053,0.41,0.0156506610333333,-0.000766666666666667,,,0.0275,02_tobago
+Species,Pollination,Marcgravia Elegans,0.053,0.41,0.00157869556666667,-0.000333333333333334,,,0.0025,02_tobago
+Species,Seed-dispersal,Marcgraviaceae Sp2,0.053,0.41,0.00356214369999994,-0.000666666666666667,,,0.0065,02_tobago
+Species,Seed-dispersal,Melastomataceae Sp1,0.053,0.41,0.00327020876666664,-0.000333333333333334,,,0.0058,02_tobago
+Species,Seed-dispersal,Miconia Dodecandra,0.053,0.41,0.00311036710000007,-0.000433333333333334,,,0.0052,02_tobago
+Species,Seed-dispersal,Miconia Neourceolata,0.053,0.41,0.00694891820000003,-0.000433333333333334,,,0.014,02_tobago
+Species,Pollination,Miconia Sp2,0.053,0.41,0.00431051443333332,-0.000333333333333334,,,0.0076,02_tobago
+Species,Seed-dispersal,Miconia Sp4,0.053,0.41,0.0140182498,-0.000666666666666667,,,0.0274,02_tobago
+Species,Pollination,Myrciaria Floribunda,0.053,0.41,0.00453465799999998,-0.000433333333333334,,,0.0094,02_tobago
+Species,Seed-dispersal,Nectandra Membranacea,0.053,0.41,0.00664642789999995,-0.000766666666666667,,,0.013,02_tobago
+Species,Seed-dispersal,Notopleura Uliginosa,0.053,0.41,0.00705577973333333,-0.000666666666666667,,,0.0118,02_tobago
+Species,Pollination,Oryza Latifolia,0.053,0.41,0.00561447593333327,-0.000433333333333334,,,0.01,02_tobago
+Species,Seed-dispersal,Psittacanthus Americanus,0.053,0.41,0.015934086,-0.000766666666666667,,,0.0286,02_tobago
+Species,Seed-dispersal,Psychotria Carthagenensis,0.053,0.41,0.00554000283333338,-0.000666666666666667,,,0.0107,02_tobago
+Species,Pollination,Renealmia Sp2,0.053,0.41,0.00428077993333339,-0.000333333333333334,,,0.0087,02_tobago
+Species,Pollination,Rosa Sp1,0.053,0.41,0.00110346600000006,-0.000333333333333334,,,0.0019,02_tobago
+Species,Seed-dispersal,Vaccinium Latifolium,0.053,0.41,0.00289290956666666,-0.000433333333333334,,,0.0055,02_tobago
+Species,Pollination,Vitis Vinifera,0.053,0.41,0.00383900599999999,-0.000333333333333334,,,0.0064,02_tobago
+Species,Pollination,Warszewiczia Coccinea,0.053,0.41,0.00161051383333326,-0.000333333333333334,,,0.0033,02_tobago
+Species,Pollination,Bananaquit,0.053,0.41,0.00268869370000004,-0.000333333333333334,,,0.0049,02_tobago
+Species,Multilayer,Barred Antshrike,0.053,0.41,0.00290110223333333,-0.000333333333333334,,,0.005,02_tobago
+Species,Seed-dispersal,Blue-Backed Manakin,0.053,0.41,0.00426873536666673,-0.000433333333333334,,,0.0068,02_tobago
+Species,Seed-dispersal,Collared Trogon,0.053,0.41,0.00757921033333331,-0.000666666666666667,,,0.0137,02_tobago
+Species,Pollination,Copper-Rumped Hummingbird,0.053,0.41,0.00211439763333341,-0.000333333333333334,,,0.0034,02_tobago
+Species,Pollination,Golden-Olive Woodpecker,0.053,0.41,0.00377668146666667,-0.000333333333333334,,,0.0065,02_tobago
+Species,Pollination,Northern Waterthrush,0.053,0.41,0.0138908261333333,-0.000666666666666667,,,0.0275,02_tobago
+Species,Multilayer,Ochre-Bellied Flycatcher,0.053,0.41,0.0119356961333334,-0.000766666666666667,,,0.022,02_tobago
+Species,Pollination,Olivaceous Woodcreeper,0.053,0.41,0.0594327220333334,-0.002,,,0.0984,02_tobago
+Species,Pollination,Red-Legged Honeycreeper,0.053,0.41,0.0020123465666667,-0.000333333333333334,,,0.0043,02_tobago
+Species,Pollination,Rufous-Breasted Hermit,0.053,0.41,0.00239740566666671,-0.000333333333333334,,,0.0033,02_tobago
+Species,Multilayer,White-Lined Tanager,0.053,0.41,0.000761441800000016,-0.000333333333333334,,,0.0019,02_tobago
+Species,Pollination,White-Necked Jacobin,0.053,0.41,0.00195435673333334,-0.000433333333333334,,,0.0035,02_tobago
+Species,Seed-dispersal,White-Necked Thrush,0.053,0.41,0.00684800579999997,-0.000533333333333334,,,0.012,02_tobago
+Species,Pollination,White-Tailed Sabrewing,0.053,0.41,0.000517562600000021,-0.000333333333333334,,,0.0016,02_tobago
+Species,Pollination,White-Throated Spadebill,0.053,0.41,0.00374591186666672,-0.000666666666666667,,,0.0053,02_tobago
+Species,Multilayer,Yellow-Legged Thrush,0.053,0.41,0.000910352500000001,-0.000333333333333334,,,0.0019,02_tobago
+Network,All,03_grenada,0.09,0.39,0.00682961538461546,-0.000324786324786312,2.70401527325411,0.0123076923076923,0.0142307692307692,03_grenada
+Type,Multilayer,Multilayer,0.09,0.39,0.00390333333333326,-0.000277777777777784,1.1999650386929,0.008,0.00866666666666667,03_grenada
+Type,Pollination,Pollination,0.09,0.39,0.00700884615384612,-0.000333333333333334,2.38803950312913,0.0121538461538462,0.0141538461538461,03_grenada
+Type,Seed-dispersal,Seed-dispersal,0.09,0.39,0.0086721428571428,-0.000333333333333334,1.81659636361831,0.0178571428571429,0.0192857142857143,03_grenada
+Species,Pollination,Albizia Sp2,0.09,0.39,0.0100935063333333,-0.000666666666666667,,,0.019,03_grenada
+Species,Pollination,Begonia Sp2,0.09,0.39,0.00296101133333326,-0.000666666666666667,,,0.007,03_grenada
+Species,Pollination,Brassavola Cucullata,0.09,0.39,0.00786477233333338,-0.000333333333333334,,,0.015,03_grenada
+Species,Pollination,Brunfelsia Americana,0.09,0.39,0.00906072300000005,-0.000666666666666667,,,0.019,03_grenada
+Species,Seed-dispersal,Cecropia Schreberiana,0.09,0.39,0.00545160333333339,-0.000333333333333334,,,0.013,03_grenada
+Species,Pollination,Coccinia Grandis,0.09,0.39,0.00876006399999996,-0.000666666666666667,,,0.018,03_grenada
+Species,Pollination,Coccoloba Sp1,0.09,0.39,0.00919922833333331,-0.000333333333333334,,,0.019,03_grenada
+Species,Pollination,Drymaria Cordata,0.09,0.39,0.00313505000000003,-0.000333333333333334,,,0.009,03_grenada
+Species,Seed-dispersal,Ficus Sp2,0.09,0.39,0.0062435913333333,-0.000333333333333334,,,0.013,03_grenada
+Species,Pollination,Gesneria Ventricose,0.09,0.39,0.00384184733333337,-0.000666666666666667,,,0.009,03_grenada
+Species,Pollination,Gonzalagunia Hirsuta,0.09,0.39,0.00583894266666674,-0.000666666666666667,,,0.013,03_grenada
+Species,Seed-dispersal,Guarea Glabra,0.09,0.39,0.00446672800000003,-0.000333333333333334,,,0.013,03_grenada
+Species,Pollination,Heliconia Sp2,0.09,0.39,0.00435402533333329,-0.000333333333333334,,,0.007,03_grenada
+Species,Pollination,Hibiscus Sp1,0.09,0.39,0.00597992233333322,-0.000333333333333334,,,0.015,03_grenada
+Species,Pollination,Hippeastrum Puniceum,0.09,0.39,0.00323049633333328,-0.000333333333333334,,,0.005,03_grenada
+Species,Seed-dispersal,Ixora Ferrea,0.09,0.39,0.0103781569999999,-0.000666666666666667,,,0.022,03_grenada
+Species,Pollination,Justicia Sp1,0.09,0.39,0.00730938466666653,-0.000666666666666667,,,0.012,03_grenada
+Species,Pollination,Lobelia Sp1,0.09,0.39,0.00642330499999999,-0.000666666666666667,,,0.014,03_grenada
+Species,Multilayer,Marcgravia Umbellata,0.09,0.39,0.00210900166666661,-0.000333333333333334,,,0.005,03_grenada
+Species,Seed-dispersal,Miconia Dodecandra,0.09,0.39,0.00622723800000002,-0.000333333333333334,,,0.015,03_grenada
+Species,Pollination,Miconia Grenadensis,0.09,0.39,0.00871473833333336,-0.000666666666666667,,,0.019,03_grenada
+Species,Pollination,Myosotis Sp1,0.09,0.39,0.011547513,-0.000666666666666667,,,0.02,03_grenada
+Species,Multilayer,Palicourea Crocea,0.09,0.39,0.00443599766666669,-0.000333333333333334,,,0.011,03_grenada
+Species,Pollination,Passiflora Sp1,0.09,0.39,0.0104260843333333,-0.000666666666666667,,,0.019,03_grenada
+Species,Pollination,Pinus Sp1,0.09,0.39,0.0112835479999999,-0.000666666666666667,,,0.023,03_grenada
+Species,Seed-dispersal,Prestoea Montana,0.09,0.39,0.0146724193333334,-0.000666666666666667,,,0.03,03_grenada
+Species,Pollination,Psidium Guajava,0.09,0.39,0.00578390099999993,-0.000333333333333334,,,0.012,03_grenada
+Species,Pollination,Psychotria Sp2,0.09,0.39,0.00809346399999999,-0.000666666666666667,,,0.016,03_grenada
+Species,Pollination,Renealmia Alpinia,0.09,0.39,0.00442881733333322,-0.000333333333333334,,,0.009,03_grenada
+Species,Pollination,Ruellia_sp1,0.09,0.39,0.00916834966666669,-0.000333333333333334,,,0.017,03_grenada
+Species,Pollination,Verbena Sp1,0.09,0.39,0.00920263999999993,-0.000666666666666667,,,0.017,03_grenada
+Species,Pollination,Antillean Crested Hummingbird,0.09,0.39,0.00509138900000006,-0.000333333333333334,,,0.011,03_grenada
+Species,Multilayer,Bananaquit,0.09,0.39,0.00261176233333327,-0.000333333333333334,,,0.007,03_grenada
+Species,Multilayer,Black-Whiskered Vireo,0.09,0.39,0.00466898866666665,-0.000333333333333334,,,0.01,03_grenada
+Species,Seed-dispersal,Cocoa Thrush,0.09,0.39,0.0131855366666668,-0.000666666666666667,,,0.029,03_grenada
+Species,Pollination,Green-Throated Carib,0.09,0.39,0.00731130599999996,-0.000666666666666667,,,0.017,03_grenada
+Species,Multilayer,Lesser Antillean Tanager,0.09,0.39,0.00331352600000001,-0.000333333333333334,,,0.007,03_grenada
+Species,Pollination,Rufous-Breasted Hermit,0.09,0.39,0.00289010433333337,-0.000333333333333334,,,0.007,03_grenada
+Species,Multilayer,Spectacled Thrush,0.09,0.39,0.00622746966666665,-0.000333333333333334,,,0.012,03_grenada
+Network,All,04_stvincent,0.12,0.42,0.0423269047619048,-0.00121428571428569,3.0577156091743,0.0737380952380955,0.0892857142857143,04_stvincent
+Type,Multilayer,Multilayer,0.12,0.42,0.0350600000000001,-0.00133333333333333,1.61097690188445,0.0676000000000001,0.0744000000000001,04_stvincent
+Type,Pollination,Pollination,0.12,0.42,0.039301551724138,-0.00118390804597701,2.92462664089442,0.0706551724137931,0.0839655172413792,04_stvincent
+Type,Seed-dispersal,Seed-dispersal,0.12,0.42,0.057835625,-0.00125000000000001,1.76999497570024,0.09975,0.117875,04_stvincent
+Species,Pollination,Aechmea Sp2,0.12,0.42,0.0357090283333335,-0.00133333333333333,,,0.074,04_stvincent
+Species,Pollination,Alpinia Purpurata,0.12,0.42,0.0341779719999999,-0.001,,,0.073,04_stvincent
+Species,Pollination,Begonia Obliqua,0.12,0.42,0.0398921876666666,-0.00133333333333333,,,0.083,04_stvincent
+Species,Pollination,Begonia Sp2,0.12,0.42,0.0458459763333333,-0.00133333333333333,,,0.092,04_stvincent
+Species,Pollination,Begonia Sp3,0.12,0.42,0.0555338273333332,-0.00233333333333334,,,0.118,04_stvincent
+Species,Pollination,Brunfelsia Americana,0.12,0.42,0.0321807783333332,-0.00133333333333333,,,0.068,04_stvincent
+Species,Seed-dispersal,Cecropia Schreberiana,0.12,0.42,0.0989864643333334,-0.002,,,0.19,04_stvincent
+Species,Pollination,Cestrum Sp1,0.12,0.42,0.0563494496666668,-0.00133333333333333,,,0.124,04_stvincent
+Species,Pollination,Charianthus Sp1,0.12,0.42,0.037850486,-0.0013333333333333,,,0.08,04_stvincent
+Species,Seed-dispersal,Cissampelos Pareira,0.12,0.42,0.043332081,-0.00133333333333333,,,0.098,04_stvincent
+Species,Seed-dispersal,Clusia Major,0.12,0.42,0.049929499,-0.00133333333333333,,,0.104,04_stvincent
+Species,Pollination,Eugenia Sp2,0.12,0.42,0.027509932,-0.001,,,0.059,04_stvincent
+Species,Seed-dispersal,Ficus Sp4,0.12,0.42,0.040886817,-0.00133333333333333,,,0.084,04_stvincent
+Species,Pollination,Heliconia Sp1,0.12,0.42,0.027701954,-0.001,,,0.063,04_stvincent
+Species,Pollination,Hippeastrum Puniceum,0.12,0.42,0.0305734816666667,-0.001,,,0.071,04_stvincent
+Species,Pollination,Ipomoea Sp2,0.12,0.42,0.0604630553333334,-0.002,,,0.125,04_stvincent
+Species,Pollination,Lagenaria Siceraria,0.12,0.42,0.0367246443333332,-0.001,,,0.074,04_stvincent
+Species,Pollination,Lobelia Sp2,0.12,0.42,0.0582681396666668,-0.00166666666666667,,,0.126,04_stvincent
+Species,Pollination,Lobelia Sp3,0.12,0.42,0.0393389459999999,-0.00166666666666667,,,0.086,04_stvincent
+Species,Pollination,Marcgravia Umbellata,0.12,0.42,0.0282100263333333,-0.00166666666666667,,,0.063,04_stvincent
+Species,Seed-dispersal,Miconia Dodecandra,0.12,0.42,0.0466085046666666,-0.00133333333333333,,,0.095,04_stvincent
+Species,Seed-dispersal,Miconia Racemosa,0.12,0.42,0.0535602789999999,-0.00133333333333333,,,0.112,04_stvincent
+Species,Pollination,Miconia Sp5,0.12,0.42,0.0332348213333333,-0.001,,,0.071,04_stvincent
+Species,Pollination,Ocimum Sp1,0.12,0.42,0.0406776016666667,-0.00133333333333333,,,0.091,04_stvincent
+Species,Pollination,Passiflora Sp1,0.12,0.42,0.0391550296666666,-0.00166666666666667,,,0.08,04_stvincent
+Species,Pollination,Psidium Guajava,0.12,0.42,0.03764933,-0.00133333333333333,,,0.079,04_stvincent
+Species,Pollination,Psychotria Uliginosa,0.12,0.42,0.0354538913333332,-0.00133333333333333,,,0.079,04_stvincent
+Species,Pollination,Psychotria Urbaniana,0.12,0.42,0.0414359186666666,-0.00166666666666667,,,0.085,04_stvincent
+Species,Seed-dispersal,Rondeletia Americana,0.12,0.42,0.0458272923333334,-0.00133333333333333,,,0.101,04_stvincent
+Species,Pollination,Ruellia_sp1,0.12,0.42,0.0562754736666666,-0.00133333333333333,,,0.12,04_stvincent
+Species,Pollination,Turnera Sp2,0.12,0.42,0.0380369020000001,-0.00166666666666667,,,0.079,04_stvincent
+Species,Pollination,Vriesea Ringens,0.12,0.42,0.0385782083333334,-0.00133333333333333,,,0.084,04_stvincent
+Species,Pollination,Antillean Crested Hummingbird,0.12,0.42,0.0295669636666666,-0.00133333333333333,,,0.07,04_stvincent
+Species,Multilayer,Bananaquit,0.12,0.42,0.0264877649999999,-0.001,,,0.062,04_stvincent
+Species,Seed-dispersal,Black-Whiskered Vireo,0.12,0.42,0.0833996203333334,-0.002,,,0.159,04_stvincent
+Species,Multilayer,Brown Trembler,0.12,0.42,0.0357639543333332,-0.001,,,0.076,04_stvincent
+Species,Multilayer,Caribbean Elaenia,0.12,0.42,0.0191853056666668,-0.00133333333333333,,,0.048,04_stvincent
+Species,Multilayer,Cocoa Thrush,0.12,0.42,0.0453291763333334,-0.00233333333333334,,,0.089,04_stvincent
+Species,Pollination,Green-Throated Carib,0.12,0.42,0.046876194,-0.00266666666666667,,,0.094,04_stvincent
+Species,Pollination,Lesser-Antillean Bullfinch,0.12,0.42,0.025885061,-0.00133333333333333,,,0.057,04_stvincent
+Species,Multilayer,Lesser Antillean Tanager,0.12,0.42,0.048484184,-0.00233333333333334,,,0.097,04_stvincent
+Species,Pollination,Purple-Throated Carib,0.12,0.42,0.0299611303333334,-0.00166666666666667,,,0.067,04_stvincent
+Network,All,05_dominica,0.197,0.39,0.102534575471698,-0.00157861635220125,3.27783245006848,0.143233962264152,0.200424528301888,05_dominica
+Type,Multilayer,Multilayer,0.197,0.39,0.0667965000000001,-0.00149333333333334,1.59592863938086,0.11852,0.14062,05_dominica
+Type,Pollination,Pollination,0.197,0.39,0.103597548780488,-0.00158130081300812,3.05686567719367,0.146551219512196,0.202485365853659,05_dominica
+Type,Seed-dispersal,Seed-dispersal,0.197,0.39,0.121835785714286,-0.0019047619047619,1.70452970574371,0.177685714285714,0.231071428571428,05_dominica
+Species,Seed-dispersal,05_dominica Sp1,0.197,0.39,0.116558396633333,-0.00223333333333334,,,0.2252,05_dominica
+Species,Seed-dispersal,05_dominica Sp2,0.197,0.39,0.113002632133333,-0.0027,,,0.2223,05_dominica
+Species,Pollination,Alloplectus Cristatus,0.197,0.39,0.1021556244,-0.0022,,,0.2004,05_dominica
+Species,Pollination,Bauhinia Sp3,0.197,0.39,0.104471979466667,-0.00199999999999999,,,0.2035,05_dominica
+Species,Pollination,Begonia Sp2,0.197,0.39,0.0816436133000001,-0.0019,,,0.166,05_dominica
+Species,Pollination,Besleria Lutea,0.197,0.39,0.107408611,-0.00266666666666667,,,0.2138,05_dominica
+Species,Pollination,Caladium Bicolor,0.197,0.39,0.0887452991999999,-0.00166666666666667,,,0.1809,05_dominica
+Species,Pollination,Chromolaena Trigonocarpa,0.197,0.39,0.107406479266667,-0.0019,,,0.2128,05_dominica
+Species,Pollination,Chrysothemis Melittifolia,0.197,0.39,0.143522807133333,-0.00243333333333334,,,0.2666,05_dominica
+Species,Pollination,Erythrina Sp1,0.197,0.39,0.0874137272666667,-0.002,,,0.1777,05_dominica
+Species,Pollination,Eucalyptus Sp1,0.197,0.39,0.1056036232,-0.0019,,,0.2025,05_dominica
+Species,Pollination,Eugenia Sp1,0.197,0.39,0.0882624140000001,-0.00213333333333334,,,0.1873,05_dominica
+Species,Pollination,Euphorbia Heterophylla,0.197,0.39,0.103521028833333,-0.00223333333333334,,,0.2082,05_dominica
+Species,Pollination,Euphorbia Sp2,0.197,0.39,0.111352861466667,-0.0021,,,0.2217,05_dominica
+Species,Seed-dispersal,Gesnera Ventricosa,0.197,0.39,0.112774372433333,-0.002,,,0.2156,05_dominica
+Species,Pollination,Gesneria Ventricose,0.197,0.39,0.083970927,-0.0018,,,0.1714,05_dominica
+Species,Multilayer,Gonzalagunia Hirsuta,0.197,0.39,0.0761591500333334,-0.00189999999999999,,,0.1613,05_dominica
+Species,Pollination,Heliconia Bihai,0.197,0.39,0.0738706226333333,-0.0018,,,0.1523,05_dominica
+Species,Pollination,Hibiscus Sp2,0.197,0.39,0.0923616541333333,-0.0019,,,0.1812,05_dominica
+Species,Pollination,Hilia Parasitica,0.197,0.39,0.0864820001666667,-0.00243333333333334,,,0.1727,05_dominica
+Species,Pollination,Hippeastrum Puniceum,0.197,0.39,0.0763366583666667,-0.00143333333333333,,,0.1562,05_dominica
+Species,Pollination,Ipomoea Batatas,0.197,0.39,0.2193558557,-0.0037,,,0.3722,05_dominica
+Species,Seed-dispersal,Isachne Disperma,0.197,0.39,0.0874779787666667,-0.0019,,,0.1859,05_dominica
+Species,Pollination,Justicia Secunda,0.197,0.39,0.2156804526,-0.0037,,,0.3636,05_dominica
+Species,Pollination,Lagenaria Siceraria,0.197,0.39,0.0978746365666669,-0.00223333333333333,,,0.2017,05_dominica
+Species,Seed-dispersal,Lantana Radula,0.197,0.39,0.112486016766667,-0.0021,,,0.2171,05_dominica
+Species,Pollination,Leonotis Nepetifolia,0.197,0.39,0.0793403077666667,-0.00176666666666667,,,0.1642,05_dominica
+Species,Pollination,Marcgravia Sp2,0.197,0.39,0.0805283908333333,-0.0019,,,0.1655,05_dominica
+Species,Pollination,Miconia Sp4,0.197,0.39,0.0698360654333334,-0.00143333333333333,,,0.1506,05_dominica
+Species,Pollination,Miconia Sp5,0.197,0.39,0.0750130003333333,-0.0019,,,0.1532,05_dominica
+Species,Pollination,Mikania Sp1,0.197,0.39,0.118473617833333,-0.0029,,,0.2252,05_dominica
+Species,Pollination,Piper Sp1,0.197,0.39,0.112197672333333,-0.00256666666666667,,,0.217,05_dominica
+Species,Pollination,Psidium Sp2,0.197,0.39,0.103061001166667,-0.00223333333333334,,,0.1989,05_dominica
+Species,Multilayer,Psychotria Urbaniana,0.197,0.39,0.0761956674666666,-0.00206666666666667,,,0.1532,05_dominica
+Species,Pollination,Renealmia Pyramidalis,0.197,0.39,0.104671203366667,-0.00223333333333334,,,0.1998,05_dominica
+Species,Pollination,Ruellia Sp1,0.197,0.39,0.101132521666667,-0.00236666666666667,,,0.2022,05_dominica
+Species,Pollination,Solanum Sp1,0.197,0.39,0.0843240184666667,-0.00156666666666667,,,0.1731,05_dominica
+Species,Seed-dispersal,Symphisia Racemosa,0.197,0.39,0.1026546808,-0.00246666666666666,,,0.1984,05_dominica
+Species,Pollination,Symplocos Guadeloupensis,0.197,0.39,0.109760309566667,-0.0019,,,0.2077,05_dominica
+Species,Pollination,Turnera Ulmiflora,0.197,0.39,0.106781251766667,-0.00223333333333334,,,0.2046,05_dominica
+Species,Pollination,Vaccinium Racemosum,0.197,0.39,0.1019143672,-0.00166666666666667,,,0.1989,05_dominica
+Species,Pollination,Wercklea Tulipiflora,0.197,0.39,0.0836332628,-0.00223333333333334,,,0.168,05_dominica
+Species,Pollination,Antillean Crested Hummingbird,0.197,0.39,0.120534999,-0.0019,,,0.2332,05_dominica
+Species,Multilayer,Bananaquit,0.197,0.39,0.0551699934,-0.00153333333333333,,,0.1204,05_dominica
+Species,Pollination,Black-Faced Grassquit,0.197,0.39,0.0878238922,-0.002,,,0.1731,05_dominica
+Species,Pollination,Blue-Headed Hummingbird,0.197,0.39,0.0983928115,-0.002,,,0.2027,05_dominica
+Species,Multilayer,Caribbean Elaenia,0.197,0.39,0.0623536119,-0.00156666666666667,,,0.1316,05_dominica
+Species,Pollination,Green-Throated Carib,0.197,0.39,0.143370810833333,-0.003,,,0.2795,05_dominica
+Species,Pollination,House Wren,0.197,0.39,0.1006771711,-0.00166666666666667,,,0.1969,05_dominica
+Species,Multilayer,Lesser-Antillean Bullfinch,0.197,0.39,0.0641120726333333,-0.00166666666666667,,,0.1366,05_dominica
+Species,Pollination,Plumbeous Warbler,0.197,0.39,0.105871112266667,-0.00213333333333334,,,0.2106,05_dominica
+Species,Pollination,Purple-Throated Carib,0.197,0.39,0.0834986153,-0.0019,,,0.1643,05_dominica
+Species,Seed-dispersal,Scaly-Breasted Thrasher,0.197,0.39,0.2079469334,-0.00366666666666667,,,0.353,05_dominica
+Network,All,06_mtserrat,0.243,0.41,0.200959902173913,-0.00247753623188404,3.4869502186978,0.241610869565217,0.360589130434783,06_mtserrat
+Type,Multilayer,Multilayer,0.243,0.41,0.173645625,-0.00218333333333335,1.41492659750906,0.2567,0.320925,06_mtserrat
+Type,Pollination,Pollination,0.243,0.41,0.190782625,-0.00241666666666666,3.24290743759582,0.241446875,0.3468875,06_mtserrat
+Type,Seed-dispersal,Seed-dispersal,0.243,0.41,0.2444529,-0.00303666666666668,1.87033126857103,0.283029999999999,0.4203,06_mtserrat
+Species,Seed-dispersal,06_mtserrat Sp1,0.243,0.41,0.217642525533333,-0.0034,,,0.3831,06_mtserrat
+Species,Pollination,Alpinia Sp2,0.243,0.41,0.176454464766667,-0.00333333333333334,,,0.3316,06_mtserrat
+Species,Pollination,Amaranthus Sp1,0.243,0.41,0.184014419866667,-0.00356666666666667,,,0.3367,06_mtserrat
+Species,Pollination,Bauhinia Sp2,0.243,0.41,0.173603220466667,-0.0036,,,0.3292,06_mtserrat
+Species,Pollination,Brunfelsia Americana,0.243,0.41,0.206179487566667,-0.00343333333333334,,,0.3739,06_mtserrat
+Species,Seed-dispersal,Cecropia Schreberiana,0.243,0.41,0.201657939733333,-0.003,,,0.3624,06_mtserrat
+Species,Seed-dispersal,Coccoloba Pubescens,0.243,0.41,0.2130190807,-0.00323333333333334,,,0.3801,06_mtserrat
+Species,Pollination,Eucalyptus Sp1,0.243,0.41,0.196686648233333,-0.00296666666666667,,,0.3593,06_mtserrat
+Species,Pollination,Eugenia Sp1,0.243,0.41,0.176075191566667,-0.00276666666666667,,,0.3276,06_mtserrat
+Species,Pollination,Euphorbia Sp4,0.243,0.41,0.1892905773,-0.003,,,0.3432,06_mtserrat
+Species,Seed-dispersal,Faramea Occidentalis,0.243,0.41,0.244471430333333,-0.00343333333333334,,,0.4152,06_mtserrat
+Species,Seed-dispersal,Ficus Sp2,0.243,0.41,0.274625312766667,-0.00513333333333334,,,0.4608,06_mtserrat
+Species,Seed-dispersal,Freziera Undulata,0.243,0.41,0.291696317333333,-0.00463333333333334,,,0.4894,06_mtserrat
+Species,Pollination,Gesneria Ventricose,0.243,0.41,0.2038890823,-0.00323333333333331,,,0.3707,06_mtserrat
+Species,Pollination,Gonzalagunia Hirsuta,0.243,0.41,0.175558439633333,-0.00286666666666666,,,0.3225,06_mtserrat
+Species,Pollination,Heliconia Sp1,0.243,0.41,0.173516856833333,-0.00243333333333331,,,0.3259,06_mtserrat
+Species,Pollination,Hilia Parasitica,0.243,0.41,0.170663708433333,-0.0026,,,0.3108,06_mtserrat
+Species,Pollination,Hippeastrum Puniceum,0.243,0.41,0.212727572366667,-0.00306666666666667,,,0.3744,06_mtserrat
+Species,Seed-dispersal,Ixora Ferrea,0.243,0.41,0.2119126436,-0.00296666666666667,,,0.3786,06_mtserrat
+Species,Pollination,Justicia Sp1,0.243,0.41,0.184861911733333,-0.0029,,,0.342,06_mtserrat
+Species,Pollination,Lagenaria Siceraria,0.243,0.41,0.200181719033333,-0.00346666666666664,,,0.3624,06_mtserrat
+Species,Pollination,Lobelia Sp1,0.243,0.41,0.2098297075,-0.00346666666666667,,,0.3682,06_mtserrat
+Species,Pollination,Marcgravia Sp2,0.243,0.41,0.200551198166667,-0.0037,,,0.356,06_mtserrat
+Species,Pollination,Melothria Pendula,0.243,0.41,0.1990534827,-0.00333333333333334,,,0.3639,06_mtserrat
+Species,Seed-dispersal,Miconia Christophriana,0.243,0.41,0.269717685,-0.00443333333333334,,,0.4568,06_mtserrat
+Species,Pollination,Miconia Sp3,0.243,0.41,0.187381637166667,-0.00306666666666667,,,0.3424,06_mtserrat
+Species,Pollination,Miconia Sp4,0.243,0.41,0.1775689964,-0.00276666666666667,,,0.3247,06_mtserrat
+Species,Pollination,Myrcia Sp1,0.243,0.41,0.180710873433333,-0.00356666666666666,,,0.328,06_mtserrat
+Species,Seed-dispersal,Norantea Guianensis,0.243,0.41,0.3027956837,-0.00620000000000001,,,0.4944,06_mtserrat
+Species,Pollination,Palicourea Crocea,0.243,0.41,0.200839767666667,-0.00376666666666667,,,0.361,06_mtserrat
+Species,Pollination,Passiflora Sp 2,0.243,0.41,0.188329480133333,-0.00286666666666667,,,0.3472,06_mtserrat
+Species,Pollination,Pinus Sp1,0.243,0.41,0.198397164033333,-0.0037,,,0.3599,06_mtserrat
+Species,Seed-dispersal,Prestoea Montana,0.243,0.41,0.217069688333333,-0.00333333333333334,,,0.3822,06_mtserrat
+Species,Pollination,Psychotria Sp1,0.243,0.41,0.1849751668,-0.00323333333333334,,,0.3403,06_mtserrat
+Species,Pollination,Rubus Sp1,0.243,0.41,0.205386680933333,-0.0037,,,0.3639,06_mtserrat
+Species,Pollination,Vaccinium Racemosum,0.243,0.41,0.196236911366667,-0.003,,,0.3567,06_mtserrat
+Species,Pollination,Antillean Crested Hummingbird,0.243,0.41,0.148818536033333,-0.00243333333333334,,,0.2745,06_mtserrat
+Species,Pollination,Bananaquit,0.243,0.41,0.1474980162,-0.0024,,,0.2815,06_mtserrat
+Species,Pollination,Bridled Quail-Dove,0.243,0.41,0.275377683333333,-0.00436666666666664,,,0.4648,06_mtserrat
+Species,Multilayer,Brown Trembler,0.243,0.41,0.2035936118,-0.00376666666666667,,,0.3609,06_mtserrat
+Species,Multilayer,Forest Thrush,0.243,0.41,0.176033472233333,-0.00296666666666666,,,0.324,06_mtserrat
+Species,Pollination,Green-Throated Carib,0.243,0.41,0.191994959133333,-0.00346666666666667,,,0.3483,06_mtserrat
+Species,Pollination,Montserrat Oriole,0.243,0.41,0.21868506,-0.00386666666666667,,,0.396,06_mtserrat
+Species,Multilayer,Pearly-Eyed Thrasher,0.243,0.41,0.138085171233333,-0.003,,,0.2686,06_mtserrat
+Species,Pollination,Purple-Throated Carib,0.243,0.41,0.170542851466667,-0.00286666666666667,,,0.3129,06_mtserrat
+Species,Multilayer,Scaly-Breasted Thrasher,0.243,0.41,0.176829238733333,-0.00276666666666667,,,0.3302,06_mtserrat
+Network,All,07_antigua,0.243,0.4,0.151028470588235,-0.00228627450980392,2.97372688677258,0.191585294117648,0.280158823529412,07_antigua
+Type,Multilayer,Multilayer,0.243,0.4,0.1184355,-0.0021,,0.2301,0.2301,07_antigua
+Type,Pollination,Pollination,0.243,0.4,0.13916502,-0.00221066666666667,2.80566713892742,0.188316,0.262428,07_antigua
+Type,Seed-dispersal,Seed-dispersal,0.243,0.4,0.192175875,-0.00268749999999999,1.76215787351798,0.240275,0.341825,07_antigua
+Species,Pollination,Albizia Lebbeck,0.243,0.4,0.1481688214,-0.00303333333333334,,,0.2774,07_antigua
+Species,Pollination,Bauhinia Sp2,0.243,0.4,0.134629645366667,-0.0028,,,0.2539,07_antigua
+Species,Pollination,Bauhinia Tomentosa,0.243,0.4,0.1414672713,-0.00243333333333334,,,0.2697,07_antigua
+Species,Pollination,Begonia Sp1,0.243,0.4,0.141344159466667,-0.0036,,,0.2642,07_antigua
+Species,Pollination,Brunfelsia Americana,0.243,0.4,0.1295007852,-0.00246666666666667,,,0.2506,07_antigua
+Species,Seed-dispersal,Casearia Decandra,0.243,0.4,0.1936521656,-0.00323333333333334,,,0.3425,07_antigua
+Species,Seed-dispersal,Chiococca Alba,0.243,0.4,0.192321142233333,-0.00346666666666667,,,0.3411,07_antigua
+Species,Seed-dispersal,Coccoloba Pubescens,0.243,0.4,0.1900597039,-0.00343333333333334,,,0.337,07_antigua
+Species,Pollination,Coccoloba Sp1,0.243,0.4,0.1462593449,-0.00243333333333334,,,0.2734,07_antigua
+Species,Pollination,Cosmos Sp1,0.243,0.4,0.157419651166667,-0.0028,,,0.2862,07_antigua
+Species,Pollination,Drymaria Cordata,0.243,0.4,0.1269769018,-0.0028,,,0.2503,07_antigua
+Species,Pollination,Euphorbia Sp2,0.243,0.4,0.1396801906,-0.00243333333333334,,,0.2573,07_antigua
+Species,Pollination,Euphorbia Sp4,0.243,0.4,0.151569575766667,-0.00256666666666667,,,0.2777,07_antigua
+Species,Seed-dispersal,Ficus Sp3,0.243,0.4,0.1994881449,-0.0037,,,0.3466,07_antigua
+Species,Pollination,Indigofera Sp1,0.243,0.4,0.129582863866667,-0.00303333333333334,,,0.2491,07_antigua
+Species,Pollination,Lagenaria Siceraria,0.243,0.4,0.149895052966667,-0.00276666666666667,,,0.2805,07_antigua
+Species,Seed-dispersal,Lasiacis Sloanei,0.243,0.4,0.185785478733333,-0.00333333333333334,,,0.3368,07_antigua
+Species,Pollination,Miconia Sp1,0.243,0.4,0.129033291766667,-0.0029,,,0.2523,07_antigua
+Species,Pollination,Myrcia Sp1,0.243,0.4,0.134918409566667,-0.00253333333333334,,,0.2486,07_antigua
+Species,Pollination,Parkia Sp1,0.243,0.4,0.139672317666667,-0.00266666666666667,,,0.2622,07_antigua
+Species,Pollination,Psidium Guajava,0.243,0.4,0.139407886266667,-0.00253333333333334,,,0.2688,07_antigua
+Species,Pollination,Psychotria Sp2,0.243,0.4,0.148449577266667,-0.00273333333333334,,,0.2736,07_antigua
+Species,Seed-dispersal,Randia Aculeata,0.243,0.4,0.1854561309,-0.00356666666666664,,,0.3367,07_antigua
+Species,Pollination,Rubus Sp1,0.243,0.4,0.140442089566667,-0.00266666666666667,,,0.2647,07_antigua
+Species,Pollination,Sideroxylon Sp1,0.243,0.4,0.1372792342,-0.00243333333333334,,,0.2653,07_antigua
+Species,Seed-dispersal,Solanum Americanum,0.243,0.4,0.195603492666667,-0.00333333333333334,,,0.3507,07_antigua
+Species,Pollination,Solanum Sp2,0.243,0.4,0.147610638733333,-0.0029,,,0.2781,07_antigua
+Species,Seed-dispersal,Trichostigma Octandrum,0.243,0.4,0.195108970766667,-0.00313333333333334,,,0.3432,07_antigua
+Species,Pollination,American Redstart,0.243,0.4,0.1954066497,-0.0033,,,0.3451,07_antigua
+Species,Pollination,Antillean Crested Hummingbird,0.243,0.4,0.109647184033333,-0.00246666666666666,,,0.213,07_antigua
+Species,Pollination,Bananaquit,0.243,0.4,0.110600057,-0.0027,,,0.2166,07_antigua
+Species,Pollination,Black-Whiskered Vireo,0.243,0.4,0.143031776,-0.00266666666666667,,,0.271,07_antigua
+Species,Multilayer,Caribbean Elaenia,0.243,0.4,0.1185040864,-0.0021,,,0.2301,07_antigua
+Species,Pollination,Lesser-Antillean Bullfinch,0.243,0.4,0.107587961266667,-0.00233333333333334,,,0.2111,07_antigua
+Network,All,08_nevis,0.225,0.39,0.105477368421053,-0.0017763157894737,3.08477910430005,0.145407894736843,0.202131578947368,08_nevis
+Type,Multilayer,Multilayer,0.225,0.39,0.121046666666666,-0.00227777777777779,1.26642021067008,0.194333333333334,0.230333333333334,08_nevis
+Type,Pollination,Pollination,0.225,0.39,0.0952454032258063,-0.00174731182795698,3.10220017486661,0.139419354838709,0.185629032258064,08_nevis
+Type,Seed-dispersal,Seed-dispersal,0.225,0.39,0.173098125,-0.00279166666666666,1.36586881478084,0.23775,0.308875,08_nevis
+Species,Pollination,Acacia Sp1,0.225,0.39,0.100887211166667,-0.00183333333333334,,,0.192,08_nevis
+Species,Pollination,Alloplectus Cristatus,0.225,0.39,0.0875137585000001,-0.00233333333333334,,,0.18,08_nevis
+Species,Pollination,Amaranthus Sp1,0.225,0.39,0.100200511333333,-0.00200000000000001,,,0.1925,08_nevis
+Species,Pollination,Bauhinia Sp3,0.225,0.39,0.0996206485000002,-0.00216666666666666,,,0.1875,08_nevis
+Species,Pollination,Bauhinia Tomentosa,0.225,0.39,0.0981993731666669,-0.00233333333333334,,,0.1965,08_nevis
+Species,Pollination,Begonia Sp3,0.225,0.39,0.097370181,-0.00199999999999999,,,0.1895,08_nevis
+Species,Pollination,Carica Papaya,0.225,0.39,0.0948001880000002,-0.002,,,0.186,08_nevis
+Species,Pollination,Charianthus Sp2,0.225,0.39,0.101420982,-0.00233333333333334,,,0.194,08_nevis
+Species,Seed-dispersal,Clusia Major,0.225,0.39,0.183632799166667,-0.00316666666666665,,,0.3235,08_nevis
+Species,Seed-dispersal,Coccoloba Pubescens,0.225,0.39,0.158396871333334,-0.00283333333333334,,,0.2885,08_nevis
+Species,Pollination,Eucalyptus Sp1,0.225,0.39,0.1022909765,-0.00216666666666667,,,0.198,08_nevis
+Species,Pollination,Eugenia Sp1,0.225,0.39,0.0940998861666667,-0.002,,,0.1875,08_nevis
+Species,Pollination,Euphorbia Sp2,0.225,0.39,0.092860661,-0.00233333333333334,,,0.1865,08_nevis
+Species,Pollination,Euphorbia Sp4,0.225,0.39,0.1173361895,-0.002,,,0.221,08_nevis
+Species,Pollination,Gesneria Sp2,0.225,0.39,0.0917836973333332,-0.00233333333333334,,,0.1775,08_nevis
+Species,Pollination,Heliconia Sp1,0.225,0.39,0.0964319536666667,-0.0025,,,0.1845,08_nevis
+Species,Pollination,Hippeastrum Puniceum,0.225,0.39,0.0961456148333336,-0.00183333333333332,,,0.188,08_nevis
+Species,Pollination,Marcgravia Umbellata,0.225,0.39,0.0912576868333333,-0.00216666666666667,,,0.187,08_nevis
+Species,Pollination,Miconia Sp1,0.225,0.39,0.0889231276666667,-0.00183333333333334,,,0.1715,08_nevis
+Species,Pollination,Miconia Sp5,0.225,0.39,0.0851538218333334,-0.00166666666666667,,,0.174,08_nevis
+Species,Pollination,Myosotis Sp1,0.225,0.39,0.0977892703333335,-0.00249999999999999,,,0.1935,08_nevis
+Species,Pollination,Myrcia Sp1,0.225,0.39,0.0918926031666666,-0.00183333333333334,,,0.1755,08_nevis
+Species,Pollination,Palicourea Crocea,0.225,0.39,0.102653110833334,-0.00233333333333332,,,0.1935,08_nevis
+Species,Pollination,Passiflora Sp1,0.225,0.39,0.0962397154999998,-0.00216666666666665,,,0.1875,08_nevis
+Species,Seed-dispersal,Prestoea Montana,0.225,0.39,0.161516744666667,-0.00333333333333332,,,0.292,08_nevis
+Species,Seed-dispersal,Psychotria Nervosa,0.225,0.39,0.1888523095,-0.00350000000000001,,,0.3315,08_nevis
+Species,Pollination,Rubus Sp1,0.225,0.39,0.0966624028333333,-0.00183333333333334,,,0.1885,08_nevis
+Species,Pollination,Solanum Sp1,0.225,0.39,0.095075808,-0.002,,,0.1865,08_nevis
+Species,Pollination,Symplocos Martinicensis,0.225,0.39,0.0888269054999999,-0.00200000000000001,,,0.1745,08_nevis
+Species,Pollination,Vriesea Sp2,0.225,0.39,0.0959008416666669,-0.00216666666666667,,,0.184,08_nevis
+Species,Pollination,Antillean Crested Hummingbird,0.225,0.39,0.068530885,-0.00200000000000001,,,0.1395,08_nevis
+Species,Pollination,Bananaquit,0.225,0.39,0.0771230303333334,-0.00200000000000001,,,0.15,08_nevis
+Species,Pollination,Bridled Quail-Dove,0.225,0.39,0.146951436833334,-0.00266666666666667,,,0.2745,08_nevis
+Species,Multilayer,Brown Trembler,0.225,0.39,0.1152411445,-0.00250000000000001,,,0.225,08_nevis
+Species,Pollination,Lesser-Antillean Bullfinch,0.225,0.39,0.076687721,-0.00166666666666667,,,0.151,08_nevis
+Species,Multilayer,Pearly-Eyed Thrasher,0.225,0.39,0.116981965166667,-0.00233333333333334,,,0.2245,08_nevis
+Species,Pollination,Purple-Throated Carib,0.225,0.39,0.081357036,-0.00216666666666667,,,0.1625,08_nevis
+Species,Multilayer,Scaly-Breasted Thrasher,0.225,0.39,0.130923494666667,-0.00283333333333334,,,0.2415,08_nevis
+Network,All,09_stkitts,0.266,0.38,0.183383848484849,-0.00227878787878785,2.71827407627596,0.204000000000001,0.320078787878788,09_stkitts
+Type,Multilayer,Multilayer,0.266,0.38,0.1752692,-0.00237333333333333,1.51720628712261,0.235159999999999,0.311359999999999,09_stkitts
+Type,Pollination,Pollination,0.266,0.38,0.157331238095238,-0.00190476190476191,2.5632166899723,0.202466666666667,0.288361904761905,09_stkitts
+Type,Seed-dispersal,Seed-dispersal,0.266,0.38,0.267337857142857,-0.00406666666666667,1.52500298557737,0.265342857142856,0.421457142857144,09_stkitts
+Species,Pollination,Acacia Sp1,0.266,0.38,0.159895565733333,-0.00246666666666667,,,0.2962,09_stkitts
+Species,Pollination,Alloplectus Cristatus,0.266,0.38,0.152378747,-0.00266666666666667,,,0.2902,09_stkitts
+Species,Pollination,Bauhinia Sp3,0.266,0.38,0.1525501938,-0.00266666666666667,,,0.2846,09_stkitts
+Species,Pollination,Carica Papaya,0.266,0.38,0.161298011933333,-0.003,,,0.288,09_stkitts
+Species,Seed-dispersal,Cecropia Schreberiana,0.266,0.38,0.230097443466667,-0.00366666666666667,,,0.3862,09_stkitts
+Species,Pollination,Chamaecytisus Sp1,0.266,0.38,0.149206562333333,-0.00293333333333334,,,0.2728,09_stkitts
+Species,Pollination,Chrysothemis Sp1,0.266,0.38,0.149499159333333,-0.00246666666666667,,,0.279,09_stkitts
+Species,Seed-dispersal,Clusia Major,0.266,0.38,0.210677303533333,-0.00333333333333334,,,0.3606,09_stkitts
+Species,Pollination,Eugenia Sp1,0.266,0.38,0.163101971266667,-0.0026,,,0.2976,09_stkitts
+Species,Seed-dispersal,Ficus Sp3,0.266,0.38,0.228339435866667,-0.00366666666666667,,,0.3864,09_stkitts
+Species,Pollination,Hibiscus Sp2,0.266,0.38,0.159055288333333,-0.00273333333333334,,,0.2868,09_stkitts
+Species,Pollination,Hilia Sp2,0.266,0.38,0.1941882998,-0.00313333333333334,,,0.3424,09_stkitts
+Species,Pollination,Hippeastrum Sp1,0.266,0.38,0.159605738933333,-0.00253333333333334,,,0.2956,09_stkitts
+Species,Pollination,Indigofera Sp1,0.266,0.38,0.153966321266667,-0.00246666666666667,,,0.2862,09_stkitts
+Species,Pollination,Inga Laurina,0.266,0.38,0.159124515666667,-0.00273333333333334,,,0.2946,09_stkitts
+Species,Pollination,Marcgravia Sp1,0.266,0.38,0.155874384866667,-0.00233333333333334,,,0.2882,09_stkitts
+Species,Seed-dispersal,Miconia Dodecandra,0.266,0.38,0.222921323533333,-0.0034,,,0.3808,09_stkitts
+Species,Pollination,Miconia Sp2,0.266,0.38,0.168656988,-0.00299999999999999,,,0.3018,09_stkitts
+Species,Pollination,Miconia Sp5,0.266,0.38,0.151681604333333,-0.00246666666666667,,,0.2824,09_stkitts
+Species,Seed-dispersal,Nectandra Membranacea,0.266,0.38,0.216939219333333,-0.0032,,,0.3748,09_stkitts
+Species,Seed-dispersal,Prestoea Montana,0.266,0.38,0.379322102666667,-0.00833333333333334,,,0.526,09_stkitts
+Species,Pollination,Psychotria Sp3,0.266,0.38,0.166420306533333,-0.00286666666666667,,,0.2986,09_stkitts
+Species,Multilayer,Symplocos Martinicensis,0.266,0.38,0.131851335933333,-0.00233333333333334,,,0.2434,09_stkitts
+Species,Pollination,Antillean Crested Hummingbird,0.266,0.38,0.129745850933333,-0.00246666666666667,,,0.2428,09_stkitts
+Species,Pollination,Bananaquit,0.266,0.38,0.128798186333333,-0.00213333333333334,,,0.2416,09_stkitts
+Species,Pollination,Bridled Quail-Dove,0.266,0.38,0.2035370386,-0.00313333333333334,,,0.3582,09_stkitts
+Species,Multilayer,Brown Trembler,0.266,0.38,0.166826570533333,-0.0024,,,0.3012,09_stkitts
+Species,Pollination,Lesser-Antillean Bullfinch,0.266,0.38,0.132888903333333,-0.00226666666666667,,,0.2492,09_stkitts
+Species,Multilayer,Lesser Antillean Flycatcher,0.266,0.38,0.229859958466667,-0.004,,,0.3842,09_stkitts
+Species,Multilayer,Pearly-Eyed Thrasher,0.266,0.38,0.145507642866667,-0.0024,,,0.271,09_stkitts
+Species,Pollination,Purple-Throated Carib,0.266,0.38,0.152608208066667,-0.0024,,,0.2788,09_stkitts
+Species,Multilayer,Scaly-Breasted Thrasher,0.266,0.38,0.2024517904,-0.00333333333333334,,,0.357,09_stkitts
+Species,Seed-dispersal,Scaly-Naped Pigeon,0.266,0.38,0.38310946,-0.00826666666666668,,,0.5354,09_stkitts
+Network,All,10_eustatios,0.231,0.37,0.0737420212765957,-0.00108085106382979,3.23108631665588,0.101217021276595,0.137804255319149,10_eustatios
+Type,Multilayer,Multilayer,0.231,0.37,0.0481025000000001,-0.00109166666666669,1.50649419657757,0.078075,0.08915,10_eustatios
+Type,Pollination,Pollination,0.231,0.37,0.0683713653846154,-0.00102051282051283,2.73771467105306,0.0988115384615385,0.129173076923077,10_eustatios
+Type,Seed-dispersal,Seed-dispersal,0.231,0.37,0.087988794117647,-0.00125098039215685,2.28340845899255,0.121582352941177,0.162452941176471,10_eustatios
+Species,Pollination,Begonia Sp3,0.231,0.37,0.0548828556,-0.00133333333333333,,,0.104,10_eustatios
+Species,Pollination,Begonia Sp4,0.231,0.37,0.06696004,-0.00133333333333333,,,0.1209,10_eustatios
+Species,Seed-dispersal,Bursera Simaruba,0.231,0.37,0.0772319056333333,-0.00203333333333333,,,0.1487,10_eustatios
+Species,Seed-dispersal,Byrsonima Spicata,0.231,0.37,0.0987045883999999,-0.00230000000000001,,,0.1826,10_eustatios
+Species,Pollination,Caladium Bicolor,0.231,0.37,0.0663807488666666,-0.00163333333333334,,,0.1269,10_eustatios
+Species,Pollination,Carica Papaya,0.231,0.37,0.0621876216333333,-0.00133333333333333,,,0.1189,10_eustatios
+Species,Seed-dispersal,Casearia Decandra,0.231,0.37,0.0789611284333335,-0.00166666666666667,,,0.1472,10_eustatios
+Species,Seed-dispersal,Cecropia Schreberiana,0.231,0.37,0.0611962705333333,-0.00133333333333333,,,0.1172,10_eustatios
+Species,Seed-dispersal,Celtis Iguanaea,0.231,0.37,0.0901322219999999,-0.00203333333333333,,,0.1658,10_eustatios
+Species,Seed-dispersal,Chiococca Alba,0.231,0.37,0.0912585707,-0.00166666666666667,,,0.1709,10_eustatios
+Species,Seed-dispersal,Citharexylum Spinosum,0.231,0.37,0.0880454623,-0.0017,,,0.167,10_eustatios
+Species,Pollination,Citrus Sp1,0.231,0.37,0.0629065666666666,-0.00143333333333333,,,0.1152,10_eustatios
+Species,Seed-dispersal,Coccoloba Venosa,0.231,0.37,0.0916683193333333,-0.00196666666666667,,,0.1657,10_eustatios
+Species,Pollination,Cosmos Sp1,0.231,0.37,0.0690099235333335,-0.00136666666666666,,,0.1331,10_eustatios
+Species,Seed-dispersal,Crossopetalum Rhacoma,0.231,0.37,0.103127714266667,-0.002,,,0.1882,10_eustatios
+Species,Pollination,Dendrobium Sp1,0.231,0.37,0.0616446656333334,-0.00136666666666666,,,0.1169,10_eustatios
+Species,Pollination,Eugenia Sp2,0.231,0.37,0.0683451901999999,-0.0014,,,0.1264,10_eustatios
+Species,Pollination,Euphorbia Sp2,0.231,0.37,0.0867320177666666,-0.0017,,,0.1582,10_eustatios
+Species,Pollination,Euphorbia Sp4,0.231,0.37,0.0591436533333334,-0.0011,,,0.1153,10_eustatios
+Species,Seed-dispersal,Eustatius Sp1,0.231,0.37,0.0956674428666666,-0.00203333333333333,,,0.1735,10_eustatios
+Species,Seed-dispersal,Ficus Sp3,0.231,0.37,0.0742633898333334,-0.00136666666666666,,,0.1383,10_eustatios
+Species,Pollination,Gonzalagunia Sp2,0.231,0.37,0.0743068691,-0.00163333333333334,,,0.141,10_eustatios
+Species,Pollination,Heliconia Caribaea,0.231,0.37,0.0572070956666666,-0.00166666666666667,,,0.1112,10_eustatios
+Species,Pollination,Indigofera Sp1,0.231,0.37,0.0803925278,-0.00166666666666667,,,0.1455,10_eustatios
+Species,Seed-dispersal,Miconia Laevigata,0.231,0.37,0.0986575617333333,-0.0017,,,0.1861,10_eustatios
+Species,Pollination,Miconia Sp4,0.231,0.37,0.0677031473333333,-0.00166666666666667,,,0.1344,10_eustatios
+Species,Pollination,Nephrolepis Cordifolia (Fern),0.231,0.37,0.0945243560333334,-0.0026,,,0.1809,10_eustatios
+Species,Pollination,Passiflora Sp1,0.231,0.37,0.0599764197666667,-0.00166666666666667,,,0.1098,10_eustatios
+Species,Pollination,Plectranthus Sp1,0.231,0.37,0.0650953483,-0.00143333333333333,,,0.1318,10_eustatios
+Species,Pollination,Psycothria Sp3,0.231,0.37,0.0648850042,-0.00133333333333333,,,0.1224,10_eustatios
+Species,Seed-dispersal,Quadrella Indica,0.231,0.37,0.0775617552666668,-0.00196666666666667,,,0.1401,10_eustatios
+Species,Pollination,Rauvolfia Viridis,0.231,0.37,0.0559068779333333,-0.00196666666666667,,,0.1108,10_eustatios
+Species,Pollination,Renealmia Alpinia,0.231,0.37,0.0581625697666667,-0.00133333333333333,,,0.1136,10_eustatios
+Species,Pollination,Ruellia Sp2,0.231,0.37,0.0594123671333334,-0.00133333333333333,,,0.1173,10_eustatios
+Species,Seed-dispersal,Sapotaceae Sp1,0.231,0.37,0.0928954182666666,-0.00136666666666666,,,0.1636,10_eustatios
+Species,Seed-dispersal,Schoepfia Schreberi,0.231,0.37,0.0963125164333333,-0.00196666666666667,,,0.1761,10_eustatios
+Species,Pollination,Solanum Bahamense,0.231,0.37,0.0572495536666666,-0.00163333333333334,,,0.1079,10_eustatios
+Species,Seed-dispersal,Tournefortia Sp1,0.231,0.37,0.0912123862,-0.00166666666666667,,,0.1608,10_eustatios
+Species,Seed-dispersal,Zanthoxylum Martinicense,0.231,0.37,0.0893905997333333,-0.00203333333333333,,,0.1699,10_eustatios
+Species,Pollination,Zanthoxylum Sp1,0.231,0.37,0.0616755669333333,-0.00163333333333334,,,0.1118,10_eustatios
+Species,Pollination,Antillean Crested Hummingbird,0.231,0.37,0.0533923178666668,-0.00133333333333333,,,0.098,10_eustatios
+Species,Multilayer,Bananaquit,0.231,0.37,0.0478295786,-0.00166666666666667,,,0.0892,10_eustatios
+Species,Pollination,Black-Faced Grassquit,0.231,0.37,0.1243972725,-0.00233333333333334,,,0.2286,10_eustatios
+Species,Pollination,Green-Throated Carib,0.231,0.37,0.0859654279,-0.00163333333333334,,,0.1577,10_eustatios
+Species,Multilayer,Lesser-Antillean Bullfinch,0.231,0.37,0.0520356385666666,-0.00163333333333334,,,0.0927,10_eustatios
+Species,Multilayer,Pearly-Eyed Thrasher,0.231,0.37,0.0417994445333334,-0.0014,,,0.0844,10_eustatios
+Species,Multilayer,Scaly-Breasted Thrasher,0.231,0.37,0.0508669402666666,-0.0014,,,0.0903,10_eustatios
+Network,All,11_saba,0.26,0.37,0.0935713513513514,-0.00119819819819822,2.79405760406058,0.126027027027027,0.179513513513514,11_saba
+Type,Multilayer,Multilayer,0.26,0.37,0.058935,-0.001,1.31146960149366,0.101333333333333,0.119666666666667,11_saba
+Type,Pollination,Pollination,0.26,0.37,0.0910825925925927,-0.00118518518518518,2.57854875315891,0.126111111111111,0.174814814814815,11_saba
+Type,Seed-dispersal,Seed-dispersal,0.26,0.37,0.118015,-0.00171428571428571,1.55593667504028,0.170857142857142,0.223285714285714,11_saba
+Species,Pollination,Bauhinia Sp6,0.26,0.37,0.0890456113333332,-0.002,,,0.172,11_saba
+Species,Pollination,Begonia Sp3,0.26,0.37,0.0858354396666666,-0.00233333333333334,,,0.165,11_saba
+Species,Pollination,Carica Papaya,0.26,0.37,0.0846891883333333,-0.00166666666666667,,,0.155,11_saba
+Species,Seed-dispersal,Cecropia Schreberiana,0.26,0.37,0.10701983,-0.00266666666666667,,,0.205,11_saba
+Species,Pollination,Chromolaena Sp2,0.26,0.37,0.088168189,-0.00166666666666667,,,0.164,11_saba
+Species,Seed-dispersal,Cyathea Sp1,0.26,0.37,0.126584777,-0.00233333333333334,,,0.242,11_saba
+Species,Pollination,Erythrina Sp1,0.26,0.37,0.0909573263333334,-0.00233333333333334,,,0.173,11_saba
+Species,Pollination,Eucalyptus Sp1,0.26,0.37,0.0944622013333333,-0.00199999999999997,,,0.183,11_saba
+Species,Pollination,Euphorbia Sp4,0.26,0.37,0.0847793116666666,-0.00166666666666667,,,0.171,11_saba
+Species,Seed-dispersal,Freziera Undulata,0.26,0.37,0.0930938176666666,-0.002,,,0.186,11_saba
+Species,Pollination,Gesneria Ventricosa,0.26,0.37,0.0880965223333334,-0.00166666666666667,,,0.166,11_saba
+Species,Pollination,Heliconia Sp1,0.26,0.37,0.0709312959999999,-0.00133333333333333,,,0.139,11_saba
+Species,Pollination,Hippeastrum Puniceum,0.26,0.37,0.0757943770000001,-0.00166666666666667,,,0.15,11_saba
+Species,Pollination,Lagenaria Siceraria,0.26,0.37,0.0903779426666667,-0.00166666666666667,,,0.168,11_saba
+Species,Pollination,Miconia Sp5,0.26,0.37,0.0721706280000001,-0.00166666666666667,,,0.143,11_saba
+Species,Pollination,Musa Sp1,0.26,0.37,0.0922755283333333,-0.00166666666666667,,,0.178,11_saba
+Species,Pollination,Myrcia Sp1,0.26,0.37,0.0854624513333332,-0.00133333333333333,,,0.175,11_saba
+Species,Pollination,Nephrolepis Cordifolia (Fern),0.26,0.37,0.0815566059999999,-0.00233333333333334,,,0.169,11_saba
+Species,Pollination,Passiflora Sp1,0.26,0.37,0.0920653850000001,-0.00166666666666667,,,0.182,11_saba
+Species,Seed-dispersal,Philodendrum Giganteum,0.26,0.37,0.107402394666667,-0.00233333333333334,,,0.203,11_saba
+Species,Seed-dispersal,Prestoea Montana,0.26,0.37,0.107796930666667,-0.00233333333333334,,,0.21,11_saba
+Species,Pollination,Psychotria Sp4,0.26,0.37,0.087462487,-0.00166666666666667,,,0.174,11_saba
+Species,Pollination,Rauvolfia Viridis,0.26,0.37,0.0810361023333334,-0.00166666666666667,,,0.164,11_saba
+Species,Seed-dispersal,Rubus Rosifolius,0.26,0.37,0.133172419666667,-0.00266666666666667,,,0.247,11_saba
+Species,Pollination,Rubus Sp1,0.26,0.37,0.0778474513333333,-0.002,,,0.155,11_saba
+Species,Pollination,Rudbeckia Hirta,0.26,0.37,0.087087717,-0.002,,,0.172,11_saba
+Species,Seed-dispersal,Saba Sp1,0.26,0.37,0.150988645333333,-0.00266666666666667,,,0.27,11_saba
+Species,Pollination,Solanum Sp3,0.26,0.37,0.0747224463333334,-0.00133333333333333,,,0.15,11_saba
+Species,Pollination,Symplocos Martinicensis,0.26,0.37,0.0864338276666666,-0.002,,,0.168,11_saba
+Species,Pollination,Antillean Crested Hummingbird,0.26,0.37,0.0687376373333333,-0.00166666666666667,,,0.133,11_saba
+Species,Multilayer,Bananaquit,0.26,0.37,0.0565785849999999,-0.001,,,0.116,11_saba
+Species,Pollination,Black-Whiskered Vireo,0.26,0.37,0.181081139666667,-0.00333333333333334,,,0.317,11_saba
+Species,Pollination,Green-Throated Carib,0.26,0.37,0.112390880666667,-0.00233333333333334,,,0.213,11_saba
+Species,Pollination,Lesser-Antillean Bullfinch,0.26,0.37,0.0638972186666666,-0.00133333333333333,,,0.129,11_saba
+Species,Multilayer,Pearly-Eyed Thrasher,0.26,0.37,0.059293071,-0.00133333333333333,,,0.123,11_saba
+Species,Pollination,Purple-Throated Carib,0.26,0.37,0.172123902,-0.0033333333333333,,,0.292,11_saba
+Species,Multilayer,Scaly-Breasted Thrasher,0.26,0.37,0.0609744096666667,-0.002,,,0.12,11_saba

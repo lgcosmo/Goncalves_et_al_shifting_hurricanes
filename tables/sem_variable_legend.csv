@@ -1,0 +1,14 @@
+code,descriptive_name,definition
+auc_pmf,Fragility to hurricane intensity,Species fragility in response to shifts in hurricane intensity.
+auc_lambda,Fragility to hurricane frequency,Species fragility in response to increases in hurricane frequency.
+PC1_sc,Global network integration,First PCA axis of island-level multilayer structure; larger values indicate globally more integrated networks.
+PC2_sc,Pollination topological dominance,Reversed second PCA axis of island-level multilayer structure; larger values indicate stronger pollination topological dominance.
+mpc,Multilayer participation coefficient,Species-level participation across pollination and seed-dispersal layers.
+z_pollination,Pollination layer degree (z-score),Standardized degree in the pollination layer.
+z_dispersal,Seed-dispersal layer degree (z-score),Standardized degree in the seed-dispersal layer.
+bm_avg,Body mass,Average species body mass.
+area_sc,Island area,Scaled log island area.
+elev_sc,Elevation,Scaled maximum island elevation.
+isol_sc,Isolation distance,Scaled distance from the continent.
+type = Oceanic,Oceanic islands,Coefficient for oceanic islands in categorical island-type effects.
+type = Continental,Continental islands,Coefficient for continental islands in categorical island-type effects.

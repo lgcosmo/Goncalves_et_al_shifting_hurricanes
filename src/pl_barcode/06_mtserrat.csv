@@ -1,0 +1,83 @@
+island,code,species,Vaccinium racemosum,Heliconia sp1,Gesneria ventricose,Hilia parasitica,Bauhinia sp2,Psychotria sp1,Miconia sp4  ,Alpinia sp2,Eugenia sp1,Rubus sp1,Gonzalagunia hirsuta,Myrcia sp1,Palicourea crocea ,Melothria pendula,Passiflora sp 2,Brunfelsia americana,Eucalyptus sp1,Amaranthus sp1,Pinus sp1,Hippeastrum puniceum,Miconia sp3,Lagenaria siceraria,Justicia sp1,Marcgravia sp2,Euphorbia sp4,Lobelia sp1
+06_mtserrat,M1N1H1159K,Bananaquit,0,1,1,0,1,0,0,1,1,0,0,0,1,1,0,0,1,0,1,0,1,0,1,1,0,1
+06_mtserrat,M1N1H1200Z,Bananaquit,1,0,0,0,1,0,0,1,0,1,1,1,0,1,1,0,0,1,0,0,0,1,0,0,1,0
+06_mtserrat,M1N2H1244K,Forest thrush,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M1N2H945Obs,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M1N5H1143B,Purple-throated carib,0,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M2N1H807K,Forest thrush,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M2N2H909M,Forest thrush,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M2N3H721K,Bridled quail-dove,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M2N4H1105Z,Brown trembler,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M2N4H1106K,Brown trembler,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M2N4H725H,Purple-throated carib,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M2N4H915H,Purple-throated carib,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M2N4H919Z,Brown trembler,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M2N4H920Z,Antillean crested hummingbird,0,0,0,0,0,0,1,0,0,1,1,0,1,0,1,1,1,1,1,1,1,1,1,0,0,1
+06_mtserrat,M2N5H712Z,Purple-throated carib,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M3N1H1115Obs,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M3N1H650B,Montserrat oriole,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M3N1H830M,Montserrat oriole,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M3N5H1032M,Purple-throated carib,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M3NeH923M,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M4N2H735B,Purple-throated carib,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M4N4H930B,Forest thrush,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M4N5H1110M,Bridled quail-dove,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N1H1126B,American kestrel,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N1H630M,Bananaquit,0,0,1,1,1,1,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0
+06_mtserrat,M5N1H650B,Pearly-eyed thrasher,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N1H727B,Pearly-eyed thrasher,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N1H845Z,Bananaquit,1,0,0,1,1,1,1,0,0,1,0,0,1,1,0,0,1,0,1,0,1,0,0,1,1,0
+06_mtserrat,M5N1H900H,Green-throated carib,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N1H901B,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N1H917B,Scaly-breasted thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N1H948B,Scaly-breasted thrasher,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N2H1150H,Bananaquit,0,1,0,0,0,1,1,1,1,1,0,0,0,0,1,1,0,0,0,1,0,1,1,0,1,0
+06_mtserrat,M5N2H700B,Antillean crested hummingbird,1,1,1,0,0,1,1,1,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0
+06_mtserrat,M5N2H701K,Antillean crested hummingbird,0,0,1,0,0,0,0,0,0,0,1,1,0,1,0,1,0,0,0,1,0,0,1,0,0,0
+06_mtserrat,M5N2H740M,Bananaquit,1,1,1,1,0,1,0,0,0,0,1,1,0,0,0,0,1,1,0,1,1,0,0,0,0,0
+06_mtserrat,M5N2H745M,Forest thrush,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N2H850B,Pearly-eyed thrasher,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+06_mtserrat,M5N2H904B,Scaly-breasted thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+06_mtserrat,M5N3H1120H,Forest thrush,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N3H820B,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N4H1225H,Antillean crested hummingbird,0,1,0,0,1,0,0,1,1,1,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,1
+06_mtserrat,M5N4H1230B,Pearly-eyed thrasher,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+06_mtserrat,M5N4H700H,Antillean crested hummingbird,1,0,0,1,0,0,0,0,0,0,0,1,1,0,1,1,0,1,1,0,0,0,0,0,1,0
+06_mtserrat,M5N4H710H,Antillean crested hummingbird,0,0,0,1,1,1,1,0,1,0,1,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0
+06_mtserrat,M5N4H812Z,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N5H1026K,Antillean crested hummingbird,1,1,0,1,1,0,1,1,0,1,0,1,0,1,0,0,0,0,1,1,0,0,0,1,1,0
+06_mtserrat,M5N5H700M,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N5H708M,Antillean crested hummingbird,0,0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,1
+06_mtserrat,M5N5H752K,Purple-throated carib,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N5H822K,Bridled quail-dove,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N5H843M,Pearly-eyed thrasher,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5N5H914K,Purple-throated carib,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5NeH1010K,Bridled quail-dove,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5NeH1100H,Purple-throated carib,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+06_mtserrat,M5NeH1105M,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,G3N3H720H,Purple-throated carib,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5NeH835B,Montserrat oriole,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5NeH850Z,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M5NeH954B,Montserrat oriole,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+06_mtserrat,M6N1H1035B,Scaly-breasted thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M6N1H635M,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M6N1H645B,Bananaquit,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,1,0,1,0,0,0,0,1,0,0
+06_mtserrat,M6N1H720M,Forest thrush,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M6N1H855B,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+06_mtserrat,M6N1H902B,Pearly-eyed thrasher,0,1,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M6N1H927M,Brown trembler,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M6N1H943B,Scaly-breasted thrasher,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M6N2H623M,Green-throated carib,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+06_mtserrat,M6N3H1042K,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+06_mtserrat,M6N3H1047H,American redstart,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M6N3H747Z,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M6N3H804B,Antillean crested hummingbird,1,1,1,0,0,1,1,0,1,0,0,1,0,0,0,1,0,1,0,0,1,0,0,1,1,0
+06_mtserrat,M6N3H830Z,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M6N5H1050H,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M6N5H1055H,Pearly-eyed thrasher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M6N5H1128K,Antillean crested hummingbird,0,0,1,0,0,0,1,1,0,1,1,0,1,1,1,0,1,0,1,1,0,1,1,1,0,1
+06_mtserrat,M6N5H1130K,Bananaquit,0,1,1,1,1,0,1,1,1,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,1
+06_mtserrat,M6N5H705H,Green-throated carib,0,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+06_mtserrat,M6N5H806K,Brown trembler,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+06_mtserrat,M6NeH1005Z,Bananaquit,0,0,0,0,0,0,0,0,0,1,1,1,0,0,1,1,0,1,1,1,1,1,1,1,0,1
+06_mtserrat,M5NeH803K,Purple-throated carib,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0

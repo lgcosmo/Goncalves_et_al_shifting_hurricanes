@@ -1,0 +1,12 @@
+network,island,type,isolation,area,max_elevation,habitat,effort,elevation
+01_trinidad,Trinidad,Continental,10,4848,940,Rainforest,3900,700
+02_tobago,Tobago,Continental,97,311,576,Rainforest,3900,500
+03_grenada,Grenada,Oceanic,137,344,840,Rainforest,3900,560
+04_stvincent,St. Vincent,Oceanic,272,350,1234,Rainforest,5148,460
+05_dominica,Dominica,Oceanic,496,754,1447,Elfin forest,5304,800
+06_mtserrat,Montserrat,Oceanic,657,102,914,Rainforest,3900,370
+07_antigua,Antigua,Oceanic,692,280,402,Dry forest,4200,300
+08_nevis,Nevis,Oceanic,700,93,985,Elfin woodland Forest,5616,570
+09_stkitts,St. Kitts,Oceanic,713,170,1165,Elfin woodland Forest,7020,700
+10_eustatios,St. Eustatius,Oceanic,742,21,602,Dry Forest,6396,410
+11_saba,Saba,Oceanic,760,13,887,Elfin Forest/ Elfin woodland Forest,5928,830

@@ -1,0 +1,8 @@
+response,method,marginal_r2,conditional_r2
+Fragility to hurricane intensity,none,0.9799467326485535,0.9799467326485535
+Fragility to hurricane frequency,none,0.8704937262727094,0.8704937262727094
+Global network integration,none,0.14464008516401783,
+Pollination topological dominance,none,0.7086071407225458,
+Multilayer participation coefficient,none,0.10729658780667282,0.7737725627583978
+Pollination layer degree (z-score),none,0.07137171209690345,0.6731572141546763
+Seed-dispersal layer degree (z-score),none,0.07607683491364754,0.8116220306352341

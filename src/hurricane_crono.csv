@@ -1,0 +1,341 @@
+network,name,year,Cat_1,Cat_2,Cat_3,Cat_4,Cat_5
+01_trinidad,Emily,2005,0,0,0,0,1
+01_trinidad,Ivan,2004,0,0,0,0,1
+01_trinidad,Flora,1963,0,0,0,1,0
+01_trinidad,Unnamed,1933,0,1,0,0,0
+01_trinidad,Unnamed,1921,0,0,1,0,0
+01_trinidad,Unnamed,1892,0,1,0,0,0
+01_trinidad,Unnamed,1878,0,1,0,0,0
+01_trinidad,Unnamed,1877,0,0,1,0,0
+01_trinidad,Unnamed,1856,1,0,0,0,0
+02_tobago,Emily,2005,0,0,0,0,1
+02_tobago,Ivan,2004,0,0,0,0,1
+02_tobago,Flora,1963,0,0,0,1,0
+02_tobago,Unnamed,1921,0,0,1,0,0
+02_tobago,Unnamed,1892,0,1,0,0,0
+02_tobago,Unnamed,1878,0,1,0,0,0
+02_tobago,Unnamed,1877,0,0,1,0,0
+02_tobago,Unnamed,1856,1,0,0,0,0
+03_grenada,Elsa,2021,1,0,0,0,0
+03_grenada,Tomas,2010,0,1,0,0,0
+03_grenada,Emily,2005,0,0,0,0,1
+03_grenada,Ivan,2004,0,0,0,0,1
+03_grenada,Flora,1963,0,0,0,1,0
+03_grenada,Janet,1955,0,0,0,0,1
+03_grenada,Hazel,1954,0,0,0,1,0
+03_grenada,Unnamed,1944,0,0,1,0,0
+03_grenada,Unnamed,1921,0,0,1,0,0
+03_grenada,Unnamed,1898,0,1,0,0,0
+03_grenada,Unnamed,1892,0,1,0,0,0
+03_grenada,Unnamed,1886,0,0,1,0,0
+03_grenada,Unnamed,1878,0,1,0,0,0
+03_grenada,Unnamed,1877,0,0,1,0,0
+03_grenada,Unnamed,1856,1,0,0,0,0
+04_stvincent,Elsa,2021,1,0,0,0,0
+04_stvincent,Tomas,2010,0,1,0,0,0
+04_stvincent,Dean,2007,0,0,0,0,1
+04_stvincent,Emily,2005,0,0,0,0,1
+04_stvincent,Ivan,2004,0,0,0,0,1
+04_stvincent,Allen,1980,0,0,0,0,1
+04_stvincent,Flora,1963,0,0,0,1,0
+04_stvincent,Edith,1963,0,1,0,0,0
+04_stvincent,Janet,1955,0,0,0,0,1
+04_stvincent,Hazel,1954,0,0,0,1,0
+04_stvincent,Dog,1951,1,0,0,0,0
+04_stvincent,Unnamed,1944,0,0,1,0,0
+04_stvincent,Unnamed,1921,0,0,1,0,0
+04_stvincent,Unnamed,1903,0,0,1,0,0
+04_stvincent,Unnamed,1898,0,1,0,0,0
+04_stvincent,Unnamed,1894,0,0,0,1,0
+04_stvincent,Unnamed,1886,0,0,1,0,0
+04_stvincent,Unnamed,1877,0,0,1,0,0
+04_stvincent,Unnamed,1875,0,0,1,0,0
+04_stvincent,Unnamed,1856,1,0,0,0,0
+05_dominica,Tammy,2023,0,1,0,0,0
+05_dominica,Maria,2017,0,0,0,0,1
+05_dominica,Dean,2007,0,0,0,0,1
+05_dominica,Jose,1999,0,1,0,0,0
+05_dominica,Marilyn,1995,0,0,1,0,0
+05_dominica,Hugo,1989,0,0,0,0,1
+05_dominica,David,1979,0,0,0,0,1
+05_dominica,Inez,1966,0,0,0,0,1
+05_dominica,Cleo,1964,0,0,0,1,0
+05_dominica,Edith,1963,0,1,0,0,0
+05_dominica,Betsy,1956,0,0,1,0,0
+05_dominica,Dog,1951,1,0,0,0,0
+05_dominica,Unnamed,1930,0,0,0,1,0
+05_dominica,Unnamed,1928,0,0,0,0,1
+05_dominica,Unnamed,1924,0,1,0,0,0
+05_dominica,Unnamed ,1916,1,0,0,0,0
+05_dominica,Unnamed ,1916,0,1,0,0,0
+05_dominica,Unnamed,1915,0,0,0,1,0
+05_dominica,Unnamed,1909,0,0,1,0,0
+05_dominica,Unnamed,1908,0,1,0,0,0
+05_dominica,Unnamed,1903,0,0,1,0,0
+05_dominica,Unnamed,1899,0,0,0,1,0
+05_dominica,Unnamed,1898,0,1,0,0,0
+05_dominica,Unnamed,1896,0,0,1,0,0
+05_dominica,Unnamed (Oct 11--Oct 20),1894,0,0,0,1,0
+05_dominica,Unnamed (Sep 18-Oct 01),1894,0,0,1,0,0
+05_dominica,Unnamed,1893,0,0,1,0,0
+05_dominica,Unnamed,1891,0,0,1,0,0
+05_dominica,Unnamed,1889,0,1,0,0,0
+05_dominica,Unnamed,1883,0,0,1,0,0
+05_dominica,Unnamed,1875,0,0,1,0,0
+05_dominica,Unnamed,1865,0,1,0,0,0
+05_dominica,Unnamed,1864,1,0,0,0,0
+05_dominica,Unnamed,1851,0,0,1,0,0
+06_mtserrat,Tammy,2023,0,1,0,0,0
+06_mtserrat,Maria,2017,0,0,0,0,1
+06_mtserrat,Irma ,2017,0,0,0,0,1
+06_mtserrat,Gonzalo ,2014,0,0,0,1,0
+06_mtserrat,Debby,2000,1,0,0,0,0
+06_mtserrat,Lenny,1999,0,0,0,1,0
+06_mtserrat,Jose,1999,0,1,0,0,0
+06_mtserrat,Georges,1998,0,0,0,1,0
+06_mtserrat,Bertha,1996,0,0,1,0,0
+06_mtserrat,Marilyn,1995,0,0,1,0,0
+06_mtserrat,Luis,1995,0,0,0,1,0
+06_mtserrat,Klaus,1990,1,0,0,0,0
+06_mtserrat,Hugo,1989,0,0,0,0,1
+06_mtserrat,David,1979,0,0,0,0,1
+06_mtserrat,Inez,1966,0,0,0,0,1
+06_mtserrat,Cleo,1964,0,0,0,1,0
+06_mtserrat,Dona,1960,0,0,0,1,0
+06_mtserrat,Betsy,1956,0,0,1,0,0
+06_mtserrat,Dog,1950,0,0,0,1,0
+06_mtserrat,Baker,1950,0,1,0,0,0
+06_mtserrat,Unnamed,1932,0,0,0,1,0
+06_mtserrat,Unnamed,1930,0,0,0,1,0
+06_mtserrat,Unnamed,1928,0,0,0,0,1
+06_mtserrat,Unnamed,1924,0,1,0,0,0
+06_mtserrat,Unnamed,1922,0,0,1,0,0
+06_mtserrat,Unnamed,1916,1,0,0,0,0
+06_mtserrat,Unnamed,1916,0,1,0,0,0
+06_mtserrat,Unnamed,1915,0,0,0,1,0
+06_mtserrat,Unnamed,1910,0,1,0,0,0
+06_mtserrat,Unnamed,1909,0,0,1,0,0
+06_mtserrat,Unnamed,1908,0,1,0,0,0
+06_mtserrat,Unnamed,1908,0,1,0,0,0
+06_mtserrat,Unnamed,1906,0,0,0,1,0
+06_mtserrat,Unnamed,1899,0,0,0,1,0
+06_mtserrat,Unnamed,1899,0,1,0,0,0
+06_mtserrat,Unnamed,1898,0,1,0,0,0
+06_mtserrat,Unnamed,1893,0,0,1,0,0
+06_mtserrat,Unnamed,1889,0,1,0,0,0
+06_mtserrat,Unnamed,1871,0,0,1,0,0
+06_mtserrat,Unnamed,1865,0,1,0,0,0
+06_mtserrat,Unnamed,1859,1,0,0,0,0
+06_mtserrat,Unnamed,1851,0,0,1,0,0
+07_antigua,Tammy,2023,0,1,0,0,0
+07_antigua,Maria,2017,0,0,0,0,1
+07_antigua,Jose,2017,0,0,0,1,0
+07_antigua,Irma,2017,0,0,0,0,1
+07_antigua,Gonzalo,2014,0,0,0,1,0
+07_antigua,Earl,2010,0,0,0,1,0
+07_antigua,Debby,2000,1,0,0,0,0
+07_antigua,Lenny,1999,0,0,0,1,0
+07_antigua,Jose,1999,0,1,0,0,0
+07_antigua,Georges,1998,0,0,0,1,0
+07_antigua,Bertha,1996,0,0,1,0,0
+07_antigua,Marilyn,1995,0,0,1,0,0
+07_antigua,Luis ,1995,0,0,0,1,0
+07_antigua,Klaus,1990,1,0,0,0,0
+07_antigua,Hugo,1989,0,0,0,0,1
+07_antigua,Inez,1966,0,0,0,0,1
+07_antigua,Cleo,1964,0,0,0,1,0
+07_antigua,Donna ,1960,0,0,0,1,0
+07_antigua,Betsy ,1956,0,0,1,0,0
+07_antigua,Dog,1950,0,0,0,1,0
+07_antigua,Baker,1950,0,1,0,0,0
+07_antigua,Unnamed,1932,0,0,0,1,0
+07_antigua,Unnamed,1928,0,0,0,0,1
+07_antigua,Unnamed,1924,0,1,0,0,0
+07_antigua,Unnamed,1922,0,0,1,0,0
+07_antigua,Unnamed,1916,0,1,0,0,0
+07_antigua,Unnamed,1910,0,1,0,0,0
+07_antigua,Unnamed,1909,0,0,1,0,0
+07_antigua,Unnamed,1908,0,1,0,0,0
+07_antigua,Unnamed,1908,0,1,0,0,0
+07_antigua,Unnamed,1906,0,0,0,1,0
+07_antigua,Unnamed,1899,0,0,1,0,0
+07_antigua,Unnamed,1899,0,1,0,0,0
+07_antigua,Unnamed,1899,0,0,0,1,0
+07_antigua,Unnamed,1898,0,1,0,0,0
+07_antigua,Unnamed,1893,0,0,1,0,0
+07_antigua,Unnamed,1889,0,1,0,0,0
+07_antigua,Unnamed,1876,0,0,1,0,0
+07_antigua,Unnamed,1871,0,0,1,0,0
+07_antigua,Unnamed,1865,0,1,0,0,0
+07_antigua,Unnamed,1859,1,0,0,0,0
+07_antigua,Unnamed,1851,0,0,1,0,0
+08_nevis,Tammy ,2023,0,1,0,0,0
+08_nevis,Maria,2017,0,0,0,0,1
+08_nevis,Irma,2017,0,0,0,0,1
+08_nevis,Gonzalo,2014,0,0,0,1,0
+08_nevis,Debby ,2000,1,0,0,0,0
+08_nevis,Lenny,1999,0,0,0,1,0
+08_nevis,Jose ,1999,0,1,0,0,0
+08_nevis,Georges,1998,0,0,0,1,0
+08_nevis,Bertha,1996,0,0,1,0,0
+08_nevis,Marilyn ,1995,0,0,1,0,0
+08_nevis,Luis ,1995,0,0,0,1,0
+08_nevis,Hugo ,1989,0,0,0,0,1
+08_nevis,Inez,1966,0,0,0,0,1
+08_nevis,Donna,1960,0,0,0,1,0
+08_nevis,Betsy,1956,0,0,1,0,0
+08_nevis,Alice,1954,1,0,0,0,0
+08_nevis,Dog,1950,0,0,0,1,0
+08_nevis,Baker ,1950,0,1,0,0,0
+08_nevis,Unnamed,1932,0,0,0,1,0
+08_nevis,Unnamed,1928,0,0,0,0,1
+08_nevis,Unnamed,1924,0,1,0,0,0
+08_nevis,Unnamed,1922,0,0,1,0,0
+08_nevis,Unnamed,1916,0,1,0,0,0
+08_nevis,Unnamed,1910,0,1,0,0,0
+08_nevis,Unnamed,1909,0,0,1,0,0
+08_nevis,Unnamed,1908,0,1,0,0,0
+08_nevis,Unnamed,1908,0,1,0,0,0
+08_nevis,Unnamed,1906,0,0,0,1,0
+08_nevis,Unnamed,1899,0,1,0,0,0
+08_nevis,Unnamed,1899,0,0,0,1,0
+08_nevis,Unnamed,1898,0,1,0,0,0
+08_nevis,Unnamed,1893,0,0,1,0,0
+08_nevis,Unnamed,1889,0,1,0,0,0
+08_nevis,Unnamed,1876,0,0,1,0,0
+08_nevis,Unnamed,1871,0,0,1,0,0
+08_nevis,Unnamed,1871,0,0,0,1,0
+08_nevis,Unnamed,1865,0,1,0,0,0
+08_nevis,Unnamed,1859,1,0,0,0,0
+08_nevis,Unnamed,1851,0,0,1,0,0
+09_stkitts,Tammy ,2023,0,1,0,0,0
+09_stkitts,Maria,2017,0,0,0,0,1
+09_stkitts,Irma,2017,0,0,0,0,1
+09_stkitts,Gonzalo,2014,0,0,0,1,0
+09_stkitts,Earl,2010,0,0,0,1,0
+09_stkitts,Debby ,2000,1,0,0,0,0
+09_stkitts,Lenny,1999,0,0,0,1,0
+09_stkitts,Jose ,1999,0,1,0,0,0
+09_stkitts,Georges,1998,0,0,0,1,0
+09_stkitts,Bertha,1996,0,0,1,0,0
+09_stkitts,Marilyn ,1995,0,0,1,0,0
+09_stkitts,Luis ,1995,0,0,0,1,0
+09_stkitts,Klaus,1990,1,0,0,0,0
+09_stkitts,Hugo,1989,0,0,0,0,1
+09_stkitts,Inez,1966,0,0,0,0,1
+09_stkitts,Cleo,1964,0,0,0,1,0
+09_stkitts,Donna,1960,0,0,0,1,0
+09_stkitts,Betsy,1956,0,0,1,0,0
+09_stkitts,Alice,1954,1,0,0,0,0
+09_stkitts,Dog,1950,0,0,0,1,0
+09_stkitts,Baker ,1950,0,1,0,0,0
+09_stkitts,Unnamed,1933,1,0,0,0,0
+09_stkitts,Unnamed,1932,0,0,0,1,0
+09_stkitts,Unnamed,1931,0,1,0,0,0
+09_stkitts,Unnamed,1930,0,0,0,1,0
+09_stkitts,Unnamed,1928,0,0,0,0,1
+09_stkitts,Unnamed,1924,0,1,0,0,0
+09_stkitts,Unnamed,1922,0,0,1,0,0
+09_stkitts,Unnamed,1916,0,1,0,0,0
+09_stkitts,Unnamed,1910,0,1,0,0,0
+09_stkitts,Unnamed,1909,0,0,1,0,0
+09_stkitts,Unnamed,1908,0,1,0,0,0
+09_stkitts,Unnamed,1908,0,1,0,0,0
+09_stkitts,Unnamed,1906,0,0,0,1,0
+09_stkitts,Unnamed,1899,0,0,1,0,0
+09_stkitts,Unnamed,1899,0,1,0,0,0
+09_stkitts,Unnamed,1899,0,1,0,0,0
+09_stkitts,Unnamed,1898,0,0,0,1,0
+09_stkitts,Unnamed,1893,0,0,1,0,0
+09_stkitts,Unnamed,1889,0,1,0,0,0
+09_stkitts,Unnamed,1876,0,0,1,0,0
+09_stkitts,Unnamed,1871,0,0,1,0,0
+09_stkitts,Unnamed,1865,0,1,0,0,0
+09_stkitts,Unnamed,1859,1,0,0,0,0
+09_stkitts,Unnamed,1852,1,0,0,0,0
+09_stkitts,Unnamed,1851,0,0,1,0,0
+10_eustatios,Tammy ,2023,0,1,0,0,0
+10_eustatios,Maria ,2017,0,0,0,0,1
+10_eustatios,Irma,2017,0,0,0,0,1
+10_eustatios,Gonzalo,2014,0,0,0,1,0
+10_eustatios,Earl,2010,0,0,0,1,0
+10_eustatios,Debby,2000,1,0,0,0,0
+10_eustatios,Lenny ,1999,0,0,0,1,0
+10_eustatios,Jose,1999,0,1,0,0,0
+10_eustatios,Georges,1998,0,0,0,1,0
+10_eustatios,Bertha ,1996,0,0,1,0,0
+10_eustatios,Marilyn ,1995,0,0,1,0,0
+10_eustatios,Luis,1995,0,0,0,1,0
+10_eustatios,Hugo,1989,0,0,0,0,1
+10_eustatios,Donna,1960,0,0,0,1,0
+10_eustatios,Betsy,1956,0,0,1,0,0
+10_eustatios,Alice,1954,1,0,0,0,0
+10_eustatios,Dog,1950,0,0,0,1,0
+10_eustatios,Baker ,1950,0,1,0,0,0
+10_eustatios,Unnamed,1933,1,0,0,0,0
+10_eustatios,Unnamed,1932,0,0,0,1,0
+10_eustatios,Unnamed,1931,0,1,0,0,0
+10_eustatios,Unnamed,1928,0,0,0,0,1
+10_eustatios,Unnamed,1924,0,1,0,0,0
+10_eustatios,Unnamed,1922,0,0,1,0,0
+10_eustatios,Unnamed,1916,0,1,0,0,0
+10_eustatios,Unnamed,1910,0,1,0,0,0
+10_eustatios,Unnamed,1909,0,0,1,0,0
+10_eustatios,Unnamed,1908,0,1,0,0,0
+10_eustatios,Unnamed,1906,0,0,0,1,0
+10_eustatios,Unnamed,1899,0,0,1,0,0
+10_eustatios,Unnamed,1899,0,1,0,0,0
+10_eustatios,Unnamed,1899,0,0,0,1,0
+10_eustatios,Unnamed,1898,0,1,0,0,0
+10_eustatios,Unnamed,1893,0,0,1,0,0
+10_eustatios,Unnamed,1889,0,1,0,0,0
+10_eustatios,Unnamed,1876,0,0,1,0,0
+10_eustatios,Unnamed,1871,0,0,1,0,0
+10_eustatios,Unnamed,1859,1,0,0,0,0
+10_eustatios,Unnamed,1852,1,0,0,0,0
+10_eustatios,Unnamed,1851,0,0,1,0,0
+11_saba,Tammy ,2023,0,1,0,0,0
+11_saba,Maria ,2017,0,0,0,0,1
+11_saba,Irma,2017,0,0,0,0,1
+11_saba,Gonzalo,2014,0,0,0,1,0
+11_saba,Earl,2010,0,0,0,1,0
+11_saba,Omar,2008,0,0,0,1,0
+11_saba,Debby,2000,1,0,0,0,0
+11_saba,Lenny ,1999,0,0,0,1,0
+11_saba,Jose,1999,0,1,0,0,0
+11_saba,Georges,1998,0,0,0,1,0
+11_saba,Bertha ,1996,0,0,1,0,0
+11_saba,Marilyn ,1995,0,0,1,0,0
+11_saba,Luis,1995,0,0,0,1,0
+11_saba,Hugo,1989,0,0,0,0,1
+11_saba,Donna,1960,0,0,0,1,0
+11_saba,Betsy,1956,0,0,1,0,0
+11_saba,Alice,1954,1,0,0,0,0
+11_saba,Dog,1950,0,0,0,1,0
+11_saba,Unnamed,1933,1,0,0,0,0
+11_saba,Unnamed,1932,0,0,0,1,0
+11_saba,Unnamed,1931,0,1,0,0,0
+11_saba,Unnamed,1928,0,0,0,0,1
+11_saba,Unnamed,1924,0,1,0,0,0
+11_saba,Unnamed,1922,0,0,1,0,0
+11_saba,Unnamed,1916,0,0,1,0,0
+11_saba,Unnamed,1916,0,1,0,0,0
+11_saba,Unnamed,1910,0,1,0,0,0
+11_saba,Unnamed,1909,0,0,1,0,0
+11_saba,Unnamed,1908,0,1,0,0,0
+11_saba,Unnamed,1906,0,0,0,1,0
+11_saba,Unnamed,1899,0,0,1,0,0
+11_saba,Unnamed,1899,0,1,0,0,0
+11_saba,Unnamed,1899,0,0,0,1,0
+11_saba,Unnamed,1898,0,1,0,0,0
+11_saba,Unnamed,1894,0,0,0,1,0
+11_saba,Unnamed,1893,0,0,1,0,0
+11_saba,Unnamed,1889,0,1,0,0,0
+11_saba,Unnamed,1876,0,0,1,0,0
+11_saba,Unnamed,1871,0,0,1,0,0
+11_saba,Unnamed,1867,0,0,1,0,0
+11_saba,Unnamed,1865,0,1,0,0,0
+11_saba,Unnamed,1859,1,0,0,0,0
+11_saba,Unnamed,1852,1,0,0,0,0
+11_saba,Unnamed,1852,1,0,0,0,0
+11_saba,Unnamed,1851,0,0,1,0,0
