@@ -2,27 +2,21 @@
 #-Checks of every null network of the decoupling null models---#
 #--------------------------------------------------------------#
 
-# Each null network of null models I to II-B (Extended Data Fig. 1) is
-# checked before it is written to disk, and a failed check stops the run. The
-# checks verify the properties that every null model holds fixed, and the
-# properties specific to each class. They use the helpers of
-# src/null_decoupling_functions.jl, which must be included before this file.
-# build_class_I_network and build_class_II_network call the checks on every
-# null network they build, so no unchecked network reaches build_null_ensemble.
+# Checks of the null networks of null models I, I-A, II and II-B. Every null
+# network is checked when it is built, before it is saved, and a failed
+# check stops the run. The checks cover the properties held fixed by all
+# null models and the properties of each class.
 #
-# Inputs:  the null and empirical layers passed by the building functions
-# Outputs: none. Each check returns nothing or stops the run with an error.
-# Used by: src/null_decoupling_functions.jl, included after it by
-#          scripts/01_network_preparation/build_null_decoupling.jl
+# Inputs:  the null and the empirical layers
+# Outputs: none. Each check returns nothing or stops with an error.
+#
+# Needs the functions of src/null_decoupling_functions.jl.
 
-# Properties shared by all null models: the matrices stay binary; species
-# richness, the identity of the plants in each layer and the number of
-# interactions in each layer are unchanged; no single-role bird becomes a
-# connector or loses an interaction; hummingbirds receive no fruits; and plant
-# degrees change only through the interactions rewired to another plant.
-# Arguments: layers holds the null matrices and empirical_layers the empirical
-# ones; hummingbirds marks the hummingbirds; n_rewired_to_other_plants is the
-# number of interactions rewired to another plant. Returns nothing.
+# Properties shared by all null models. The matrices stay binary. Species
+# richness, the plants of each layer and the number of interactions in each
+# layer do not change. No single-role bird becomes a connector or loses an
+# interaction. Hummingbirds receive no fruits. Plant degrees change only
+# through the interactions rewired to another plant.
 function check_shared_properties(; layers::Vector{Matrix{Int64}},
                                    empirical_layers::Vector{Matrix{Int64}},
                                    hummingbirds::Vector{Bool},
@@ -68,11 +62,10 @@ function check_shared_properties(; layers::Vector{Matrix{Int64}},
     return nothing
 end
 
-# Properties of class I: each decoupled connector keeps every interaction of
-# its retained layer and none of the other layer, untouched connectors keep
-# exactly their empirical interactions, and only untouched connectors still
-# interact in both layers. Arguments: as in build_class_I_network, plus layers
-# (the null matrices) and n_rewired_to_other_plants. Returns nothing.
+# Properties of class I. Each decoupled connector keeps every interaction of
+# its retained layer and none of the other layer. Untouched connectors keep
+# exactly their empirical interactions. Only untouched connectors still
+# interact in both layers.
 function check_class_I_network(; layers::Vector{Matrix{Int64}},
                                  empirical_layers::Vector{Matrix{Int64}},
                                  decoupled::Vector{Int64}, retained_layers::Vector{Int64},
@@ -101,12 +94,9 @@ function check_class_I_network(; layers::Vector{Matrix{Int64}},
     return nothing
 end
 
-# Properties of class II: dual-role birds retain at most (1 - share) of their
-# empirical interactions, unless the rewiring stopped early, and null model
-# II-B keeps the two layers coupled. Arguments: as in build_class_II_network,
-# plus layers (the null matrices), stopped_early (true when null model II-B
-# stopped before reaching its target) and n_rewired_to_other_plants.
-# Returns nothing.
+# Properties of class II. Dual-role birds retain at most (1 - share) of
+# their empirical interactions, unless null model II-B stopped before its
+# target (stopped_early). Null model II-B keeps the two layers coupled.
 function check_class_II_network(; layers::Vector{Matrix{Int64}},
                                   empirical_layers::Vector{Matrix{Int64}},
                                   hummingbirds::Vector{Bool}, share::Float64,

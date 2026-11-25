@@ -2,22 +2,17 @@
 #-Figure 2: Map of the islands and their multilayer networks---#
 #--------------------------------------------------------------#
 
-# Figure 2 maps the 11 islands of the Lesser Antilles and draws, beside each
-# island, its multilayer bird-pollination and seed-dispersal network. Each
-# network shows the pollination layer on the left, the birds in the centre and
-# the seed-dispersal layer on the right, so that the dual-role birds are the
-# species joining the two layers. An inset in the open sea plots pollination
-# topological dominance, the second PCA axis of network topology, against
-# distance to the continent, with island type given by point shape.
+# Figure 2: map of the 11 islands of the Lesser Antilles with the multilayer
+# network of each island beside it. Each network has the pollination layer
+# on the left, the birds in the center and the seed-dispersal layer on the
+# right. The inset plots pollination topological dominance (second PCA axis
+# of network topology) against distance to the continent, with island type
+# as point shape.
 #
-# Inputs:  src/multi_pol/B_*.csv and src/multi_sd/S_*.csv, the incidence
-#          matrices of each island, built by build_networks_multilayer.R
-#          data/main_summary/island_data.csv, written by build_island_data.R,
-#          with the isolation, island type and PCA scores of each island
-#          src/shape_islands/*.shp, the shapefiles of the islands
+# Inputs:  src/multi_pol/B_*.csv and src/multi_sd/S_*.csv
+#          data/main_summary/island_data.csv
+#          src/shape_islands/*.shp
 # Outputs: figures/figure_2.png, .pdf and .svg
-# Helpers: island_names in src/island_labels.R and save_figure in
-#          src/figure_helpers.R
 
 library(here)
 library(ggplot2)
@@ -36,10 +31,10 @@ source(here("src", "figure_helpers.R"))
 #-Palette of Fig. 2--------------------------------------------#
 #--------------------------------------------------------------#
 
-# Green marks the pollination layer, rust the seed-dispersal layer and violet
-# the dual-role birds; plants take the darker shade of their layer and
-# single-role birds the lighter one. Connector colors the lines that join each
-# island to its panel, and ink the text and outlines on the muted map.
+# Green for the pollination layer, rust for the seed-dispersal layer and
+# violet for the dual-role birds. Plants take the darker shade of their layer
+# and single-role birds the lighter one. connector is the color of the lines
+# from each island to its panel and ink the color of the text.
 pal <- list(
   plant_pol    = "#1f7a5c",
   plant_sd     = "#b9551f",
@@ -60,14 +55,12 @@ pal <- list(
 #-Island order and panel anchors of Fig. 2---------------------#
 #--------------------------------------------------------------#
 
-# Anchor (lon_target, lat_target) of each network panel, the name of the
-# island in the shapefiles, and the latitude shift that separates the drawn
-# island from a close neighbour. The panels form two columns, one on each
-# side of the island arc, each ordered from north to south. The longitudes
-# keep the line from each island to its panel short, so that it reads as a
-# callout and not as an interaction. Trinidad moves a little south, away from
-# Tobago, and St. Kitts and Nevis move apart, because the enlarged islands sit
-# too close to these neighbours.
+# Anchor of each network panel (lon_target, lat_target), name of the island
+# in the shapefiles and latitude shift of the drawn island. The panels form
+# two columns, one on each side of the island arc, ordered from north to
+# south. The longitudes keep the line from each island to its panel short.
+# Trinidad is shifted south, away from Tobago, and St. Kitts and Nevis are
+# moved apart, because the enlarged islands would be too close.
 island_config <- tribble(
   ~network,        ~shapefile_name,    ~lon_target, ~lat_target, ~lat_shift,
   "11_saba",       "Saba",             -68.0,        21.2,         0.00,
@@ -88,14 +81,11 @@ island_config <- tribble(
 #-Network panels of Fig. 2, one per island---------------------#
 #--------------------------------------------------------------#
 
-# Draw the multilayer network of one island as a panel of the map. Plants of
-# the pollination layer form the left column, birds the central column and
-# plants of the seed-dispersal layer the right column. Each interaction is a
-# line from a plant to a bird, colored by its layer, so that the dual-role
-# birds are the only species joined to both plant columns.
-# Arguments: net_id is the island code of the matrix file names, for example
-# "01_trinidad". Returns a ggplot grob to place on the map with
-# annotation_custom.
+# Draw the multilayer network of one island (net_id, for example
+# "01_trinidad"). Plants of the pollination layer on the left, birds in the
+# center and plants of the seed-dispersal layer on the right. Each
+# interaction is a line from a plant to a bird, colored by its layer.
+# Returns a grob to place on the map with annotation_custom.
 build_network_panel <- function(net_id) {
 
   pol_mat <- read.csv(here("src", "multi_pol", paste0("B_", net_id, ".csv")),
@@ -103,10 +93,9 @@ build_network_panel <- function(net_id) {
   sd_mat  <- read.csv(here("src", "multi_sd", paste0("S_", net_id, ".csv")),
                       check.names=FALSE, row.names=1)
 
-  # List the interactions of one incidence matrix, plants in rows and birds in
-  # columns. Any positive entry draws a link.
-  # Arguments: mat is the matrix; layer names the layer in the output. Returns
-  # a data frame with one row per interaction.
+  # List the interactions of one incidence matrix (plants in rows, birds in
+  # columns). Any positive entry is a link. Returns a data frame with one
+  # row per interaction.
   to_edges <- function(mat, layer) {
     mat %>%
       as.matrix() %>%
@@ -122,9 +111,8 @@ build_network_panel <- function(net_id) {
   edges_pol <- to_edges(pol_mat, "Pollination")
   edges_sd  <- to_edges(sd_mat,  "Seed dispersal")
 
-  # Dual-role birds sit at the top of the central column, above the single-role
-  # pollinators and then the single-role dispersers, because they are the
-  # species that join the two layers.
+  # Dual-role birds at the top of the central column, then the single-role
+  # pollinators and the single-role seed dispersers
   animals_pol <- unique(edges_pol$animal)
   animals_sd  <- unique(edges_sd$animal)
   all_animals <- union(animals_pol, animals_sd)
@@ -143,9 +131,9 @@ build_network_panel <- function(net_id) {
       )
     )
 
-  # A plant recorded in both layers appears once in each plant column. Within
-  # a column, species are spaced evenly from the top to the bottom of the
-  # panel, so that islands of different richness fill the same area.
+  # A plant in both layers appears once in each plant column. Species are
+  # evenly spaced from top to bottom within a column, so islands with
+  # different richness fill the same area.
   nodes <- bind_rows(
     tibble(id=paste0(unique(edges_pol$plant), "_Pol"),
            col=0, type="Plant_Pol"),
@@ -200,7 +188,7 @@ build_network_panel <- function(net_id) {
     "Animal_Both"       = pal$animal_both
   )
 
-  # A transparent background lets the panel sit directly on the sea of the map
+  # Transparent background, so the panel sits directly on the sea of the map
   p <- ggplot(gn, aes(x=x, y=y, xend=xend, yend=yend)) +
     geom_edges(aes(color=layer), alpha=0.5, linewidth=0.25) +
     geom_nodes(aes(fill=type), shape=21, color="white", size=1.8, stroke=0.3) +
@@ -220,20 +208,17 @@ build_network_panel <- function(net_id) {
 #-Inset of Fig. 2: pollination dominance and isolation---------#
 #--------------------------------------------------------------#
 
-# Draw the inset, which plots pollination topological dominance against
-# distance to the continent, one point per island, with a linear fit. The
-# dominance is the second PCA axis of network topology, oriented so that
-# larger values mean a multilayer structure dominated by the pollination
-# layer. Point shape gives island type; point color repeats isolation, so the
-# inset has no color legend. Returns a ggplot grob to place in the open sea
-# between the northern network panels.
+# Draw the inset: pollination topological dominance against distance to the
+# continent, one point per island, with a linear fit. Dominance is the second
+# PCA axis of network topology, oriented so larger values mean a multilayer
+# structure dominated by the pollination layer. Shape is island type and
+# color repeats isolation, so there is no color legend. Returns a grob.
 build_topology_inset <- function() {
 
   island_data <- read.csv(here("data", "main_summary", "island_data.csv"),
                           stringsAsFactors=FALSE)
 
-  # The inset stays compact, with no title, no color legend and thin axis
-  # lines, so that it reads as a secondary panel inside the map.
+  # Compact panel: no title, no color legend and thin axis lines
   p <- ggplot(data=island_data,
               aes(x=isolation, y=pollination_dominance)) +
     geom_point(aes(shape=type, color=isolation), size=2.0, alpha=0.9) +
@@ -275,20 +260,19 @@ build_topology_inset <- function() {
 
 shape_dir <- here("src", "shape_islands")
 
-# Spherical geometry (S2) is switched off because some of the Caribbean
-# shapefiles hold duplicate vertices. They draw correctly, but they stop the
-# sf operations that repair, scale and shift the islands below.
+# Turn off spherical geometry (S2). Some Caribbean shapefiles have duplicate
+# vertices, and the sf operations that repair, scale and shift the islands
+# fail on them with S2 on.
 sf_use_s2(FALSE)
 
-# The Caribbean shapefile names its islands in the column caribbean1 and sets
-# the coordinate reference system of the map
+# The Caribbean shapefile has the island names in the column caribbean1 and
+# sets the coordinate reference system of the map
 carib_sf <- st_read(file.path(shape_dir, "select_caribbean_islands.shp"), quiet=TRUE)
 target_crs <- st_crs(carib_sf)
 
-# Read a single-island shapefile, bring it to the reference system of the map,
-# repair its geometry and name the island.
-# Arguments: file is the shapefile; name is the island name. Returns an sf
-# object with the columns Name and geometry.
+# Read the shapefile of one island, transform it to the reference system of
+# the map and repair its geometry. Returns an sf object with Name and
+# geometry.
 read_island <- function(file, name) {
   island <- st_read(file.path(shape_dir, file), quiet=TRUE) %>%
     st_transform(target_crs) %>%
@@ -304,9 +288,9 @@ all_islands_sf <- rbind(
 ) %>%
   mutate(is_study=Name %in% island_config$shapefile_name)
 
-# The 11 study islands are enlarged by a quarter about their centroids, so
-# that they stay legible at the scale of the whole map, and shifted by the
-# latitude given in island_config. The other islands stay as drawn.
+# Enlarge the 11 study islands by a quarter around their centroids, to keep
+# them legible at the scale of the map, and shift them by lat_shift. The
+# other islands stay as they are.
 scale_study <- 1.25
 
 geom_list <- lapply(seq_len(nrow(all_islands_sf)), function(i) {
@@ -323,8 +307,8 @@ geom_list <- lapply(seq_len(nrow(all_islands_sf)), function(i) {
 st_geometry(all_islands_sf) <- do.call(c, geom_list)
 st_crs(all_islands_sf) <- target_crs
 
-# The centroid of each study island, as drawn after scaling and shifting,
-# anchors the line to its network panel
+# Centroid of each study island after scaling and shifting. The line to its
+# network panel starts there.
 study_sf <- all_islands_sf %>% filter(is_study)
 centroids <- st_centroid(study_sf) %>%
   st_coordinates() %>%
@@ -339,8 +323,7 @@ layout_final <- island_config %>%
 #-Draw the network panels and the inset------------------------#
 #--------------------------------------------------------------#
 
-# The eleven network panels and the inset are drawn once, before the map, so
-# that the loop that places them only positions grobs
+# Draw the 11 network panels and the inset once, before the map
 panel_list <- lapply(setNames(layout_final$network, layout_final$network), build_network_panel)
 topology_grob <- build_topology_inset()
 
@@ -348,18 +331,18 @@ topology_grob <- build_topology_inset()
 #-Base map and panel positions---------------------------------#
 #--------------------------------------------------------------#
 
-# The map spans the Lesser Antilles from Trinidad to Saba, with open sea on
-# both sides for the network panels and at the top for the topology inset
+# Lesser Antilles from Trinidad to Saba, with open sea on both sides for the
+# network panels and at the top for the inset
 xlim <- c(-70.3, -54.4)
 ylim <- c(5.7, 23.3)
 
-# Width, height and inward shift of each network panel, in degrees of the map
+# Width, height and inward shift of each network panel, in degrees
 inset_w <- 2.60
 inset_h <- 2.20
 inset_shift <- 0.70
 
-# Each panel is pulled toward its island, and the line from the island ends at
-# the inner edge of the panel, so that the callout stays short
+# Pull each panel toward its island. The line from the island ends at the
+# inner edge of the panel.
 layout_final <- layout_final %>%
   mutate(
     inset_side = if_else(lon_target < lon_cent, "left", "right"),
@@ -394,8 +377,7 @@ p_map <- ggplot() +
 #-Place the island names, the network panels and the inset-----#
 #--------------------------------------------------------------#
 
-# The island name sits just above its network panel, clear of the topology
-# inset in the north
+# Island name just above its network panel
 for (i in seq_len(nrow(layout_final))) {
 
   row <- layout_final[i, ]
@@ -415,9 +397,9 @@ for (i in seq_len(nrow(layout_final))) {
     )
 }
 
-# The inset fills the open sea at the top of the map, between the two columns
-# of network panels and clear of the Saba and Antigua panels. Its 5:4 bounds
-# are close to square, so that the regression is not flattened.
+# The inset goes in the open sea at the top of the map, between the two
+# columns of network panels. Its bounds (5:4) are close to square, so the
+# regression is not flattened.
 p_map <- p_map +
   annotation_custom(
     grob=topology_grob,
@@ -429,9 +411,9 @@ p_map <- p_map +
 #-Legend of the network panels---------------------------------#
 #--------------------------------------------------------------#
 
-# The legend sits in the sea south of the island arc. Green and rust segments
-# stand for the pollination and seed-dispersal links, and a violet point for
-# the dual-role birds, one row each from the top.
+# Legend in the sea south of the island arc. From the top: green and rust
+# segments for the pollination and seed-dispersal links and a violet point
+# for the dual-role birds.
 legend_x <- -62.1
 legend_y <- 6.25
 legend_gap <- 0.42
@@ -461,6 +443,6 @@ p_map <- p_map +
 #-Save Fig. 2--------------------------------------------------#
 #--------------------------------------------------------------#
 
-# The sea color fills the margins, so the saved figure matches the map
+# The sea color also fills the margins of the saved figure
 save_figure(p_map, "figure_2", width=10, height=12, bg=pal$ocean)
 print(p_map)

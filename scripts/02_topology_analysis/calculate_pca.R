@@ -2,25 +2,16 @@
 #-PCA of the topology descriptors------------------------------#
 #--------------------------------------------------------------#
 
-# Summarize the topology of the 11 island networks with a principal component
-# analysis (PCA) of the five descriptors of calculate_macro_structure.R. Three
-# measure the integration of the network, namely the leading eigenvalue of
-# the multilayer network, of the pollination layer and of the seed-dispersal
-# layer. The other two, the proportion of dual-role species and the
-# proportion of interactions involving dual-role species, measure how
-# strongly dual-role species couple the layers. The first two axes are kept
-# and oriented here, once for the whole pipeline. All five descriptors load
-# positively on the first axis, global network integration. On the second
-# axis the dual-role descriptors load negatively, so that higher scores mean
-# stronger pollination topological dominance. The scores are used in the Fig. 2
-# inset, the regressions of linear_model_pca.R and the pSEM of Fig. 4
-# through island_data.csv.
+# PCA of the five topology descriptors of the 11 island networks: leading
+# eigenvalue of the multilayer network, of the pollination layer and of the
+# seed-dispersal layer, proportion of dual-role species and proportion of
+# interactions involving dual-role species. The first two axes are kept and
+# oriented. PC1 is global network integration and PC2 is pollination
+# topological dominance.
 #
-# Inputs:  data/main_summary/macro_structure.csv (calculate_macro_structure.R)
-# Outputs: data/main_summary/pca_scores.csv, the score of each island on
-#          global_integration and pollination_dominance (build_island_data.R)
-#          data/main_summary/pca_loadings.csv, the loadings of the five
-#          descriptors and the variance explained (Extended Data Table 2)
+# Inputs:  data/main_summary/macro_structure.csv
+# Outputs: data/main_summary/pca_scores.csv
+#          data/main_summary/pca_loadings.csv
 
 library(here)
 library(tidyverse)
@@ -36,18 +27,17 @@ pca_vars <- c("multi_lambda1", "pol_lambda1", "sd_lambda1",
               "prop_dual_species", "prop_dual_interactions")
 
 #--------------------------------------------------------------#
-#-PCA of the five descriptors (Extended Data Table 2)----------#
+#-PCA of the five descriptors----------------------------------#
 #--------------------------------------------------------------#
 
-# The descriptors are scaled to unit variance, as they differ in units and
-# range
+# Scale the descriptors to unit variance. They differ in units and range.
 res <- PCA(macro %>% select(all_of(pca_vars)), scale.unit=TRUE, graph=FALSE)
 
 loadings <- res$var$coord[, 1:2]
 scores <- res$ind$coord[, 1:2]
 
-# The sign of a PCA axis is arbitrary. The first axis is oriented so that the
-# descriptors load positively, and the second so that the proportion of
+# The sign of a PCA axis is arbitrary. Orient PC1 so the descriptors load
+# positively (positive sum of loadings) and PC2 so the proportion of
 # dual-role species loads negatively. Higher scores then mean stronger global
 # network integration and stronger pollination topological dominance.
 axis_sign <- c(sign(sum(loadings[, 1])), -sign(loadings["prop_dual_species", 2]))
@@ -58,8 +48,8 @@ scores <- sweep(scores, 2, axis_sign, "*")
 #-Loadings and island scores, written to data/main_summary-----#
 #--------------------------------------------------------------#
 
-# Loadings of the five descriptors and the share of the variation explained
-# by each axis, the rows of Extended Data Table 2
+# Loadings of the five descriptors and percentage of the variance explained
+# by each axis
 variance <- res$eig[1:2, "percentage of variance"]
 
 pca_loadings <- tibble(descriptor=rownames(loadings),

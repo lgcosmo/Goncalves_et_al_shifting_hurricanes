@@ -1,28 +1,28 @@
 path_type,response,predictor,estimate,std_error,df,statistic,p_value,std_estimate,significance
-Directed path,Fragility to hurricane intensity,Global network integration,-0.0995,0.0176,102.5704,31.3569,0,,***
-Directed path,Fragility to hurricane intensity,Pollination topological dominance,-0.0346,0.0259,90.8719,1.7623,0.1877,,
-Directed path,Fragility to hurricane intensity,Multilayer participation coefficient,-0.0232,0.0217,105.6979,1.1134,0.2937,,
-Directed path,Fragility to hurricane intensity,Pollination layer degree (z-score),-0.0656,0.0136,17.8093,19.7367,3e-4,,***
-Directed path,Fragility to hurricane intensity,Seed-dispersal layer degree (z-score),-0.0166,0.0205,103.8277,0.6448,0.4238,,
-Directed path,Fragility to hurricane intensity,Body mass,0.0034,0.0158,49.3759,0.0448,0.8333,,
-Directed path,Fragility to hurricane intensity,Island area,0.3162,0.025,100.14,157.3851,0,,***
-Directed path,Fragility to hurricane intensity,Elevation,0.0185,0.0161,90.5678,1.3013,0.257,,
-Directed path,Fragility to hurricane intensity,Isolation distance,1.0432,0.0418,99.2651,614.7055,0,,***
-Directed path,Fragility to hurricane intensity,Island type,,,1,70.5244,0,,***
-Directed path,Fragility to hurricane intensity,Continental islands,-0.2831,0.0361,108.9731,-7.8328,0,,***
-Directed path,Fragility to hurricane intensity,Oceanic islands,0.1524,0.0226,42.6622,6.7585,0,,***
-Directed path,Fragility to hurricane frequency,Global network integration,-0.6472,0.045,102.5704,203.5598,0,,***
-Directed path,Fragility to hurricane frequency,Pollination topological dominance,0.1598,0.0662,90.8719,5.7811,0.0182,,*
-Directed path,Fragility to hurricane frequency,Multilayer participation coefficient,-0.1243,0.0555,105.6979,4.8923,0.0291,,*
-Directed path,Fragility to hurricane frequency,Pollination layer degree (z-score),-0.2712,0.0347,17.8093,51.7105,0,,***
-Directed path,Fragility to hurricane frequency,Seed-dispersal layer degree (z-score),-0.0794,0.0524,103.8277,2.2547,0.1362,,
-Directed path,Fragility to hurricane frequency,Body mass,0.0585,0.0403,49.3759,1.9847,0.1652,,
-Directed path,Fragility to hurricane frequency,Island area,0.2824,0.0638,100.14,19.2565,0,,***
-Directed path,Fragility to hurricane frequency,Elevation,-0.1112,0.0412,90.5678,7.2271,0.0085,,**
-Directed path,Fragility to hurricane frequency,Isolation distance,-0.8179,0.1068,99.2651,57.9752,0,,***
-Directed path,Fragility to hurricane frequency,Island type,,,1,1.7733,0.1858,,
-Directed path,Fragility to hurricane frequency,Continental islands,-0.1146,0.0923,108.9731,-1.2421,0.2169,,
-Directed path,Fragility to hurricane frequency,Oceanic islands,0.0617,0.0576,42.6622,1.0717,0.2899,,
+Directed path,Persistence under hurricane intensity,Global network integration,0.0995,0.0176,102.5704,31.3569,0,,***
+Directed path,Persistence under hurricane intensity,Pollination topological dominance,0.0346,0.0259,90.8719,1.7623,0.1877,,
+Directed path,Persistence under hurricane intensity,Multilayer participation coefficient,0.0232,0.0217,105.6979,1.1134,0.2937,,
+Directed path,Persistence under hurricane intensity,Pollination layer degree (z-score),0.0656,0.0136,17.8093,19.7367,3e-4,,***
+Directed path,Persistence under hurricane intensity,Seed-dispersal layer degree (z-score),0.0166,0.0205,103.8277,0.6448,0.4238,,
+Directed path,Persistence under hurricane intensity,Body mass,-0.0034,0.0158,49.3759,0.0448,0.8333,,
+Directed path,Persistence under hurricane intensity,Island area,-0.3162,0.025,100.14,157.3851,0,,***
+Directed path,Persistence under hurricane intensity,Elevation,-0.0185,0.0161,90.5678,1.3013,0.257,,
+Directed path,Persistence under hurricane intensity,Isolation distance,-1.0432,0.0418,99.2651,614.7055,0,,***
+Directed path,Persistence under hurricane intensity,Island type,,,1,70.5244,0,,***
+Directed path,Persistence under hurricane intensity,Oceanic islands,-0.1524,0.0226,42.6622,-6.7585,0,,***
+Directed path,Persistence under hurricane intensity,Continental islands,0.2831,0.0361,108.9731,7.8328,0,,***
+Directed path,Persistence under hurricane frequency,Global network integration,0.6472,0.045,102.5704,203.5598,0,,***
+Directed path,Persistence under hurricane frequency,Pollination topological dominance,-0.1598,0.0662,90.8719,5.7811,0.0182,,*
+Directed path,Persistence under hurricane frequency,Multilayer participation coefficient,0.1243,0.0555,105.6979,4.8923,0.0291,,*
+Directed path,Persistence under hurricane frequency,Pollination layer degree (z-score),0.2712,0.0347,17.8093,51.7105,0,,***
+Directed path,Persistence under hurricane frequency,Seed-dispersal layer degree (z-score),0.0794,0.0524,103.8277,2.2547,0.1362,,
+Directed path,Persistence under hurricane frequency,Body mass,-0.0585,0.0403,49.3759,1.9847,0.1652,,
+Directed path,Persistence under hurricane frequency,Island area,-0.2824,0.0638,100.14,19.2565,0,,***
+Directed path,Persistence under hurricane frequency,Elevation,0.1112,0.0412,90.5678,7.2271,0.0085,,**
+Directed path,Persistence under hurricane frequency,Isolation distance,0.8179,0.1068,99.2651,57.9752,0,,***
+Directed path,Persistence under hurricane frequency,Island type,,,1,1.7733,0.1858,,
+Directed path,Persistence under hurricane frequency,Oceanic islands,-0.0617,0.0576,42.6622,-1.0717,0.2899,,
+Directed path,Persistence under hurricane frequency,Continental islands,0.1146,0.0923,108.9731,1.2421,0.2169,,
 Directed path,Global network integration,Island area,0.1744,0.4855,6,0.3592,0.7318,,
 Directed path,Global network integration,Elevation,0.1684,0.2699,6,0.6238,0.5557,,
 Directed path,Global network integration,Isolation distance,0.2836,0.5645,6,0.5025,0.6332,,

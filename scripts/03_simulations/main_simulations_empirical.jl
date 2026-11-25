@@ -2,32 +2,23 @@
 #-Empirical networks under increased hurricane frequency-------#
 #--------------------------------------------------------------#
 
-# Simulate the population dynamics of the 11 empirical multilayer networks
-# under increased hurricane frequency, the first scenario of the Methods.
-# Every island keeps its empirical PMF of hurricane categories, and the
-# hurricane frequency lambda sweeps from 0.01 to 0.80 hurricanes per year in
-# steps of 0.01. Each scenario runs 1,000 replicates of 300 years, so the
-# sweep schedules 880 tasks of 1,000 replicates. The extinction curves
-# against frequency are Fig. 3c (survival_curves.R and figure_3.R) and give
-# the species fragility to hurricane frequency of the pSEM in Fig. 4
-# (calculate_auc_extinction.R).
+# Simulate the 11 empirical multilayer networks under increased hurricane
+# frequency. Each island keeps its empirical PMF of hurricane categories and
+# lambda goes from 0.01 to 0.80 hurricanes per year in steps of 0.01. The
+# 880 combinations of island and lambda each run 1,000 replicates of 300
+# years.
 #
-# Inputs:  src/multi_pol/B_<island>.csv and src/multi_sd/S_<island>.csv, the
-#          incidence matrices of the two layers, built by
-#          scripts/01_network_preparation/build_networks_multilayer.R
-#          src/empirical_lambdas.csv and src/empirical_pmfs.csv, written by
-#          empirical_lambda_pmf.R
-# Outputs: data/main_sims_lambda/<island>_multilayer_lambda<lambda>_pmf<d>_tyears300.csv,
-#          one file per island and frequency, where d is the expected damage
-#          fraction of the island's empirical PMF, read by survival_curves.R
-# Helpers: src/main_functions.jl (population dynamics, hurricanes and the
-#          simulation wrapper) and src/aux_functions.jl (networks, regimes
-#          and the interaction matrix). main_simulations_empirical_pmf.jl
-#          runs the companion sweep over hurricane intensity.
+# Inputs:  src/multi_pol/B_<island>.csv
+#          src/multi_sd/S_<island>.csv
+#          src/empirical_lambdas.csv
+#          src/empirical_pmfs.csv
+# Outputs: data/main_sims_lambda/
+#          <island>_multilayer_lambda<lambda>_pmf<d>_tyears300.csv
+#          (d is the expected damage fraction of the empirical PMF)
 
 using Distributed
 
-# Worker processes; pmap gives each one scenario at a time
+# Worker processes. pmap gives one scenario at a time to each worker.
 addprocs(12)
 
 @everywhere using DrWatson
@@ -45,8 +36,7 @@ addprocs(12)
 
     BLAS.set_num_threads(1)
 
-    # Population dynamics and the simulation wrapper, then the networks, the
-    # regimes and the interaction matrix
+    # Functions of the population dynamics, networks and hurricane regimes
     include(srcdir("main_functions.jl"))
     include(srcdir("aux_functions.jl"))
 
@@ -54,7 +44,7 @@ addprocs(12)
     #-1. Empirical networks----------------------------------------#
     #--------------------------------------------------------------#
 
-    # One network per island, named by the island code of its matrix files
+    # One network per island, named after the island code of its files
     B_paths = readdir(srcdir("multi_pol"); join=true)
     S_paths = readdir(srcdir("multi_sd"); join=true)
     networks = [replace(basename(path), r"^B_|\.csv$" => "") for path in B_paths]
@@ -64,17 +54,17 @@ addprocs(12)
                              network=networks[i]) for i in eachindex(networks)]
 
     #--------------------------------------------------------------#
-    #-2. Empirical regimes and the frequency sweep-----------------#
+    #-2. Empirical regimes and values of lambda--------------------#
     #--------------------------------------------------------------#
 
-    # The empirical regime of each island, of which only the PMF is kept
+    # Empirical regime of each island. Only the PMF is used here.
     regimes = collect(values(empirical_regimes()))
 
-    # Hurricane frequencies of the sweep, in hurricanes per year
+    # Values of lambda, in hurricanes per year
     lambda_val = collect(0.01:0.01:0.80)
 
     #--------------------------------------------------------------#
-    #-3. One scenario per island and frequency---------------------#
+    #-3. One scenario per island and value of lambda---------------#
     #--------------------------------------------------------------#
 
     c1 = Dict(
@@ -85,13 +75,15 @@ addprocs(12)
         :d => 0.5,
         :c => -0.1,
         :ht => 0.5,
+        :delta => 0.5,
+        :tradeoff => "layer",
         :t_years => 300,
         :nsim => 1000,
         :out_dir => "main_sims_lambda"
     )
 
-    # Every combination of network, regime and frequency, then only the
-    # regime of the network's own island, whose PMF the wrapper expects
+    # All combinations of network, regime and lambda. Keep those with the
+    # regime of the island of the network, and pass its PMF to the wrapper.
     c_list = filter(d -> d[:net].network == d[:regime].network, dict_list(c1))
     for d in c_list
         d[:intensity_scenario] = d[:regime].pmf

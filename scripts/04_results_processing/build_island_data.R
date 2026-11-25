@@ -2,27 +2,19 @@
 #-Island biogeography, hurricane regime and network topology---#
 #--------------------------------------------------------------#
 
-# Join the island-level descriptors of the 11 islands into one table with one
-# row per island. The table supplies the island biogeography of the pSEM
-# (Fig. 4), the regressions of the PCA axes on island biogeography
-# (linear_model_pca.R) and the island descriptors drawn by figure_2.R and
-# figure_3.R. Island biogeography covers island type (continental or
-# oceanic), area, maximum elevation and isolation (distance to the
-# continent). The hurricane regime holds the empirical hurricane frequency
-# (lambda, estimated from the historical hurricane record). Network topology
-# covers species richness, connectance, the leading eigenvalue, nestedness
-# (NODF) and modularity (Barber's Q) of each layer and of the multilayer
-# network, the proportions of dual-role species and of their interactions,
-# and the two oriented PCA axes of calculate_pca.R, global network
-# integration and pollination topological dominance.
+# Join the descriptors of the 11 islands into one table with one row per
+# island: island biogeography (type, area, maximum elevation and isolation),
+# empirical hurricane frequency (lambda), network topology (richness,
+# connectance, leading eigenvalue, NODF and Q of each layer and of the
+# multilayer network, proportions of dual-role species and of their
+# interactions) and the two PCA axes (global network integration and
+# pollination topological dominance).
 #
-# Inputs:  src/Island_index.csv (island biogeography)
-#          src/empirical_lambdas.csv (empirical_lambda_pmf.R)
-#          data/main_summary/macro_structure.csv (calculate_macro_structure.R)
-#          data/main_summary/pca_scores.csv (calculate_pca.R)
+# Inputs:  src/Island_index.csv
+#          src/empirical_lambdas.csv
+#          data/main_summary/macro_structure.csv
+#          data/main_summary/pca_scores.csv
 # Outputs: data/main_summary/island_data.csv
-# Used by: linear_model_pca.R, structural_equation_model.R, figure_2.R and
-#          figure_3.R
 
 library(here)
 library(tidyverse)
@@ -30,13 +22,13 @@ library(tidyverse)
 source(here("src", "island_labels.R"))
 
 #--------------------------------------------------------------#
-#-Island descriptors, keyed by the island code-----------------#
+#-Loading the island descriptors-------------------------------#
 #--------------------------------------------------------------#
 
 island_index <- read_csv(here("src", "Island_index.csv"), show_col_types=FALSE)
 
-# Empirical hurricane frequency of each island, with the number of hurricanes
-# and the years of record behind it
+# Empirical lambda of each island, with the number of hurricanes and the
+# years of record
 emp_lambdas <- read_csv(here("src", "empirical_lambdas.csv"), show_col_types=FALSE) %>%
   select(network, lambda, n_events, observation_period_years)
 
@@ -45,11 +37,11 @@ macro <- read_csv(here("data", "main_summary", "macro_structure.csv"), show_col_
 pca_scores <- read_csv(here("data", "main_summary", "pca_scores.csv"), show_col_types=FALSE)
 
 #--------------------------------------------------------------#
-#-One row per island, written to island_data.csv---------------#
+#-One row per island-------------------------------------------#
 #--------------------------------------------------------------#
 
-# The frequency table defines the 11 islands, named after the manuscript;
-# every other table joins it by the island code
+# Start from the table of lambdas, add the island names and join the other
+# tables by the island code
 island_data <- emp_lambdas %>%
   mutate(island=island_names[network], .after=network) %>%
   left_join(island_index %>% select(-island), by="network") %>%

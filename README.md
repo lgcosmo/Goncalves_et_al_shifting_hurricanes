@@ -17,7 +17,7 @@ We study one multilayer network per island, built from the field records of bird
 | Islands | 11 islands, coded `01_trinidad` to `11_saba` in every file |
 | Pollination layer | Binary plant-bird matrix from the pollen carried by each sampled bird (`src/multi_pol/`) |
 | Seed-dispersal layer | Binary plant-bird matrix from the seeds in the fecal samples of each bird (`src/multi_sd/`) |
-| Dual-role birds | Birds that pollinate and disperse seeds, the connectors that couple the two layers |
+| Dual-role birds | Birds that both pollinate flowers and disperse seeds on a given island, coupling the two layers |
 | Hurricane regime | Hurricane frequency and category probability distribution of each island, estimated from the historical record |
 
 The two layers of an island share the same rows and columns, with an empty row or column (row/column of only zeros) for a species recorded in one layer only. This alignment lets every script tell dual-role birds apart from single-role birds. The stored matrices hold the number of records of each interaction, and every analysis reads them as presence or absence, except the proportion of interactions involving dual-role species, which weights each interaction by its records.
@@ -61,7 +61,7 @@ Each simulation run consists of two steps. First, the population dynamics is sim
 | $\gamma_0^{(D)}$ | 0.5 | Base mutualistic strength of seed dispersal (`d` in the code) |
 | $c$ | -0.1 | Intra-guild competition strength (`c` in the code) |
 | $h$ | 0.5 | Handling time of the Type II functional response (`ht` in the code) |
-| $\delta$ | 0.5 | Exponent of the generalist trade-off |
+| $\delta$ | 0.5 | Exponent of the generalist trade-off (`delta` in the code), with the degree counted within each layer (`tradeoff="layer"`) |
 | $r_i$ | $U[0.0, 0.5]$ | Intrinsic growth rate, drawn at random for each replicate |
 | $\epsilon_i$ | $0.01 N_i^{\ast}$ | Extinction threshold of species $i$ |
 
@@ -82,30 +82,34 @@ $$
 \mathrm{MPC}_i = 1 - \left[ \left( \frac{k_i^{(P)}}{k_i^{(P)} + k_i^{(D)}} \right)^2 + \left( \frac{k_i^{(D)}}{k_i^{(P)} + k_i^{(D)}} \right)^2 \right],
 $$
 
-from 0, when a species interacts in one layer only, to 0.5, when it splits its interactions equally between the two layers. Thresholds on the z-scores ($z > 0.75$) and the MPC ($\mathrm{MPC} > 0.3$) sort the species into Multilayer Hubs, Pollination Hubs, Dispersal Hubs, Multilayer Connectors and Peripheral species.
+from 0, when a species interacts in one layer only, to 0.5, when it splits its interactions equally between the two layers.
 
-## Species fragility and the structural equation model
+## Species persistence and the structural equation model
 
-Species fragility is the normalized area under the extinction curve (AUC), the curve that relates the fraction of simulations in which a species went extinct, $y_t$, to the perturbation level, $x_t$, hurricane frequency in one scenario and the intensity shift in the other:
+The extinction curve of a species relates the fraction of simulations in which it went extinct, $y_t$, to the perturbation level, $x_t$, hurricane frequency in one scenario and the intensity shift in the other. Species persistence is one minus the normalized area under this curve (AUC):
 
 $$
-\mathrm{AUC} = \frac{1}{x_n - x_1} \sum_{t=1}^{n-1} \frac{y_t + y_{t+1}}{2} \, \Delta x_t,
+\mathrm{Persistence} = 1 - \mathrm{AUC}, \qquad \mathrm{AUC} = \frac{1}{x_n - x_1} \sum_{t=1}^{n-1} \frac{y_t + y_{t+1}}{2} \, \Delta x_t,
 $$
 
-where $\Delta x_t = x_{t+1} - x_t$ and the normalization by the range of the perturbation axis makes the AUC comparable across scenarios. Higher AUC means greater fragility. A piecewise structural equation model (pSEM) then connects the fragility of bird species to predictors at three levels of organization. The first one consists of island biogeography, namely island type, area, elevation and isolation. The second level is at the network-scale, within which network structure is encoded through the two PCA axes (global integration and pollination topological dominance). Finally, the species level, containing the MPC, the two within-layer degree z-scores and the body mass of birds. Directed paths run from all three levels to each fragility response, from island biogeography to each PCA axis, and from body mass to each role metric. Every variable is standardized before fitting, so the estimates are standardized path coefficients, and Fisher's C tests the overall fit.
+where $\Delta x_t = x_{t+1} - x_t$ and the normalization by the range of the perturbation axis makes persistence comparable across scenarios. Persistence is the mean probability that the species persists across the perturbation levels, so higher values mean greater persistence. A piecewise structural equation model (pSEM) then connects the persistence of bird species to predictors at three levels of organization. The first one consists of island biogeography, namely island type, area, elevation and isolation. The second level is at the network-scale, within which network structure is encoded through the two PCA axes (global integration and pollination topological dominance). Finally, the species level, containing the MPC, the two within-layer degree z-scores and the body mass of birds. Directed paths run from all three levels to each persistence response, from island biogeography to each PCA axis, and from body mass to each role metric. Every variable is standardized before fitting, so the estimates are standardized path coefficients, and Fisher's C tests the overall fit.
 
-## Null models that deliberately decouple the two layers
+## Null model networks
 
-We used four null models to test whether the coupling of the two layers by dual-role birds shapes the extinctions that hurricanes cause. Every null network progressively decouples the pollination and seed-dispersal layers of an empirical network while holding its remaining structure fixed. Specifically, species richness, the number of interactions in each layer, and the identity and degree of the plants in each layer are held fixed. A rewired interaction keeps its plant and its layer, and the receiving bird interacts exclusively in that layer, does not yet interact with that plant, and is never a hummingbird receiving a fruit.
+To test whether the multilayer structure of the empirical networks shapes their resilience to hurricanes, we built null networks in which the pollination and seed-dispersal layers were decoupled while the remaining topological properties of the networks were held fixed. Specifically, all null networks hold fixed species richness, the total number of interactions in each layer, and the identity and degree of plants in each layer.
 
-| Null model | Decoupling level | Share decoupled | Outcome |
+How dual-role birds couple pollination and seed dispersal depends on two components: (1) the identity and number of dual-role birds that connect the two layers; and (2) the number of interactions that these species establish in each layer (cross-layer interactions). Because these two components are correlated in the empirical networks, we built two classes of null models that decouple the layers while targeting each component separately. The first class (null models I and I-A) focuses on bird species and decouples the layers by converting dual-role birds into single-role birds. The second class (null models II and II-B) focuses on interactions and decouples the layers by rewiring the cross-layer interactions of dual-role birds, regardless of which bird establishes them. In both classes, the two layers either become completely separated (null models I and II) or dual-role birds retain approximately 50% of their interactions (null models I-A and II-B).
+
+| Null model | Focus | Procedure | Outcome |
 |---|---|---|---|
-| I | Bird species | All connectors | The layers separate |
-| I-A | Bird species | Half of the connectors | Dual-role birds remain |
-| II | Interactions | All dual-role interactions | The layers separate |
-| II-B | Interactions | Half of the dual-role interactions | Dual-role birds remain |
+| I | Bird species | Each dual-role bird keeps all of its interactions in one layer, assigned at random. Its interactions in the other layer are rewired, one by one, to randomly chosen single-role birds of that layer | The two layers are completely separated |
+| I-A | Bird species | The same procedure for only half of the dual-role birds, drawn at random | The two layers remain coupled |
+| II | Interactions | One interaction is drawn with uniform probability among all interactions of dual-role birds and rewired to a randomly chosen single-role bird of the same layer, until no bird interacts in both layers | The two layers are completely separated |
+| II-B | Interactions | The same procedure, stopped once dual-role birds keep at most half of the interactions they held in the empirical network | The two layers remain coupled |
 
-Every island receives 100 null networks per null model, each built from its own seed and recorded in a manifest (`src/null_<model>/network_manifest.csv`). The null networks are then simulated under the empirical hurricane regime of their island, and the extinctions of the empirical networks are compared with those of their null counterparts through z-scores, $z = (x - \mu)/\sigma$, where $x$ is the empirical fraction of extinctions and $\mu$ and $\sigma$ are its mean and standard deviation across the 100 null networks.
+All null models followed the same rules when decoupling the layers. We rewired interactions of dual-role birds to other birds while keeping the plant species and the layer of each interaction fixed. The receiving bird had to (1) interact exclusively in that layer, so that no single-role bird became a new dual-role bird; (2) not yet interact with that plant species; and (3) not be a hummingbird in the case of seed-dispersal interactions, as these species are exclusively pollinators. In a few cases, no bird species satisfied these conditions, and we then rewired the interaction to another plant species of the same layer.
+
+We generated 100 null networks for each island and null model (n = 4,400 null networks), each built from its own seed and recorded in a manifest (`src/null_<model>/network_manifest.csv`). We then simulated the population dynamics of species in each null network under the empirical hurricane frequency and intensity PMF of its island (1,000 simulations per network). For each island and null model, we computed z-scores, $z = (x - \mu)/\sigma$, where $x$ is the fraction of extinctions observed in the empirical network and $\mu$ and $\sigma$ are the mean and standard deviation across the 100 null networks. Negative z-scores indicate that the empirical network lost fewer species than its null counterparts.
 
 ## Manuscript figures
 
@@ -114,8 +118,8 @@ Figure 1 of the manuscript is a conceptual figure produced outside this reposito
 | Figure | Biological question | Active script | Main output |
 |---|---|---|---|
 | Figure 2 | How are the pollination and seed-dispersal layers of the 11 islands structured, and how does pollination topological dominance change with isolation? | `scripts/05_visualization/figure_2.R` | `figures/figure_2.pdf` |
-| Figure 3 | How do hurricane regimes differ among islands, and how many species go extinct as hurricane frequency and intensity escalate? | `scripts/05_visualization/figure_3.R` | `figures/figure_3.pdf` |
-| Figure 4 | Which island, network and species properties shape the fragility of bird species to hurricanes? | `scripts/05_visualization/figure_4.R` | `figures/figure_4.pdf` |
+| Figure 3 | How does an escalated hurricane regime differ from the empirical one, and how many species go extinct as hurricane frequency and intensity escalate? | `scripts/05_visualization/figure_3.R` | `figures/figure_3.pdf` |
+| Figure 4 | Which island, network and species properties shape the persistence of bird species under hurricanes? | `scripts/05_visualization/figure_4.R` | `figures/figure_4.pdf` |
 | Extended Data Figure 1 | Does the coupling of the two layers by dual-role birds change how many species hurricanes drive extinct? | `scripts/05_visualization/extended_data_figure_1.R` | `figures/extended_data_figure_1.pdf` |
 
 ## Repository structure
@@ -151,20 +155,21 @@ Goncalves_et_al_shifting_hurricanes/
 |   |-- 02_topology_analysis/
 |   |   |-- calculate_macro_structure.R       # Structure descriptors of each island network
 |   |   |-- calculate_pca.R                   # PCA axes of network structure
-|   |   |-- calculate_species_roles.R         # Role metrics and functional roles of every species
+|   |   |-- calculate_species_roles.R         # Role metrics of every species
 |   |   `-- linear_model_pca.R                # PCA axes against island biogeography
 |   |-- 03_simulations/
 |   |   |-- empirical_lambda_pmf.R            # Hurricane regime of each island from the record
-|   |   |-- main_simulations_empirical.jl     # Frequency sweep of the empirical networks
-|   |   |-- main_simulations_empirical_pmf.jl # Intensity sweep of the empirical networks
-|   |   `-- main_simulations_null_decoupling.jl # Null networks under the empirical regimes
+|   |   |-- main_simulations_empirical.jl     # Empirical networks under increasing hurricane frequency
+|   |   |-- main_simulations_empirical_pmf.jl # Empirical networks under increasing hurricane intensity
+|   |   |-- main_simulations_null_decoupling.jl # Null networks under the empirical regimes
+|   |   `-- sensitivity_simulations_mutualism.jl # The three experiments under weaker and stronger mutualism
 |   |-- 04_results_processing/
-|   |   |-- survival_curves.R                 # Extinction curves of the two sweeps
+|   |   |-- survival_curves.R                 # Extinction curves of the two hurricane scenarios
 |   |   |-- build_island_data.R               # Island-level table of the pSEM and figures
-|   |   |-- calculate_auc_extinction.R        # Species fragility as the AUC of the curves
+|   |   |-- calculate_auc_extinction.R        # Species persistence from the AUC of the curves
 |   |   |-- process_null_simulations.R        # Extinctions of the null networks
 |   |   |-- null_model_comparison.R           # Empirical versus null extinctions
-|   |   `-- structural_equation_model.R       # pSEM of species fragility
+|   |   `-- structural_equation_model.R       # pSEM of species persistence
 |   `-- 05_visualization/
 |       |-- figure_2.R                        # Map, networks and PCA inset
 |       |-- figure_3.R                        # Hurricane regimes and extinction curves
@@ -196,7 +201,10 @@ install.packages(c(
   "ggnetwork",
   "network",
   "ggforce",
-  "png"
+  "png",
+  "viridisLite",
+  "writexl",
+  "multcompView"
 ))
 ```
 
@@ -221,7 +229,7 @@ source("scripts/03_simulations/empirical_lambda_pmf.R")
 julia scripts/01_network_preparation/build_null_decoupling.jl
 ```
 
-Next, compute the structure of the networks and the roles of their species:
+Next, compute the structure of the networks and the role metrics of their species:
 
 ```r
 source("scripts/02_topology_analysis/calculate_macro_structure.R")

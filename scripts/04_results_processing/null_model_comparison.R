@@ -1,29 +1,22 @@
 #--------------------------------------------------------------#
-#-Null Model Comparison----------------------------------------#
+#-Comparing the empirical networks with the null models--------#
 #--------------------------------------------------------------#
 
-# Compare the extinctions of each island's empirical network with those of
-# null models I to II-B, all simulated under the island's empirical hurricane
-# regime. The comparison works at the network level (the fraction of species
-# that went extinct) and at the species level (the fraction of replicates in
-# which a species went extinct). Two measures compare the empirical value with
-# each null model. The z-score, drawn in Extended Data Fig. 1, is the
-# empirical value minus the mean of the null networks, divided by their
-# standard deviation. Small differences among null networks make this
-# standard deviation small and the z-score large. The difference with
-# simulation uncertainty is the empirical value minus the null-model mean,
-# with a 95% confidence interval that combines the noise of the 1,000
-# empirical replicates and of the 100 null networks, each estimated from
-# 1,000 replicates. Negative values mean that the empirical network lost
-# fewer species than the null model.
+# Compare the extinctions of the empirical network of each island with null
+# models I to II-B under the empirical hurricane regime of the island, at
+# the network level (fraction of species extinct) and at the species level
+# (fraction of replicates in which a species went extinct). The z-score is
+# the empirical value minus the mean of the null networks, divided by their
+# sd. It gets large when the null networks differ little from each other.
+# The difference (empirical minus null mean) has a 95% confidence interval
+# that combines the noise of the 1,000 empirical replicates and of the 100
+# null networks. Negative values mean fewer extinctions in the empirical
+# network.
 #
-# Inputs:  data/main_sims_pmf/*_pmf0.0_tyears300.csv (empirical networks under
-#          the empirical regime)
-#          data/main_summary/null_models_network_extinction.csv and
-#          data/main_summary/null_models_species_extinction.csv, both written by
-#          process_null_simulations.R
+# Inputs:  data/main_sims_pmf/*_pmf0.0_tyears300.csv
+#          data/main_summary/null_models_network_extinction.csv
+#          data/main_summary/null_models_species_extinction.csv
 # Outputs: data/main_summary/null_models_comparison.csv
-# Helpers: summarize_extinctions in src/aux_functions.R
 
 library(data.table)
 library(here)
@@ -37,13 +30,12 @@ dir_summary   <- here("data", "main_summary")
 #-1. Extinctions in the empirical networks---------------------#
 #--------------------------------------------------------------#
 
-# The intensity shift of 0 reproduces each island's empirical hurricane regime
+# An intensity shift of 0 is the empirical hurricane regime of each island
 empirical_files <- list.files(dir_empirical, pattern="pmf0\\.0_tyears300\\.csv$",
                               full.names=TRUE)
 
-# Only 11 files, one per island, so they are read one after the other. The
-# standard error of the network level follows from the spread across
-# replicates, and that of the species level from the binomial distribution.
+# One file per island. Standard error at the network level from the sd over
+# replicates, and at the species level from the binomial distribution.
 empirical <- lapply(empirical_files, function(file) {
 
   extinctions <- summarize_extinctions(file)
@@ -67,11 +59,10 @@ empirical_species <- rbindlist(lapply(empirical, function(x) x$species))
 #-2. Extinctions in the null models----------------------------#
 #--------------------------------------------------------------#
 
-# Summarize each null model on each island across its null networks. The
-# standard error of the null-model mean divides the standard deviation across
-# null networks by the square root of their number. Each network mean already
-# carries its own simulation noise, so this standard error includes both the
-# differences among null networks and the noise of the simulations.
+# Mean and sd of each null model on each island over its null networks. The
+# mean of each null network carries its own simulation noise, so the standard
+# error of the null mean (sd / sqrt(n)) includes both the differences among
+# null networks and the noise of the simulations.
 null_networks <- fread(file.path(dir_summary, "null_models_network_extinction.csv"))
 null_network <- null_networks[, .(
   n_null_networks=.N,
@@ -90,7 +81,8 @@ null_species <- null_species_all[, .(
 #-3. Compare the empirical networks with each null model-------#
 #--------------------------------------------------------------#
 
-# Both measures, for one table holding the empirical and null values
+# Compute the two measures for a table with the empirical and null values.
+# Returns the table with the new columns.
 compare <- function(comparison) {
   comparison[, null_se := null_sd / sqrt(n_null_networks)]
 
@@ -98,7 +90,7 @@ compare <- function(comparison) {
   comparison[, z_score := fifelse(null_sd > 0, (empirical - null_mean) / null_sd,
                                   NA_real_)]
 
-  # Difference with simulation uncertainty: do the empirical and null
+  # Difference and its 95% confidence interval: do the empirical and null
   # extinctions differ by more than the noise of the simulations?
   comparison[, difference := empirical - null_mean]
   comparison[, se_difference := sqrt(empirical_se^2 + null_se^2)]

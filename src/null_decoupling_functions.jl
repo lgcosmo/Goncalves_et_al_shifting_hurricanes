@@ -2,43 +2,39 @@
 #-Null models I, I-A, II and II-B: decoupling the two layers---#
 #--------------------------------------------------------------#
 
-# These null models test whether the coupling of pollination and seed dispersal
-# by dual-role birds shapes the extinctions that hurricanes cause in the island
-# networks (Extended Data Fig. 1). Every null network decouples the pollination
-# and seed-dispersal layers of an empirical network while holding its remaining
-# topological properties fixed: species richness, the number of interactions in
-# each layer, and the identity and degree of the plants in each layer. Two
-# classes of null models decouple the layers.
+# Null models that decouple the pollination and seed-dispersal layers of an
+# empirical network. They test whether the coupling of the two layers by
+# dual-role birds (the connectors) shapes the extinctions caused by
+# hurricanes. Held fixed: species richness, the number of interactions in
+# each layer, and the identity and degree of the plants in each layer.
 #
-# Class I decouples the layers at the level of bird species. Each decoupled
-# connector (a bird that both pollinates and disperses seeds) retains all of
-# its interactions in one layer, and its interactions in the other layer are
+# Class I decouples bird species. Each decoupled connector retains all of
+# its interactions in one layer. Its interactions in the other layer are
 # rewired to single-role birds of that layer.
-#   Null model I.    All connectors are decoupled, so the layers separate.
+#   Null model I.    All connectors are decoupled and the layers separate.
 #   Null model I-A.  Half of the connectors, drawn at random, are decoupled.
 #
-# Class II decouples the layers at the level of interactions. Interactions of
-# dual-role birds are drawn one at a time, regardless of which bird holds them,
-# and rewired to single-role birds of the same layer.
-#   Null model II.   Rewiring continues until no bird interacts in both layers.
-#   Null model II-B. Rewiring stops once dual-role birds retain half of the
-#                    interactions they held in the empirical network.
+# Class II decouples interactions. Interactions of dual-role birds are drawn
+# one at a time, regardless of the bird, and rewired to single-role birds of
+# the same layer.
+#   Null model II.   Rewiring continues until no bird is in both layers.
+#   Null model II-B. Rewiring stops when dual-role birds retain half of the
+#                    interactions they had in the empirical network.
 #
-# In all null models, a rewired interaction keeps its plant and its layer, and
-# the receiving bird (1) interacts exclusively in that layer, so that no new
-# connector appears; (2) does not yet interact with that plant; and (3) is not
-# a hummingbird receiving a fruit. In a few cases, a plant already interacts
-# with every bird that could receive the interaction, which is then rewired to
-# another plant of the same layer.
+# A rewired interaction keeps its plant and its layer. The receiving bird
+# (1) interacts only in that layer (no new connector appears), (2) does not
+# yet interact with that plant and (3) is not a hummingbird receiving a
+# fruit. In a few cases a plant already interacts with every bird that could
+# receive. The interaction is then rewired to another plant of the same
+# layer.
 #
-# Inputs:  the empirical layers and the hummingbird list, read with the
-#          helpers of src/null_io_functions.jl (included before this file)
-# Outputs: the null matrices and the manifest of src/null_<model>/, written
-#          by build_null_ensemble
-# Helpers: src/null_decoupling_checks.jl (included after this file) checks
-#          every null network before it is written
-# Used by: scripts/01_network_preparation/build_null_decoupling.jl, which
-#          includes the three files in this order
+# Inputs:  the empirical layers and the hummingbird list, read with
+#          src/null_io_functions.jl
+# Outputs: src/null_<model>/multi_pol/B_<island>_null_<model>_<id>.csv
+#          src/null_<model>/multi_sd/S_<island>_null_<model>_<id>.csv
+#          src/null_<model>/network_manifest.csv
+#
+# Needs src/null_io_functions.jl and src/null_decoupling_checks.jl.
 
 using Random
 
@@ -46,20 +42,18 @@ using Random
 #-Layers, dual-role birds and receiving birds------------------#
 #--------------------------------------------------------------#
 
-# The two layers of a network are a vector of binary incidence matrices
-# (plants x birds) sharing the same rows and columns: layers[POLLINATION]
-# holds the flower visits and layers[DISPERSAL] the fruit consumption.
+# The two layers are binary incidence matrices (plants x birds) with the
+# same rows and columns. layers[POLLINATION] has the flower visits and
+# layers[DISPERSAL] the fruit consumption.
 const POLLINATION = 1
 const DISPERSAL = 2
 const LAYER_NAMES = ["pollination", "dispersal"]
 
-# The layer in which a connector's interactions are rewired once it retains
-# the other one. Arguments: retained_layer is POLLINATION or DISPERSAL.
+# Layer in which a connector is rewired, given the layer it retains.
 rewired_layer(; retained_layer::Int64) = 3 - retained_layer
 
-# The layer of each bird: POLLINATION or DISPERSAL for single-role birds, and
-# 0 for dual-role birds, which interact in both layers.
-# Arguments: layers holds the two matrices. Returns one Int64 per bird.
+# Layer of each bird: POLLINATION or DISPERSAL for single-role birds and 0
+# for dual-role birds (both layers).
 function bird_layer(; layers::Vector{Matrix{Int64}})
     in_pol = vec(sum(layers[POLLINATION]; dims=1)) .> 0
     in_disp = vec(sum(layers[DISPERSAL]; dims=1)) .> 0
@@ -69,23 +63,21 @@ function bird_layer(; layers::Vector{Matrix{Int64}})
     return layer
 end
 
-# The dual-role birds of a network: the connectors in the empirical network.
-# Arguments: layers holds the two matrices. Returns their column indices.
+# Column indices of the dual-role birds (connectors in the empirical network).
 function dual_role_birds(; layers::Vector{Matrix{Int64}})
     in_pol = vec(sum(layers[POLLINATION]; dims=1)) .> 0
     in_disp = vec(sum(layers[DISPERSAL]; dims=1)) .> 0
     return findall(in_pol .& in_disp)
 end
 
-# Number of interactions held by dual-role birds, summed over both layers.
-# Class II reduces this number. Arguments: layers holds the two matrices.
+# Interactions of dual-role birds over both layers. Class II reduces this
+# number.
 function count_dual_role_interactions(; layers::Vector{Matrix{Int64}})
     dual = dual_role_birds(layers=layers)
     return sum(layers[POLLINATION][:, dual]) + sum(layers[DISPERSAL][:, dual])
 end
 
-# Every interaction held by a dual-role bird, as (layer, plant, bird).
-# Arguments: layers holds the two matrices. Returns a vector of tuples.
+# All interactions of dual-role birds, as tuples (layer, plant, bird).
 function dual_role_interactions(; layers::Vector{Matrix{Int64}})
     dual = dual_role_birds(layers=layers)
     n_plants = size(layers[POLLINATION], 1)
@@ -95,11 +87,9 @@ function dual_role_interactions(; layers::Vector{Matrix{Int64}})
 end
 
 # Whether a bird can receive the interaction of a plant in a layer. The bird
-# must interact exclusively in that layer, must not yet interact with that
-# plant, and must not be a hummingbird receiving a fruit.
-# Arguments: layers holds the current matrices; layer, plant and bird locate
-# the candidate interaction; receiver_layer gives the layer in which each bird
-# can receive interactions (0 for none); hummingbirds marks the hummingbirds.
+# must interact only in that layer, must not yet interact with that plant,
+# and must not be a hummingbird receiving a fruit. receiver_layer is the
+# layer in which each bird can receive (0 for none).
 function can_receive(; layers::Vector{Matrix{Int64}}, layer::Int64, plant::Int64,
                        bird::Int64, receiver_layer::Vector{Int64},
                        hummingbirds::Vector{Bool})
@@ -108,8 +98,8 @@ function can_receive(; layers::Vector{Matrix{Int64}}, layer::Int64, plant::Int64
            !(layer == DISPERSAL && hummingbirds[bird])
 end
 
-# The birds that can receive the interaction of a plant in a layer.
-# Arguments: as in can_receive, without bird. Returns their column indices.
+# Column indices of the birds that can receive the interaction of a plant in
+# a layer.
 function receiving_birds(; layers::Vector{Matrix{Int64}}, layer::Int64, plant::Int64,
                            receiver_layer::Vector{Int64}, hummingbirds::Vector{Bool})
     return filter(bird -> can_receive(layers=layers, layer=layer, plant=plant, bird=bird,
@@ -118,11 +108,9 @@ function receiving_birds(; layers::Vector{Matrix{Int64}}, layer::Int64, plant::I
                   1:size(layers[layer], 2))
 end
 
-# The (plant, bird) cells of other plants of the same layer that can receive
-# an interaction. Only plants that already belong to the layer in the
-# empirical network can receive, so that no plant changes layers.
-# Arguments: as in receiving_birds; plant is the plant to exclude;
-# plants_in_layer marks the plants of the layer in the empirical network.
+# The (plant, bird) cells of the other plants of the layer that can receive
+# an interaction. Only plants already in the layer in the empirical network
+# (plants_in_layer) can receive, so no plant changes layers.
 function receiving_cells_at_other_plants(; layers::Vector{Matrix{Int64}}, layer::Int64,
                                            plant::Int64, plants_in_layer::BitVector,
                                            receiver_layer::Vector{Int64},
@@ -138,9 +126,8 @@ end
 #-Rewiring one interaction-------------------------------------#
 #--------------------------------------------------------------#
 
-# Rewire the interaction between plant and bird to a randomly chosen receiving
-# bird at the same plant. The plant keeps its degree in the layer.
-# Arguments: as in receiving_birds, plus bird (the current holder) and rng.
+# Rewire the interaction of plant and bird to a random receiving bird at the
+# same plant. The plant keeps its degree in the layer.
 function rewire_at_same_plant!(; layers::Vector{Matrix{Int64}}, layer::Int64,
                                  plant::Int64, bird::Int64, receiver_layer::Vector{Int64},
                                  hummingbirds::Vector{Bool}, rng::Random.Xoshiro)
@@ -151,10 +138,8 @@ function rewire_at_same_plant!(; layers::Vector{Matrix{Int64}}, layer::Int64,
     return nothing
 end
 
-# Rewire the interaction between plant and bird to a randomly chosen receiving
-# bird at another plant of the same layer. Two plants change their degree by
-# one interaction. Arguments: as in receiving_cells_at_other_plants, plus bird
-# (the current holder) and rng.
+# Rewire the interaction of plant and bird to a random receiving bird at
+# another plant of the same layer. Two plants change their degree by one.
 function rewire_to_other_plant!(; layers::Vector{Matrix{Int64}}, layer::Int64,
                                   plant::Int64, bird::Int64, plants_in_layer::BitVector,
                                   receiver_layer::Vector{Int64}, hummingbirds::Vector{Bool},
@@ -175,16 +160,13 @@ end
 #-Class I: decoupling at the level of bird species-------------#
 #--------------------------------------------------------------#
 
-# Count the interactions that would be rewired to another plant under one
+# Number of interactions that would be rewired to another plant under one
 # assignment of retained layers, and whether the assignment is feasible. At
 # each plant, a layer has as many interactions to rewire as decoupled
-# connectors that give it up there, and as many receiving birds as birds of
-# that layer that do not yet interact with the plant. Interactions in excess
-# have no receiver at their plant. Receivers in excess are the places where
-# such interactions can go, so each layer needs at least as many of them.
-# Arguments: layers holds the empirical matrices; decoupled lists the
-# connectors to decouple; retained_layers gives the layer each one retains;
-# hummingbirds marks the hummingbirds. Returns the count and the feasibility.
+# connectors giving it up there. Its receiving birds are the birds of that
+# layer that do not yet interact with the plant. Interactions in excess have
+# no receiver at their plant. Receivers in excess are where these
+# interactions can go, so each layer needs at least as many of them.
 function count_rewired_to_other_plants(; layers::Vector{Matrix{Int64}},
                                          decoupled::Vector{Int64},
                                          retained_layers::Vector{Int64},
@@ -209,12 +191,11 @@ function count_rewired_to_other_plants(; layers::Vector{Matrix{Int64}},
     return (n=sum(n_without_receiver), feasible=all(n_without_receiver .<= n_spare_receivers))
 end
 
-# The allowed assignments of retained layers for a set of decoupled connectors:
-# among all combinations (each connector retains pollination or dispersal),
-# the feasible ones that rewire the fewest interactions to another plant.
-# Arguments: as in count_rewired_to_other_plants, without retained_layers.
-# Returns a vector of assignments, each a vector of retained layers in the
-# order of decoupled. The vector is empty when no combination is feasible.
+# Allowed assignments of retained layers for a set of decoupled connectors.
+# Among all combinations (each connector retains pollination or dispersal),
+# keep the feasible ones that rewire the fewest interactions to another
+# plant. Returns a vector of assignments, each in the order of decoupled. It
+# is empty when no combination is feasible.
 function allowed_assignments(; layers::Vector{Matrix{Int64}}, decoupled::Vector{Int64},
                                hummingbirds::Vector{Bool})
     combinations = vec([collect(Int64, retained) for retained in
@@ -228,14 +209,11 @@ function allowed_assignments(; layers::Vector{Matrix{Int64}}, decoupled::Vector{
     return combinations[feasible .& [cost.n == fewest for cost in costs]]
 end
 
-# Draw the connectors that null model I-A decouples: half of them, or, with an
-# odd number of connectors, the number just below or above half with equal
-# probability. A drawn set without any feasible assignment is redrawn.
-# Arguments: layers holds the empirical matrices; connectors lists all
-# connectors; share is the share of connectors to decouple; hummingbirds marks
-# the hummingbirds; cache stores the allowed assignments of the sets already
-# drawn; rng is the generator of the replicate.
-# Returns the decoupled connectors and their allowed assignments.
+# Draw the connectors that null model I-A decouples: half of them. With an
+# odd number of connectors, draw the number just below or above half with
+# equal probability. A set without any feasible assignment is redrawn. cache
+# stores the allowed assignments of the sets already drawn. Returns the
+# decoupled connectors and their allowed assignments.
 function draw_decoupled_connectors(; layers::Vector{Matrix{Int64}},
                                      connectors::Vector{Int64}, share::Float64,
                                      hummingbirds::Vector{Bool},
@@ -256,16 +234,12 @@ function draw_decoupled_connectors(; layers::Vector{Matrix{Int64}},
 end
 
 # Build one null network of class I. Each decoupled connector retains all of
-# its interactions in its retained layer. Its interactions in the other layer
-# are rewired, one by one, to randomly chosen receiving birds at the same
-# plant. The interactions without a receiving bird at their plant are then
-# rewired to another plant of the same layer. The connectors left untouched
-# keep both layers and never receive interactions.
-# Arguments: empirical_layers holds the matrices to decouple; decoupled lists
-# the connectors to decouple and retained_layers the layer each one retains;
-# hummingbirds marks the hummingbirds; rng is the generator of the replicate.
-# Returns the null layers and the number of interactions rewired to another
-# plant.
+# its interactions in its retained layer. Its interactions in the other
+# layer are rewired one by one to random receiving birds at the same plant.
+# Those without a receiving bird at their plant are then rewired to another
+# plant of the same layer. Untouched connectors keep both layers and never
+# receive. Returns the null layers and the number of interactions rewired to
+# another plant.
 function build_class_I_network(; empirical_layers::Vector{Matrix{Int64}},
                                  decoupled::Vector{Int64}, retained_layers::Vector{Int64},
                                  hummingbirds::Vector{Bool}, rng::Random.Xoshiro)
@@ -273,14 +247,14 @@ function build_class_I_network(; empirical_layers::Vector{Matrix{Int64}},
     plants_in_layer = [vec(sum(empirical_layers[layer]; dims=2)) .> 0
                        for layer in (POLLINATION, DISPERSAL)]
 
-    # Single-role birds receive in their layer; decoupled connectors in the
-    # layer they retain; untouched connectors never receive
+    # Single-role birds receive in their layer and decoupled connectors in
+    # the layer they retain. Untouched connectors never receive.
     receiver_layer = bird_layer(layers=empirical_layers)
     receiver_layer[decoupled] .= retained_layers
 
-    # Rewire the interactions of each decoupled connector in its other layer to
-    # receiving birds at the same plant. Interactions without a receiving bird
-    # wait for the second pass.
+    # First pass: rewire the interactions of each decoupled connector in its
+    # other layer to receiving birds at the same plant. Interactions without
+    # a receiving bird wait for the second pass.
     without_receiver = Tuple{Int64, Int64, Int64}[]   # (layer, plant, bird)
     for (i, connector) in enumerate(decoupled)
         layer = rewired_layer(retained_layer=retained_layers[i])
@@ -298,7 +272,7 @@ function build_class_I_network(; empirical_layers::Vector{Matrix{Int64}},
         end
     end
 
-    # Rewire the remaining interactions to another plant of the same layer
+    # Second pass: rewire the rest to another plant of the same layer
     for (layer, plant, connector) in without_receiver
         rewire_to_other_plant!(layers=layers, layer=layer, plant=plant, bird=connector,
                                plants_in_layer=plants_in_layer[layer],
@@ -318,37 +292,31 @@ end
 #-Class II: decoupling at the level of interactions------------#
 #--------------------------------------------------------------#
 
-# Whether rewiring the interaction of a bird in a layer would separate the two
-# layers: the bird is the last dual-role bird and this is its last interaction
-# in that layer. Null model II-B never makes this move.
-# Arguments: layers holds the current matrices; layer and bird locate the
-# interaction. Returns true when the move would separate the layers.
+# Whether rewiring the interaction of a bird in a layer would separate the
+# two layers: the bird is the last dual-role bird and this is its last
+# interaction in that layer. Null model II-B never makes this move.
 function separates_layers(; layers::Vector{Matrix{Int64}}, layer::Int64, bird::Int64)
     return length(dual_role_birds(layers=layers)) == 1 && sum(layers[layer][:, bird]) == 1
 end
 
-# Build one null network of class II. Interactions of dual-role birds are drawn
-# one at a time, with uniform probability and regardless of which bird holds
-# them, and rewired to a randomly chosen receiving bird at the same plant. A
-# connector that loses all of its interactions in one layer becomes a
-# single-role bird and can receive from then on. Rewiring continues until
-# dual-role birds retain at most (1 - share) of the interactions they held in
-# the empirical network. When no interaction can be rewired at its own plant,
-# one is rewired to another plant of the same layer, provided its plant keeps
-# at least one partner in that layer.
+# Build one null network of class II. Interactions of dual-role birds are
+# drawn one at a time, with uniform probability and regardless of the bird,
+# and rewired to a random receiving bird at the same plant. A connector that
+# loses all of its interactions in one layer becomes a single-role bird and
+# can receive from then on. Rewiring continues until dual-role birds retain
+# at most (1 - share) of their empirical interactions (share is 1.0 in null
+# model II and 0.5 in null model II-B). When no interaction can be rewired
+# at its own plant, one is rewired to another plant of the same layer, if
+# its plant keeps at least one partner in that layer.
 #
 # Two rules cover the cases in which nothing can be rewired. Null model II-B
-# never separates the two layers, so it excludes the moves that would, and
-# stops when no other move is left (Antigua, whose single connector is the only
-# frugivorous bird, and St. Eustatius, where every frugivorous bird also visits
-# flowers). Null model II then finishes the separation with the rule of class
-# I: the remaining dual-role birds each retain one layer (St. Eustatius).
-#
-# Arguments: empirical_layers holds the matrices to decouple; hummingbirds
-# marks the hummingbirds; share is the share of the dual-role birds'
-# interactions to rewire (1.0 in null model II, 0.5 in null model II-B); rng
-# is the generator of the replicate. Returns the null layers, the number of
-# interactions rewired to another plant and the rule that stopped the rewiring.
+# never separates the two layers. It excludes the moves that would, and
+# stops when no other move is left (Antigua, where the single connector is
+# the only frugivorous bird, and St. Eustatius, where every frugivorous bird
+# also visits flowers). Null model II then finishes the separation with the
+# rule of class I: each remaining dual-role bird retains one layer
+# (St. Eustatius). Returns the null layers, the number of interactions
+# rewired to another plant and the rule that stopped the rewiring.
 function build_class_II_network(; empirical_layers::Vector{Matrix{Int64}},
                                   hummingbirds::Vector{Bool}, share::Float64,
                                   rng::Random.Xoshiro)
@@ -380,8 +348,8 @@ function build_class_II_network(; empirical_layers::Vector{Matrix{Int64}},
             continue
         end
 
-        # No interaction can be rewired at its own plant: rewire one to another
-        # plant of the same layer, keeping every plant in its layer
+        # No interaction can be rewired at its own plant. Rewire one to
+        # another plant of the same layer, keeping every plant in its layer.
         rewirable = filter(x -> sum(layers[x[1]][x[2], :]) > 1 &&
                                 !isempty(receiving_cells_at_other_plants(
                                     layers=layers, layer=x[1], plant=x[2],
@@ -432,18 +400,12 @@ end
 #--------------------------------------------------------------#
 
 # Build one null network of the requested class from an empirical network.
-# Class I decouples all connectors (share 1.0) or draws the connectors to
-# decouple (share 0.5), draws one allowed assignment of retained layers at
-# random, and rewires. Class II rewires interactions one at a time.
-# Arguments: empirical_layers holds the matrices; connectors lists the
-# empirical connectors; class is "species" (class I) or "interactions"
-# (class II); share is the share of connectors or of dual-role interactions
-# decoupled; hummingbirds marks the hummingbirds; cache stores the allowed
-# assignments already computed for this island; rng is the generator of the
-# replicate. Returns a NamedTuple with the same fields for both classes: the
-# null layers, the decoupled connectors and their retained layers (class I),
-# the number of allowed assignments (class I), the number of interactions
-# rewired to another plant, and the rule that stopped the rewiring (class II).
+# Class I ("species") decouples all connectors (share 1.0) or draws the
+# connectors to decouple (share 0.5), then draws one allowed assignment of
+# retained layers at random and rewires. Class II ("interactions") rewires
+# interactions one at a time. cache stores the allowed assignments already
+# computed for the island. Returns a NamedTuple with the same fields for
+# both classes. The fields of the other class are empty or missing.
 function build_null_network(; empirical_layers::Vector{Matrix{Int64}},
                               connectors::Vector{Int64}, class::String, share::Float64,
                               hummingbirds::Vector{Bool},
@@ -486,9 +448,7 @@ end
 #--------------------------------------------------------------#
 
 # Describe the layer retained by each decoupled connector, for example
-# "Bananaquit=pollination; Caribbean Elaenia=dispersal".
-# Arguments: birds holds the bird labels; decoupled and retained_layers come
-# from build_null_network. Returns a String (empty for class II).
+# "Bananaquit=pollination; Caribbean Elaenia=dispersal". Empty for class II.
 function describe_retained_layers(; birds::Vector{String}, decoupled::Vector{Int64},
                                     retained_layers::Vector{Int64})
     return join(["$(birds[decoupled[i]])=$(LAYER_NAMES[retained_layers[i]])"
@@ -497,8 +457,6 @@ end
 
 # Describe the layers in which each empirical connector interacts in a null
 # network, for example "Bananaquit=pollination; Caribbean Elaenia=both".
-# Arguments: birds holds the bird labels; connectors lists the empirical
-# connectors; layers holds the null matrices. Returns a String.
 function describe_connector_states(; birds::Vector{String}, connectors::Vector{Int64},
                                      layers::Vector{Matrix{Int64}})
     layer = bird_layer(layers=layers)
@@ -506,16 +464,11 @@ function describe_connector_states(; birds::Vector{String}, connectors::Vector{I
     return join(["$(birds[connector])=$(state(connector))" for connector in connectors], "; ")
 end
 
-# Build the ensemble of one null model for every island and write it to disk.
-# Arguments: source_dir is src/, with the empirical matrices and the
-# hummingbird list; model names the null model in the file names ("I",
-# "I-A", "II" or "II-B"); class is "species" or "interactions"; share is the
-# share of connectors (class I) or of dual-role interactions (class II)
-# decoupled; seed is the base seed of the null model; n_null is the number of
-# null networks per island; output_dir receives the matrices and must be new
-# or empty. Writes output_dir/multi_pol/B_<island>_null_<model>_<id>.csv,
-# output_dir/multi_sd/S_..., and output_dir/network_manifest.csv (one row per
-# null network). Returns the manifest as a DataFrame.
+# Build the ensemble of one null model for every island and save it in
+# output_dir (must be new or empty). source_dir is src/, with the empirical
+# matrices and the hummingbird list. model names the null model in the file
+# names ("I", "I-A", "II" or "II-B") and seed is its base seed. Returns the
+# manifest as a DataFrame, with one row per null network.
 function build_null_ensemble(; source_dir::String, model::String, class::String,
                                share::Float64, seed::Int64, n_null::Int64,
                                output_dir::String)

@@ -2,50 +2,31 @@
 #-Topology of the multilayer networks--------------------------#
 #--------------------------------------------------------------#
 
-# Compute the topology descriptors of each island's multilayer
-# bird-pollination and seed-dispersal network. Five of them enter the PCA of
-# calculate_pca.R (Extended Data Table 2) and, through its two axes, the Fig.
-# 2 inset and the pSEM of Fig. 4. Three are the leading eigenvalue of the
-# pollination layer, of the seed-dispersal layer and of the multilayer
-# network, and two are the proportion of dual-role species and the
-# proportion of interactions involving dual-role species. The leading
-# eigenvalue predicts the resilience of a network to pulse perturbations such
-# as hurricanes, and it correlates with nestedness, modularity, connectance
-# and species richness. To document this correlation (Extended Data), the
-# script also computes species richness, connectance, nestedness (NODF) and
-# modularity (Barber's Q) for each layer and for the multilayer network, with
-# z-scores of NODF and Q against null networks that keep the degree
-# distributions of the empirical network. The multilayer network is the union
-# of the two layers. A plant and a bird interact in it when they interact in
-# either layer. The proportion of interactions involving dual-role species
-# weights each interaction by its number of records, as stored in the
-# matrices; every other descriptor counts interactions as presence or
-# absence.
+# Compute the topology descriptors of the multilayer network of each island.
+# For each layer and for the multilayer network: species richness,
+# connectance, leading eigenvalue, nestedness (NODF) and modularity
+# (Barber's Q). NODF and Q are also given as z-scores against null networks
+# that keep the degree distributions. For each island: proportion of
+# dual-role species and proportion of interactions involving dual-role
+# species. The multilayer network is the union of the two layers.
 #
-# Inputs:  src/multi_pol/B_<island>.csv and src/multi_sd/S_<island>.csv,
-#          written by build_networks_multilayer.R
-# Outputs: data/main_summary/macro_structure.csv, one row per island, read by
-#          calculate_pca.R and build_island_data.R
+# Inputs:  src/multi_pol/B_<island>.csv
+#          src/multi_sd/S_<island>.csv
+# Outputs: data/main_summary/macro_structure.csv
 
 library(here)
 library(tidyverse)
 
 #--------------------------------------------------------------#
-#-Computing Nestedness (NODF)----------------------------------#
+#-Nestedness (NODF)--------------------------------------------#
 #--------------------------------------------------------------#
 
 # Nestedness (NODF) of a binary incidence matrix, following Almeida-Neto et
-# al. (2008). For each pair of plants, and for each pair of birds, the species
+# al. (2008). For each pair of plants and each pair of birds, the species
 # with fewer partners contributes the share of its partners that it shares
 # with the species with more partners. Pairs with the same degree contribute
-# zero, so that NODF rewards decreasing fill and not only overlap. The metric
-# is the mean contribution over all pairs, scaled from 0 (no specialist
-# shares partners with a generalist) to 100 (the partners of every specialist
-# form a subset of those of every generalist).
-# Arguments: matrix is the incidence matrix with plants in rows and birds in
-# columns, binarized before use; sort_for_nodf orders rows and columns by
-# decreasing degree before the pairs are compared. Returns NODF between 0 and
-# 100, or 0 for a matrix without interactions.
+# zero. NODF is the mean contribution over all pairs, from 0 to 100.
+# Returns 0 for a matrix without interactions.
 compute_nodf <- function(matrix, sort_for_nodf = TRUE) {
   B <- (matrix > 0) * 1
   if (sum(B) == 0) {
@@ -64,6 +45,7 @@ compute_nodf <- function(matrix, sort_for_nodf = TRUE) {
   row_deg <- rowSums(B)
   col_deg <- colSums(B)
 
+  # Overlap of partners between pairs of plants (rows)
   row_sum <- 0
   if (nrow_val > 1) {
     for (i in 1:(nrow_val - 1)) {
@@ -79,6 +61,7 @@ compute_nodf <- function(matrix, sort_for_nodf = TRUE) {
     }
   }
 
+  # Overlap of partners between pairs of birds (columns)
   col_sum <- 0
   if (ncol_val > 1) {
     for (i in 1:(ncol_val - 1)) {
@@ -94,6 +77,7 @@ compute_nodf <- function(matrix, sort_for_nodf = TRUE) {
     }
   }
 
+  # Mean over all pairs of plants and pairs of birds
   num_row_pairs <- if (nrow_val > 1) nrow_val * (nrow_val - 1) / 2 else 0
   num_col_pairs <- if (ncol_val > 1) ncol_val * (ncol_val - 1) / 2 else 0
   denom <- num_row_pairs + num_col_pairs
@@ -106,17 +90,15 @@ compute_nodf <- function(matrix, sort_for_nodf = TRUE) {
 }
 
 #--------------------------------------------------------------#
-#-Bascompte Null Model 2---------------------------------------#
+#-Null model 2 of Bascompte et al. (2003)----------------------#
 #--------------------------------------------------------------#
 
-# One null network under null model 2 of Bascompte et al. (2003). Each plant
-# and bird interact with a probability equal to the mean of the plant's fill
-# (its degree over the number of birds) and the bird's fill (its degree over
-# the number of plants). The null networks therefore keep, on average, the
-# degree of each plant and of each bird, and with them the connectance, so
-# that the z-scores of NODF and Q measure structure beyond what the degree
-# distributions impose.
-# Arguments: matrix is the empirical incidence matrix, binarized before use.
+# One null network under null model 2 of Bascompte et al. (2003). A plant and
+# a bird interact with probability equal to the mean of the fill of the plant
+# (its degree over the number of birds) and the fill of the bird (its degree
+# over the number of plants). The null networks keep, on average, the degree
+# of each plant and bird and the connectance. The z-scores of NODF and Q then
+# measure structure beyond the degree distributions.
 # Returns a binary incidence matrix of the same dimensions.
 bascompte_null_model_2 <- function(matrix) {
   B <- (matrix > 0) * 1
@@ -127,9 +109,11 @@ bascompte_null_model_2 <- function(matrix) {
     return(matrix(0, nrow = rows, ncol = cols))
   }
 
+  # Fill of each plant and each bird
   p_row <- rowSums(B) / cols
   p_col <- colSums(B) / rows
 
+  # Probability of each interaction: mean of the two fills
   P <- 0.5 * (matrix(p_row, nrow = rows, ncol = cols) +
     matrix(p_col, nrow = rows, ncol = cols, byrow = TRUE))
 
@@ -139,20 +123,15 @@ bascompte_null_model_2 <- function(matrix) {
 }
 
 #--------------------------------------------------------------#
-#-Barber Modularity for Bipartite Networks---------------------#
+#-Barber's modularity for bipartite networks-------------------#
 #--------------------------------------------------------------#
 
-# Barber's modularity Q of a bipartite network under a given division of its
-# plants and birds into modules. Standard modularity compares the interactions
-# inside modules with those expected among all pairs of species, but a plant
-# never interacts with another plant, nor a bird with another bird. Barber's Q
-# therefore takes the expectation only between plants and birds. The expected
-# number of interactions inside a module is the product of the summed degree
-# of its plants and the summed degree of its birds, divided by the number of
-# interactions in the network.
-# Arguments: B is the binary incidence matrix; row_labels and col_labels give
-# the module of each plant and of each bird as positive integers. Returns Q,
-# or 0 for a network without interactions.
+# Barber's modularity Q of a bipartite network for a given division of its
+# plants and birds into modules. Interactions are expected only between
+# plants and birds. The expected number inside a module is the summed degree
+# of its plants times the summed degree of its birds, divided by the number
+# of interactions in the network (L). row_labels and col_labels are positive
+# integers. Returns Q, or 0 for a network without interactions.
 barber_Q <- function(B, row_labels, col_labels) {
   L <- sum(B)
   if (L == 0) {
@@ -165,7 +144,7 @@ barber_Q <- function(B, row_labels, col_labels) {
   max_label <- max(c(row_labels, col_labels))
 
   # Summed degree of the plants (aR) and of the birds (aC) in each module, and
-  # the number of interactions inside each module (e)
+  # number of interactions inside each module (e)
   aR <- numeric(max_label)
   aC <- numeric(max_label)
   e <- numeric(max_label)
@@ -179,8 +158,7 @@ barber_Q <- function(B, row_labels, col_labels) {
   aC_agg <- tapply(col_deg, col_labels, sum)
   aC[as.numeric(names(aC_agg))] <- aC_agg
 
-  # An interaction lies inside a module when its plant and its bird share the
-  # module
+  # An interaction is inside a module when its plant and bird share the module
   indices <- which(B > 0, arr.ind = TRUE)
   rows_idx <- indices[, 1]
   cols_idx <- indices[, 2]
@@ -195,17 +173,13 @@ barber_Q <- function(B, row_labels, col_labels) {
     e[as.numeric(names(e_agg))] <- e_agg
   }
 
-  # Interactions inside each module minus their expectation, summed over the
-  # modules and divided by the number of interactions
+  # Q: interactions inside modules minus their expectation, divided by L
   Q <- sum(e - (aR * aC) / L) / L
   return(Q)
 }
 
-# Renumber the modules as 1, 2, 3 and so on, dropping the labels that no plant
-# or bird holds any more, so that the module vectors stay short after moves.
-# Arguments: row_labels and col_labels are the current module labels of the
-# plants and of the birds. Returns the renumbered labels and the number of
-# modules.
+# Renumber the modules as 1, 2, 3, ..., dropping the labels with no plant or
+# bird. Returns the new labels and the number of modules.
 compact_relabel <- function(row_labels, col_labels) {
   all_labels <- sort(unique(c(row_labels, col_labels)))
   mapping <- setNames(seq_along(all_labels), all_labels)
@@ -217,18 +191,14 @@ compact_relabel <- function(row_labels, col_labels) {
   ))
 }
 
-# Greedy search for the division that maximizes Barber's Q. The search starts
-# from a given division, or from every species in its own module. Each plant
-# then moves to the module of one of its partners whenever the move increases
-# Q, and the birds do the same. Both passes repeat until no species moves or
-# max_iter passes have run. The gain of a move follows the bipartite form of
-# the modularity increment, which needs only the interactions of the moving
-# species with each module and the summed degrees of the two modules
-# involved, so that Q is never recomputed from scratch during the search.
-# Arguments: matrix is the incidence matrix, binarized before use; init_row
-# and init_col give the starting division of the plants and of the birds
-# (NULL puts every species in its own module); max_iter caps the number of
-# passes. Returns Q and the module labels of the plants and of the birds.
+# Greedy search for the division that maximizes Barber's Q. Starts from a
+# given division (init_row, init_col) or from every species in its own
+# module. Each plant moves to the module of its partners that most increases
+# Q, then the birds do the same. Repeats until no species moves or max_iter
+# iterations. The gain in Q of a move needs only the interactions of the
+# species with each module and the summed degrees of the two modules, so Q
+# is not recomputed during the search.
+# Returns Q and the module labels of the plants and of the birds.
 local_move_barber <- function(matrix, init_row = NULL, init_col = NULL, max_iter = 50) {
   B <- (matrix > 0) * 1
   m <- nrow(B)
@@ -240,8 +210,7 @@ local_move_barber <- function(matrix, init_row = NULL, init_col = NULL, max_iter
     return(list(Q = 0, r = 1:m, c = (m + 1):(m + n)))
   }
 
-  # Without a starting division, every plant and every bird begins in its own
-  # module, with the bird labels following the plant labels
+  # Default: every species in its own module, birds numbered after plants
   if (is.null(init_row)) {
     row_labels <- 1:m
   } else {
@@ -260,13 +229,12 @@ local_move_barber <- function(matrix, init_row = NULL, init_col = NULL, max_iter
   iter <- 0
   improved <- TRUE
 
-  # Renumber the modules so that the label vectors index them directly
+  # Renumber the modules so the labels index the vectors of summed degrees
   cres <- compact_relabel(row_labels, col_labels)
   row_labels <- cres$row_labels
   col_labels <- cres$col_labels
 
-  # Each pass moves the plants and then the birds. The search stops when a
-  # pass moves no species.
+  # Each iteration moves the plants, then the birds, until no species moves
   while (improved && iter < max_iter) {
     iter <- iter + 1
     improved <- FALSE
@@ -282,7 +250,7 @@ local_move_barber <- function(matrix, init_row = NULL, init_col = NULL, max_iter
     aC_agg <- tapply(col_deg, col_labels, sum)
     aC[as.numeric(names(aC_agg))] <- aC_agg
 
-    # First pass. Each plant considers the modules of its partners.
+    # Plants: each plant considers the modules of its partners
     for (i in 1:m) {
       ki <- row_deg[i] # degree of plant i
       s <- row_labels[i] # current module of plant i
@@ -303,10 +271,9 @@ local_move_barber <- function(matrix, init_row = NULL, init_col = NULL, max_iter
 
       sumA_s <- k_i_to_mod[s]
 
-      # Gain in Q from moving plant i to module t. The gain is the change in
-      # interactions inside modules minus the change in their expectation,
-      # which for a plant depends on the summed bird degrees of the two
-      # modules.
+      # Gain in Q from moving plant i to module t: change in interactions
+      # inside modules minus change in their expectation. For a plant, the
+      # expectation depends on the summed bird degrees (aC) of the modules.
       for (t in neigh_mods) {
         if (t == s) next
 
@@ -315,7 +282,7 @@ local_move_barber <- function(matrix, init_row = NULL, init_col = NULL, max_iter
         delta_num <- (sumA_t - sumA_s) - ki * (aC[t] - aC[s]) / L
         delta <- delta_num / L
 
-        # A small tolerance keeps ties from moving species back and forth
+        # The tolerance keeps ties from moving species back and forth
         if (delta > best_delta + 1e-10) {
           best_delta <- delta
           best_t <- t
@@ -325,19 +292,19 @@ local_move_barber <- function(matrix, init_row = NULL, init_col = NULL, max_iter
       if (best_t != s) {
         row_labels[i] <- best_t
 
-        # The summed plant degrees of the two modules follow the move
+        # Update the summed plant degrees of the two modules
         aR[s] <- aR[s] - ki
         aR[best_t] <- aR[best_t] + ki
         improved <- TRUE
       }
     }
 
-    # Drop the modules left empty and renumber
+    # Drop the empty modules and renumber
     cres <- compact_relabel(row_labels, col_labels)
     row_labels <- cres$row_labels
     col_labels <- cres$col_labels
 
-    # Summed degrees per module under the new labels
+    # Summed degrees per module with the new labels
     max_lab <- max(c(row_labels, col_labels))
     aR <- numeric(max_lab)
     aC <- numeric(max_lab)
@@ -346,8 +313,7 @@ local_move_barber <- function(matrix, init_row = NULL, init_col = NULL, max_iter
     aC_agg <- tapply(col_deg, col_labels, sum)
     aC[as.numeric(names(aC_agg))] <- aC_agg
 
-    # Second pass. Each bird considers the modules of its partners, with the
-    # same rules as the plants.
+    # Birds: same rules as the plants
     for (j in 1:n) {
       kj <- col_deg[j]
       s <- col_labels[j]
@@ -370,8 +336,7 @@ local_move_barber <- function(matrix, init_row = NULL, init_col = NULL, max_iter
         if (t == s) next
 
         sumA_t <- k_j_to_mod[t]
-        # For a bird, the expectation depends on the summed plant degrees of
-        # the two modules
+        # For a bird, the expectation depends on the summed plant degrees (aR)
         delta_num <- (sumA_t - sumA_s) - kj * (aR[t] - aR[s]) / L
         delta <- delta_num / L
 
@@ -399,17 +364,12 @@ local_move_barber <- function(matrix, init_row = NULL, init_col = NULL, max_iter
   return(list(Q = Q, row_labels = row_labels, col_labels = col_labels))
 }
 
-# Simulated annealing to leave the local optimum found by the greedy search.
-# At each step one plant or bird, drawn at random, moves to a random module,
+# Simulated annealing to leave the local optimum of the greedy search. At
+# each step one plant or bird, drawn at random, moves to a random module,
 # either an existing one or a new one. A move that lowers Q is accepted with
-# probability exp(delta / T), where the temperature T shrinks by the cooling
-# factor at every step, so that the search explores early and settles late.
-# The best division met along the way is kept.
-# Arguments: matrix is the incidence matrix, binarized before use; init_row
-# and init_col give the starting division of the plants and of the birds;
-# steps is the number of proposed moves; T0 is the starting temperature;
-# cooling multiplies the temperature at each step. Returns the highest Q
-# found and its module labels.
+# probability exp(delta / T). The temperature T starts at T0 and is
+# multiplied by cooling at every step: the search explores early and settles
+# late. Returns the highest Q found and its module labels.
 sa_barber <- function(matrix, init_row, init_col, steps = 2000, T0 = 0.01, cooling = 0.999) {
   B <- (matrix > 0) * 1
   row_labels <- init_row
@@ -426,6 +386,7 @@ sa_barber <- function(matrix, init_row, init_col, steps = 2000, T0 = 0.01, cooli
   for (i in 1:steps) {
     is_row <- runif(1) < 0.5
 
+    # Move one plant (row) or one bird (column) to a random module
     if (is_row) {
       idx <- sample(length(row_labels), 1)
       old_lab <- row_labels[idx]
@@ -446,7 +407,7 @@ sa_barber <- function(matrix, init_row, init_col, steps = 2000, T0 = 0.01, cooli
 
     delta <- new_Q - current_Q
 
-    # Metropolis rule. A gain is always accepted, and a loss with a
+    # Metropolis rule: a gain is always accepted. A loss is accepted with a
     # probability that falls as the temperature cools.
     if (delta >= 0 || runif(1) < exp(delta / T_curr)) {
       current_Q <- new_Q
@@ -470,13 +431,10 @@ sa_barber <- function(matrix, init_row, init_col, steps = 2000, T0 = 0.01, cooli
   return(list(Q = best_Q, row_labels = best_row, col_labels = best_col))
 }
 
-# Modularity of a network, as the highest Q found by a greedy search, a
-# simulated annealing started from its division, and a second greedy search
-# started from the annealed division. The annealing frees the search from the
-# local optimum of the first pass, and the last pass refines the division
-# that the annealing found.
-# Arguments: matrix is the incidence matrix; sa_steps is the number of
-# annealing steps. Returns Q.
+# Modularity of a network: the highest Q among a greedy search, a simulated
+# annealing started from its division and a second greedy search started
+# from the annealed division. The annealing leaves the local optimum of the
+# first search and the second search refines the result. Returns Q.
 hybrid_barber_modularity <- function(matrix, sa_steps = 2000) {
   res1 <- local_move_barber(matrix, max_iter = 50)
   res2 <- sa_barber(matrix, res1$row_labels, res1$col_labels, steps = sa_steps)
@@ -490,23 +448,14 @@ hybrid_barber_modularity <- function(matrix, sa_steps = 2000) {
 #-Descriptors of one network-----------------------------------#
 #--------------------------------------------------------------#
 
-# Descriptors of one network, either a layer or the multilayer network.
-# Species richness counts the plants and birds of the network, connectance
-# divides its interactions by the possible plant and bird pairs, and the
-# leading eigenvalue is the largest singular value of the incidence matrix,
-# which equals the leading eigenvalue of the adjacency matrix of the
-# bipartite network. Nestedness (NODF) and modularity (Barber's Q) are also
-# standardized as z-scores against null_reps null networks of Bascompte's
-# null model 2, which keep the degree distributions of the empirical
-# network, so that nestedness and modularity can be compared across islands
-# that differ in size and connectance. The annealing of each null network
-# runs fewer steps than that of the empirical network to keep the running
-# time low.
-# Arguments: matrix is the incidence matrix of the species with at least one
-# interaction, binarized before use; null_reps is the number of null
-# networks. Returns a list with the richness, connectance, lambda1, the raw
-# and standardized NODF and the raw and standardized Q, or NULL for a network
-# without interactions.
+# Descriptors of one network, either a layer or the multilayer network:
+# species richness (plants plus birds), connectance, leading eigenvalue, NODF
+# and Q. The leading eigenvalue is the largest singular value of the
+# incidence matrix, equal to the leading eigenvalue of the adjacency matrix
+# of the bipartite network. NODF and Q are also given as z-scores against
+# null_reps null networks, to compare islands that differ in size and
+# connectance. matrix has only the species with at least one interaction.
+# Returns a list, or NULL for a network without interactions.
 analyze_network <- function(matrix, null_reps = 100) {
   B <- (matrix > 0) * 1
   if (sum(B) == 0) {
@@ -516,14 +465,15 @@ analyze_network <- function(matrix, null_reps = 100) {
   nodf_obs <- compute_nodf(B)
   q_obs <- hybrid_barber_modularity(B, sa_steps = 1000)
 
-  # Leading eigenvalue, as the largest singular value of the incidence matrix
+  # Leading eigenvalue: largest singular value of the incidence matrix
   sv <- svd(B)$d
   lambda1 <- sv[1]
 
   richness <- nrow(B) + ncol(B)
   connectance <- sum(B) / (nrow(B) * ncol(B))
 
-  # NODF and Q of each null network, with a shorter annealing
+  # NODF and Q of each null network. The annealing has fewer steps than for
+  # the empirical network (200 instead of 1000) to reduce the running time.
   nodf_nulls <- numeric(null_reps)
   q_nulls <- numeric(null_reps)
 
@@ -533,8 +483,8 @@ analyze_network <- function(matrix, null_reps = 100) {
     q_nulls[i] <- hybrid_barber_modularity(B_null, sa_steps = 200)
   }
 
-  # z-scores of the empirical values among the null networks, set to zero
-  # when the null networks do not vary
+  # z-scores of the empirical values against the null networks. Zero when
+  # the null networks do not vary.
   nodf_mean <- mean(nodf_nulls)
   nodf_sd <- sd(nodf_nulls)
   nodf_z <- if (nodf_sd > 0) (nodf_obs - nodf_mean) / nodf_sd else 0
@@ -558,19 +508,13 @@ analyze_network <- function(matrix, null_reps = 100) {
 #-Dual-role species and their interactions---------------------#
 #--------------------------------------------------------------#
 
-# Coupling of the two layers of an island by its dual-role species. A
-# dual-role species interacts in both layers. Such a bird both pollinates
-# flowers and disperses seeds, and such a plant is both pollinated and
-# dispersed by birds. The two descriptors are the proportion of dual-role
-# species among the species with at least one interaction, and the proportion
-# of all interactions, over both layers, that involve a dual-role plant or
-# bird. The second sums the records of each interaction, as stored in the
-# matrices, so that an interaction recorded many times weighs more. Both
-# enter the PCA of calculate_pca.R.
-# Arguments: mat_pol and mat_sd are the incidence matrices of the two layers
-# as stored, with the number of records of each interaction, the same plants
-# in rows and the same birds in columns. Returns a list with
-# prop_dual_species and prop_dual_interactions.
+# Coupling of the two layers of an island by its dual-role species, the
+# species that interact in both layers. Returns a list with the proportion
+# of dual-role species among the species with at least one interaction and
+# the proportion of the interactions of both layers that involve a dual-role
+# plant or bird. The second sums the number of records of each interaction,
+# as stored in the matrices: an interaction recorded many times weighs more.
+# mat_pol and mat_sd have the same plants in rows and birds in columns.
 dual_role_descriptors <- function(mat_pol, mat_sd) {
 
   # Species present in each layer, and in both
@@ -582,8 +526,7 @@ dual_role_descriptors <- function(mat_pol, mat_sd) {
   dual_plants <- plants_pol & plants_sd
   dual_birds  <- birds_pol & birds_sd
 
-  # An interaction involves a dual-role species when its plant or its bird is
-  # one
+  # An interaction involves a dual-role species when its plant or bird is one
   involves_dual <- outer(dual_plants, dual_birds, FUN="|")
 
   list(
@@ -595,14 +538,11 @@ dual_role_descriptors <- function(mat_pol, mat_sd) {
 }
 
 #--------------------------------------------------------------#
-#-Running every island-----------------------------------------#
+#-Descriptors of all islands-----------------------------------#
 #--------------------------------------------------------------#
 
 # Read one incidence matrix as stored, with the number of records of each
-# interaction, the plants in rows and the birds in columns. analyze_network
-# binarizes it; dual_role_descriptors uses the records.
-# Arguments: path is the CSV file with the plant names in its first column.
-# Returns the matrix with the plant names as row names.
+# interaction. Returns the matrix with plants in rows and birds in columns.
 read_layer <- function(path) {
   df <- read_csv(path, show_col_types=FALSE)
   mat <- as.matrix(df[, -1])
@@ -610,19 +550,15 @@ read_layer <- function(path) {
   return(mat)
 }
 
-# Keep the plants and birds with at least one interaction in a matrix, so
-# that a bird that only disperses seeds does not count as an isolated species
+# Keep the plants and birds with at least one interaction in a matrix. A
+# bird that only disperses seeds is then not counted as an isolated species
 # of the pollination layer.
-# Arguments: mat is the binary matrix. Returns the matrix restricted to its
-# connected plants and birds.
 active_matrix <- function(mat) {
   mat[rowSums(mat) > 0, colSums(mat) > 0, drop=FALSE]
 }
 
-# Compute every descriptor for every island and write them to one table, one
-# row per island. The multilayer network is the union of the two layers,
-# which share their plants and birds. Takes no arguments, reads src/multi_pol
-# and src/multi_sd and writes data/main_summary/macro_structure.csv.
+# Compute the descriptors of every island and save them in one table, with
+# one row per island.
 run_all <- function() {
 
   networks <- list.files(here("src", "multi_pol"), pattern="^B_.*\\.csv$") %>%
@@ -637,14 +573,13 @@ run_all <- function() {
     mat_pol <- read_layer(here("src", "multi_pol", paste0("B_", net, ".csv")))
     mat_sd  <- read_layer(here("src", "multi_sd",  paste0("S_", net, ".csv")))
 
-    # Descriptors of each layer and of the multilayer network, in which a
-    # plant and a bird interact when they interact in either layer
+    # Each layer and the multilayer network, the union of the two layers
     res_pol   <- analyze_network(active_matrix(mat_pol))
     res_sd    <- analyze_network(active_matrix(mat_sd))
     res_multi <- analyze_network(active_matrix((mat_pol | mat_sd) * 1))
 
-    # One row per island, with the descriptors of each network prefixed by
-    # its name (pol, sd, multi) and the two dual-role descriptors
+    # One row per island. The descriptors of each network are prefixed by
+    # its name (pol, sd, multi), followed by the two dual-role descriptors.
     results[[net]] <- bind_cols(
       tibble(network=net),
       as_tibble(res_pol)   %>% rename_with(~paste0("pol_", .x)),

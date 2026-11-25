@@ -1,22 +1,16 @@
 #--------------------------------------------------------------#
-#-Extended Data Figure 1: Empirical versus Null Extinctions----#
+#-Extended Data Figure 1: empirical versus null extinctions----#
 #--------------------------------------------------------------#
 
-# Plot how the extinctions of each island's empirical network compare with
-# those of its null networks, all simulated under the island's empirical
-# hurricane regime. The null networks decouple the pollination and
-# seed-dispersal layers while holding the remaining topological properties
-# fixed, with 100 null networks per island and null model (Methods, null
-# models I, I-A, II and II-B). The network figure is Extended Data Figure 1.
-# It shows the z-score of the empirical fraction of species that went extinct
-# among the null networks. The species figure shows the z-scores of the
-# fraction of simulations in which each species went extinct, with the
-# network-level z-score of each null model. That figure is not yet placed in
-# the manuscript. Negative z-scores mean that the empirical network lost
-# fewer species than its null counterparts.
+# Extended Data Figure 1: extinctions of the empirical network of each island
+# compared with its null networks (null models I, I-A, II and II-B, 100 null
+# networks each), all under the empirical hurricane regime of the island.
+# The network figure shows the z-score of the fraction of species extinct.
+# A second figure, not in the manuscript, shows the z-scores of each species
+# with the network-level z-score of each null model. Negative z-scores mean
+# fewer extinctions in the empirical network than in the null networks.
 #
 # Inputs:  data/main_summary/null_models_comparison.csv
-#          (null_model_comparison.R)
 # Outputs: figures/extended_data_figure_1.png, .pdf and .svg
 #          figures/extended_data_figure_1_species.png, .pdf and .svg
 
@@ -29,13 +23,12 @@ source(here("src", "island_labels.R"))
 source(here("src", "figure_helpers.R"))
 
 #--------------------------------------------------------------#
-#-1. Load and Prepare Data-------------------------------------#
+#-1. Load and prepare the data---------------------------------#
 #--------------------------------------------------------------#
 
 null_results <- fread(here("data", "main_summary", "null_models_comparison.csv"))
 
-# Names of the null models in the figure legends, keyed by the names used in
-# the simulation files
+# Names of the null models in the legend
 model_labels <- c(
   "I"    = "Null I (bird species focused, full decoupling)",
   "I-A"  = "Null I-A (bird species focused, half decoupling)",
@@ -43,9 +36,9 @@ model_labels <- c(
   "II-B" = "Null II-B (interaction focused, half decoupling)"
 )
 
-# Each island occupies one row, from Trinidad in the south to Saba in the
-# north, and its four null models sit side by side within the row, from null
-# I at the top to null II-B at the bottom
+# One row per island, from Trinidad (south) to Saba (north). The four null
+# models are offset within the row, from null I at the top to null II-B at
+# the bottom.
 model_offsets <- c("I"=0.27, "I-A"=0.09, "II"=-0.09, "II-B"=-0.27)
 
 null_results[, model := factor(model, levels=names(model_labels))]
@@ -54,18 +47,19 @@ null_results[, y := match(island, names(island_names)) +
 
 network_results <- null_results[level == "network"]
 
-# Point labels show the z-score to one decimal. Values within 0.05 of zero
-# read 0.0 rather than -0.0.
+# Label with the z-score to one decimal. Values within 0.05 of zero are
+# written as 0.0 instead of -0.0.
 network_results[, z_label := fifelse(abs(z_score) < 0.05, "0.0", sprintf("%.1f", z_score))]
 
 species_results <- null_results[level == "species"]
 
 #--------------------------------------------------------------#
-#-2. Figure Settings-------------------------------------------#
+#-2. Figure settings-------------------------------------------#
 #--------------------------------------------------------------#
 
-# Green marks the bird species focused null models and orange the interaction
-# focused ones; circles mark full decoupling and triangles half decoupling
+# Green for the bird species focused null models and orange for the
+# interaction focused ones. Circles for full and triangles for half
+# decoupling.
 pal_model <- c("I"="#1f7a5c", "I-A"="#1f7a5c", "II"="#d8843a", "II-B"="#d8843a")
 shape_model <- c("I"=21, "I-A"=24, "II"=21, "II-B"=24)
 ink <- "#243238"
@@ -82,9 +76,9 @@ theme_null <- theme_pubr(base_size=13) +
     plot.margin=margin(8, 12, 8, 8)
   )
 
-# Elements shared by both figures: the island rows, the zero line, and the
-# colors and shapes of the null models with a single legend in two rows.
-# Returns a list of ggplot components, added to a plot with +.
+# Elements shared by both figures: island rows, zero line, and the colors
+# and shapes of the null models with one legend in two rows. Returns a list
+# of ggplot components.
 null_model_layout <- function() {
   list(
     geom_vline(xintercept=0, color=ink, linewidth=0.55),
@@ -100,11 +94,11 @@ null_model_layout <- function() {
 }
 
 #--------------------------------------------------------------#
-#-3. Extended Data Figure 1: Network-level z-scores------------#
+#-3. Extended Data Figure 1: network-level z-scores------------#
 #--------------------------------------------------------------#
 
-# Each line begins at the null expectation and ends at the empirical z-score.
-# Point labels make the magnitude and direction of the response explicit.
+# Each line goes from the null expectation (zero) to the empirical z-score,
+# with the value written next to the point
 p1 <- ggplot(network_results) +
   null_model_layout() +
   geom_segment(aes(x=0, xend=z_score, y=y, yend=y, color=model),
@@ -119,12 +113,11 @@ p1 <- ggplot(network_results) +
 save_figure(p1, "extended_data_figure_1", width=10, height=10, dpi=400)
 
 #--------------------------------------------------------------#
-#-4. Species Figure: Species z-scores, not in the manuscript---#
+#-4. Species figure: species z-scores, not in the manuscript---#
 #--------------------------------------------------------------#
 
-# The boxes and points show the response of individual species. Each box
-# takes the color of its null model, and the solid marker gives the
-# whole-network response of that null model, shown in the network figure.
+# Boxes and small points are the z-scores of the species, in the color of
+# their null model. The large markers are the network-level z-scores.
 p2 <- ggplot() +
   null_model_layout() +
   geom_boxplot(data=species_results,

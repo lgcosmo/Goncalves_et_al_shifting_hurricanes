@@ -2,20 +2,14 @@
 #-Helpers of the results-processing scripts--------------------#
 #--------------------------------------------------------------#
 
-# Functions shared by the scripts of scripts/04_results_processing.
-# summarize_extinctions reads one simulation file and is the single place
-# where extinctions are counted. survival_curves.R builds the extinction
-# curves with calculate_survival_curve and process_sim_dir and interpolates
-# them with interpolate_at_lambda; process_null_simulations.R and
-# null_model_comparison.R summarize the null and empirical networks with
-# summarize_extinctions; calculate_auc_extinction.R computes species
-# fragility with compute_auc and calculate_auc_se. Each script sources this
-# file after loading its packages.
+# Functions shared by the scripts in scripts/04_results_processing: counting
+# the extinctions in the simulation files, building the extinction curves
+# and computing the area under them (AUC).
 #
-# Inputs:  simulation files written by the scripts of 03_simulations, each
-#          holding one network under one hurricane regime with one row per
-#          species and replicate
-# Outputs: none. The functions return tables that the scripts write.
+# Inputs:  simulation files from scripts/03_simulations, each with one
+#          network under one hurricane regime and one row per species and
+#          replicate
+# Outputs: none. The functions return tables that the scripts save.
 
 library(data.table)
 library(tidyverse)
@@ -26,19 +20,12 @@ library(here)
 #-Extinctions in one simulation file---------------------------#
 #--------------------------------------------------------------#
 
-# Count the extinctions of one simulation file at the network level and at
-# the species level. At the network level, the fraction of species that went
-# extinct in each replicate is averaged over replicates, and its standard
-# deviation measures the stochastic uncertainty of the hurricane simulations.
-# At the species level, the fraction of replicates in which each species went
-# extinct. The file holds one network under one hurricane regime, and every
-# species appears in every replicate.
-# Arguments: file is the simulation file. Returns a list with two
-# data.tables. network has one row with network, lambda, intensity,
-# n_species, n_replicates, mean_fraction_extinct and sd_fraction_extinct.
-# species has one row per species with species_id, type (the layers in which
-# the species interacts: Pollination, Seed-dispersal or Multilayer),
-# fraction_extinct, n_replicates, network, lambda and intensity.
+# Count the extinctions of one simulation file. At the network level, the
+# fraction of species extinct in each replicate, summarized as mean and sd
+# over replicates. At the species level, the fraction of replicates in which
+# each species went extinct.
+# Returns a list with the data.tables network (one row) and species (one row
+# per species).
 summarize_extinctions <- function(file) {
 
   sims <- fread(file, select=c("network", "sim_id", "species_id", "type",
@@ -48,8 +35,7 @@ summarize_extinctions <- function(file) {
   # The island and the hurricane regime are the same in every row of a file
   regime <- sims[1, .(network, lambda, intensity)]
 
-  # Network level: fraction of species lost in each replicate, then its mean
-  # and standard deviation over replicates
+  # Network level: fraction of species extinct per replicate, then mean and sd
   per_replicate <- sims[, .(fraction_extinct=mean(is_extinct)), by=sim_id]
   network <- data.table(
     regime,
@@ -68,22 +54,14 @@ summarize_extinctions <- function(file) {
 }
 
 #--------------------------------------------------------------#
-#-Extinction curves of the frequency and intensity sweeps------#
+#-Extinction curves of the two hurricane scenarios-------------#
 #--------------------------------------------------------------#
 
 # Arrange the extinctions of one simulation file as the rows of an extinction
-# curve, at three levels. The species level holds the fraction of simulations
-# in which each species went extinct. The type level averages that fraction
-# over the species of each layer membership. The network level holds the
-# fraction of species that went extinct, averaged over replicates, which
-# equals the mean over species because every species appears in every
-# replicate. figure_3.R draws the network level, and
-# calculate_auc_extinction.R computes species fragility at all three levels.
-# Arguments: file is the simulation file. Returns a data.table with one row
-# per network, per type and per species holding network, lambda, intensity,
-# level ("Network", "Type" or "Species"), name (the island, the type or the
-# species), extinction_fraction, type ("All" at the network level) and
-# species_id (empty above the species level).
+# curve at three levels: each species, the mean over the species of each type
+# (Pollination, Seed-dispersal or Multilayer) and the whole network.
+# Returns a data.table with network, lambda, intensity, level, name,
+# extinction_fraction, type and species_id.
 calculate_survival_curve <- function(file) {
 
   extinctions <- summarize_extinctions(file)
@@ -99,8 +77,7 @@ calculate_survival_curve <- function(file) {
                         level="Network", name=regime$network, type="All",
                         species_id=NA_character_)
 
-  # One table with the three levels, the network row first, and the island
-  # and hurricane regime of the file on every row
+  # One table with the three levels and the hurricane regime of the file
   metrics <- rbindlist(list(network, types, species), use.names=TRUE)
   metrics <- cbind(regime, metrics)
   setcolorder(metrics, c("network", "lambda", "intensity", "level", "name",
@@ -109,16 +86,14 @@ calculate_survival_curve <- function(file) {
   return(metrics)
 }
 
-# Build the extinction curves of every simulation file of one sweep, in
-# parallel, and bind them.
-# Arguments: dir is the folder of simulation files; label names the sweep in
-# the progress message ("PMF" or "Lambda"). Returns one data.table with the
-# network, type and species rows of every simulation file.
+# Build the extinction curves of all simulation files in a folder, in
+# parallel. label ("PMF" or "Lambda") identifies the scenario in the progress
+# message. Returns one data.table with all curves.
 process_sim_dir <- function(dir, label) {
 
   files <- list.files(dir, pattern="\\.csv$", full.names=TRUE)
   if (length(files) == 0) stop(paste("No simulation files found in:", dir))
-  message(label, " sweep: ", length(files), " simulation files")
+  message(label, " scenario: ", length(files), " simulation files")
 
   curves <- future_lapply(files, calculate_survival_curve, future.seed=TRUE)
 
@@ -129,16 +104,11 @@ process_sim_dir <- function(dir, label) {
 #-Extinctions at the empirical hurricane frequency-------------#
 #--------------------------------------------------------------#
 
-# Interpolate the extinction fraction of each species at the empirical
-# hurricane frequency of its island, for the points that place each island
-# on its extinction curve in Fig. 3c. The frequency sweep simulates lambda on
-# a grid, so the value at the empirical lambda is interpolated linearly
-# between the two neighboring grid values, for each species, level and type.
-# Arguments: metrics is the table of extinction curves of the frequency
-# sweep; emp_lams holds the columns network and lambda with the empirical
-# frequency of each island. Returns a data.table with species_id, level,
-# type, network, the empirical lambda and the interpolated
-# extinction_fraction.
+# Interpolate the extinction fraction at the empirical hurricane frequency of
+# each island. Lambda was simulated in steps of 0.01, so the value at the
+# empirical lambda is interpolated linearly between the two closest values.
+# emp_lams has the columns network and lambda. Returns a data.table with one
+# row per species, level and type.
 interpolate_at_lambda <- function(metrics, emp_lams) {
 
   results <- lapply(seq_len(nrow(emp_lams)), function(i) {
@@ -159,22 +129,17 @@ interpolate_at_lambda <- function(metrics, emp_lams) {
 }
 
 #--------------------------------------------------------------#
-#-Species fragility as the AUC of the extinction curves--------#
+#-Area under the extinction curves (AUC)-----------------------#
 #--------------------------------------------------------------#
 
-# Compute the normalized area under one extinction curve and its analytical
-# standard error with the trapezoidal rule. The area is the species fragility
-# that the pSEM (Fig. 4) explains. It is divided by the range of x, so that it
-# lies between 0 and 1 and higher values mean greater fragility. Each point
-# of the curve is a binomial proportion estimated from n_reps replicates. Its
-# variance, y (1 - y) / n_reps, propagates through the trapezoid coefficients
-# of the area. These coefficients are half the width of the first and last
-# intervals at the ends of the curve and half the distance between the two
-# neighbors at every interior point.
-# Arguments: x is the hurricane frequency or intensity at each point; y is
-# the extinction fraction at each x; n_reps is the number of replicates
-# behind each y. Returns a list with auc and auc_se, both NA when the curve
-# has fewer than two points or no range in x.
+# Normalized area under one extinction curve (trapezoidal rule) and its
+# standard error. The area is divided by the range of x, so it lies between 0
+# and 1. Species persistence is one minus this area. Each point of the curve
+# is a binomial proportion from n_reps replicates, with variance
+# y (1 - y) / n_reps, and these variances are propagated through the
+# trapezoid coefficients.
+# Returns a list with auc and auc_se, both NA when the curve has fewer than
+# two points or no range in x.
 calculate_auc_se <- function(x, y, n_reps=1000) {
 
   ord <- order(x)
@@ -187,8 +152,7 @@ calculate_auc_se <- function(x, y, n_reps=1000) {
   dx  <- diff(x)
   auc <- sum((y[-n] + y[-1]) / 2 * dx)
 
-  # Variance of each point of the curve, and the trapezoid coefficient that
-  # weights it in the area
+  # Variance of each point of the curve and its trapezoid coefficient
   var_y           <- (y * (1 - y)) / n_reps
   c_coeff         <- numeric(n)
   c_coeff[1]      <- 0.5 * dx[1]
@@ -202,12 +166,9 @@ calculate_auc_se <- function(x, y, n_reps=1000) {
   list(auc=auc / x_range, auc_se=auc_se / x_range)
 }
 
-# Apply calculate_auc_se to every extinction curve of one scenario, one curve
-# per network, per type and per species in each island network.
-# Arguments: df is the table of extinction curves of the scenario; x_col
-# names the column of the sweep ("lambda" or "intensity"); scenario_label is
-# written to the scenario column ("PMF" or "Lambda"). Returns a tibble with
-# network, type, level, species_id, auc, auc_se and scenario.
+# Apply calculate_auc_se to the extinction curves of one scenario, one curve
+# per network, type and species. x_col is the column with the values of
+# lambda or of the intensity shift. Returns a tibble with auc and auc_se.
 compute_auc <- function(df, x_col, scenario_label) {
   df %>%
     group_by(network, type, level, species_id) %>%

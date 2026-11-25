@@ -2,17 +2,16 @@
 #-Empirical and null multilayer networks-----------------------#
 #--------------------------------------------------------------#
 
-# Draw each empirical island network in the centre of a page, surrounded by
-# four of its null networks, to check by eye what each null model rewires.
-# The three-column layout and the colors follow the network insets of
-# Figure 2 (figure_2.R). Species keep the positions of the empirical panel in
-# the four null panels, so the rewired interactions stand out. Bird colors
-# show the role of each bird in the network of its panel, so violet marks the
-# dual-role birds that remain after the decoupling. These figures are
-# diagnostic and do not appear in the manuscript.
+# Diagnostic figures, not in the manuscript. Draw the empirical network of
+# each island in the center of a page, surrounded by four of its null
+# networks, to check by eye what each null model rewires. Species keep the
+# positions of the empirical panel in the null panels. Bird colors show the
+# role of each bird in the network of its panel, so violet marks the birds
+# that remain dual-role after the decoupling. Layout and colors follow the
+# network insets of Figure 2.
 #
-# Inputs:  src/multi_pol/ and src/multi_sd/ (build_networks_multilayer.R)
-#          src/null_<model>/ (build_null_decoupling.jl)
+# Inputs:  src/multi_pol/ and src/multi_sd/
+#          src/null_<model>/
 # Outputs: scripts/05_visualization/diagnostic/
 #          null_<model>_networks_<island>.png, .pdf and .svg
 
@@ -27,13 +26,12 @@ source(here("src", "island_labels.R"))
 #-Null models, palette and panel layout------------------------#
 #--------------------------------------------------------------#
 
-# Null models to draw. The null networks of null model X live in src/null_X/,
-# and their files end in _null_X_<id>. null_ids selects which four of the 100
-# null networks of each island are drawn.
+# Null models to draw, with files in src/null_X/ ending in _null_X_<id>.
+# null_ids are the four null networks (out of 100) drawn for each island.
 null_models <- c("I", "I-A", "II", "II-B")
 null_ids <- c(1, 2, 3, 4)
 
-# Short descriptions of each null model, shown in the figure subtitles
+# Short description of each null model for the figure subtitle
 null_descriptions <- c(
   "I"="all connectors retain a single layer; the layers are separated",
   "I-A"="half of the connectors retain a single layer",
@@ -43,9 +41,8 @@ null_descriptions <- c(
 output_dir <- here("scripts", "05_visualization", "diagnostic")
 dir.create(output_dir, showWarnings=FALSE, recursive=TRUE)
 
-# The colors and the pale background are those of Figure 2. Green marks the
-# pollination layer, rust the seed-dispersal layer and violet the dual-role
-# birds.
+# Colors of Figure 2: green for the pollination layer, rust for the
+# seed-dispersal layer and violet for the dual-role birds
 pal <- list(
   plant_pol   = "#1f7a5c",
   plant_sd    = "#b9551f",
@@ -68,9 +65,9 @@ node_cols <- c("Plant_Pol"=pal$plant_pol,
 node_labels <- c("Pollination plant", "Seed-dispersal plant", "Pollinator",
                  "Seed disperser", "Bird in both layers")
 
-# Folder and file suffix of the five networks drawn for each null model. The
-# empirical network comes first because its panel supplies the species
-# positions of the other four.
+# Folder and file suffix of the five networks of each null model. The
+# empirical network comes first because its panel sets the species positions
+# of the other four.
 network_configs <- lapply(setNames(null_models, null_models), function(null_model) {
   data.table(
     folder=c("", rep(paste0("null_", null_model), 4)),
@@ -79,8 +76,8 @@ network_configs <- lapply(setNames(null_models, null_models), function(null_mode
   )
 })
 
-# A-D are four null-model panels and E is the empirical panel. The empty cells
-# above and below E place the empirical network in the centre.
+# A-D are the four null panels and E the empirical panel. The empty cells
+# above and below E place the empirical network in the center.
 panel_design <- "
 A#C
 AEC
@@ -100,8 +97,8 @@ for (null_model in null_models) for (net_id in names(island_names)) {
 
   for (i in seq_len(nrow(network_config))) {
 
-    # Read the two binary incidence matrices (plants in rows, birds in
-    # columns), which share their rows and columns across layers
+    # Binary incidence matrices of the two layers (plants in rows, birds in
+    # columns), with the same rows and columns
     net_dir <- file.path(here("src"), network_config$folder[i])
     net_file <- paste0(net_id, network_config$suffix[i], ".csv")
     pol_df <- fread(file.path(net_dir, "multi_pol", paste0("B_", net_file)))
@@ -126,15 +123,15 @@ for (null_model in null_models) for (net_id in names(island_names)) {
                  to=colnames(sd_mat)[sd_links[, 2]], layer="Seed dispersal")
     ))
 
-    # Bird roles are recomputed for every network, so violet marks the
-    # dual-role birds of the panel rather than those of the empirical network
+    # Bird roles are computed for every network. Violet marks the dual-role
+    # birds of the panel, not those of the empirical network.
     birds_pol <- colSums(pol_mat > 0) > 0
     birds_sd <- colSums(sd_mat > 0) > 0
     bird_types <- fifelse(birds_pol & birds_sd, "Animal_Both",
                          fifelse(birds_pol, "Animal_Pollinator", "Animal_Disperser"))
-    # Proportion of interactions involving dual-role species, over both
-    # layers. The subtitle of each panel shows it because every null model
-    # lowers it, to zero once the layers separate.
+    # Proportion of interactions of dual-role birds over both layers, shown
+    # in the panel subtitle. Every null model lowers it, to zero when the
+    # layers are separated.
     dual_birds <- birds_pol & birds_sd
     n_dual_interactions <- sum(pol_mat[, dual_birds] > 0) + sum(sd_mat[, dual_birds] > 0)
     n_interactions <- sum(pol_mat > 0) + sum(sd_mat > 0)
@@ -148,10 +145,9 @@ for (null_model in null_models) for (net_id in names(island_names)) {
       data.table(id=paste0(plants_sd, "_SD"), col=2, type="Plant_SD")
     ))
 
-    # Species are ordered as in Figure 2. Dual-role birds of the empirical
-    # network come first, followed by pollinators and seed dispersers, and
-    # plants are ordered by name within each layer. The null panels reuse
-    # these positions, so the rewired interactions can be compared.
+    # Order of the species as in Figure 2: dual-role birds of the empirical
+    # network first, then pollinators and seed dispersers. Plants are ordered
+    # by name within each layer. The null panels reuse these positions.
     if (i == 1) {
       nodes[, sort_key := fifelse(col == 1,
         match(type, c("Animal_Both", "Animal_Pollinator", "Animal_Disperser")),
@@ -167,9 +163,9 @@ for (null_model in null_models) for (net_id in names(island_names)) {
     edges <- merge(edges, layout_nodes, by.x="to", by.y="id", sort=FALSE,
                    suffixes=c("", "end"))
 
-    # Links are translucent and species markers white-outlined, as in
-    # Figure 2. The legend keeps every role even when a null network lacks
-    # one, for instance the dual-role birds after null model I.
+    # Translucent links and white-outlined species markers, as in Figure 2.
+    # The legend keeps all roles even when a null network lacks one, such as
+    # the dual-role birds in null model I.
     panel_list[[i]] <- ggplot() +
       geom_segment(data=edges, aes(x=x, y=y, xend=xend, yend=yend, color=layer),
                    alpha=0.5, linewidth=0.25,
@@ -226,7 +222,7 @@ for (null_model in null_models) for (net_id in names(island_names)) {
           legend.text=element_text(size=11, color=pal$ink),
           legend.background=element_rect(fill=NA, color=NA))
 
-  # Keep a PNG for quick inspection and vector versions for zooming into links.
+  # PNG for quick inspection, PDF and SVG for zooming into the links
   for (format in c("png", "pdf", "svg")) {
     ggsave(file.path(output_dir, paste0("null_", null_model, "_networks_", net_id, ".", format)),
            p1, width=16, height=11, dpi=300, bg=pal$ocean)

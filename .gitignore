@@ -8,6 +8,7 @@
 /data/main_sims_lambda
 /data/main_sims_pmf
 /data/sims
+/data/sens_sims_*
 /videos
 /plots
 /notebooks
